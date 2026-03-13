@@ -2,6 +2,7 @@ import type { Quiz } from "../types/quiz";
 import WordBankFill from "./WordBankFill";
 import Reorder from "./Reorder";
 import Matching from "./Matching";
+import FillInBlank from "./FillInBlank";
 
 interface Props {
   quiz: Quiz;
@@ -20,6 +21,8 @@ export default function QuizRenderer({ quiz, onComplete }: Props) {
       return <Reorder quiz={quiz} onComplete={onComplete} />;
     case "matching":
       return <Matching quiz={quiz} onComplete={onComplete} />;
+    case "fill-in-blank":
+      return <FillInBlank quiz={quiz} onComplete={onComplete} />;
     default:
       return (
         <div className="p-4 text-red-600">

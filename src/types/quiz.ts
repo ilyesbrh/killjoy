@@ -68,8 +68,19 @@ export interface MatchingQuiz {
   givenPair?: { left: number; right: number };
 }
 
+/** "Ergänzen Sie" — free-form fill-in-the-blank (user types answers) */
+export interface FillInBlankQuiz {
+  type: "fill-in-blank";
+  exerciseNumber: number;
+  reference?: string;
+  section?: string;
+  instruction: string;
+  /** Labelled dialogue groups (e.g. "a", "b") */
+  dialogues: { label?: string; lines: DialogueLine[] }[];
+}
+
 /** Union of all quiz types — extend this as we add more */
-export type Quiz = WordBankFillQuiz | ReorderQuiz | MatchingQuiz;
+export type Quiz = WordBankFillQuiz | ReorderQuiz | MatchingQuiz | FillInBlankQuiz;
 
 /** A lesson containing multiple quizzes */
 export interface Lektion {

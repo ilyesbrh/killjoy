@@ -101,6 +101,92 @@
         "5": 0
       },
       "givenPair": { "left": 0, "right": 3 }
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 4,
+      "reference": "KB 3",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            {
+              "speaker": "square",
+              "segments": [
+                "Hallo! Ich bin Simon. ",
+                { "id": "4a1", "answer": "Wie" },
+                " heißt du?"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": [
+                "Ich ",
+                { "id": "4a2", "answer": "heiße" },
+                " Steffi."
+              ]
+            },
+            {
+              "speaker": "square",
+              "segments": [
+                "Und ",
+                { "id": "4a3", "answer": "woher" },
+                " kommst ",
+                { "id": "4a4", "answer": "du" },
+                "? Aus Österreich?"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": [
+                "Nein, ich ",
+                { "id": "4a5", "answer": "komme" },
+                " aus Deutschland."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            {
+              "speaker": "square",
+              "segments": [
+                "Hallo! Ich bin Sofia, ",
+                { "id": "4b1", "answer": "wer" },
+                " ",
+                { "id": "4b2", "answer": "bist" },
+                " du?"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": [
+                { "id": "4b3", "answer": "Ich" },
+                " heiße Philipp."
+              ]
+            },
+            {
+              "speaker": "square",
+              "segments": [
+                "Und woher ",
+                { "id": "4b4", "answer": "kommst" },
+                " du?"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": [
+                "Ich komme ",
+                { "id": "4b5", "answer": "aus" },
+                " der Schweiz."
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }
