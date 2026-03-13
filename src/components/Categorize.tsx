@@ -109,7 +109,7 @@ export default function Categorize({ quiz, onComplete }: Props) {
               {/* Image or placeholder */}
               <div
                 className={`
-                  w-full aspect-square rounded-lg border-2 flex items-center justify-center overflow-hidden relative
+                  w-full aspect-[4/3] rounded-lg border-2 flex items-center justify-center overflow-hidden relative
                   ${
                     checked
                       ? status === "correct"
@@ -127,7 +127,7 @@ export default function Categorize({ quiz, onComplete }: Props) {
                   <img
                     src={item.image}
                     alt={item.description || item.label}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain"
                   />
                 ) : (
                   <span className="text-sm text-gray-500 text-center px-2">
