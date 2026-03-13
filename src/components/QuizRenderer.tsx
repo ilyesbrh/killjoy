@@ -6,6 +6,7 @@ import FillInBlank from "./FillInBlank";
 import ImageWordBank from "./ImageWordBank";
 import Categorize from "./Categorize";
 import InlineChoice from "./InlineChoice";
+import WriteSentences from "./WriteSentences";
 
 interface Props {
   quiz: Quiz;
@@ -32,6 +33,8 @@ export default function QuizRenderer({ quiz, onComplete }: Props) {
       return <Categorize quiz={quiz} onComplete={onComplete} />;
     case "inline-choice":
       return <InlineChoice quiz={quiz} onComplete={onComplete} />;
+    case "write-sentences":
+      return <WriteSentences quiz={quiz} onComplete={onComplete} />;
     default:
       return (
         <div className="p-4 text-red-600">

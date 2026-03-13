@@ -140,6 +140,25 @@ export interface InlineChoiceQuiz {
   givenAnswer?: number;
 }
 
+/** "Schreiben Sie Sätze" — write sentences about photo cards */
+export interface WriteSentencesQuiz {
+  type: "write-sentences";
+  exerciseNumber: number;
+  reference?: string;
+  section?: string;
+  instruction: string;
+  title?: string;
+  cards: {
+    label: string;
+    name: string;
+    country: string;
+    image?: string;
+    expectedSentences: string[];
+  }[];
+  /** Index of a pre-filled card shown as example */
+  givenCard?: number;
+}
+
 /** Union of all quiz types — extend this as we add more */
 export type Quiz =
   | WordBankFillQuiz
@@ -148,7 +167,8 @@ export type Quiz =
   | FillInBlankQuiz
   | ImageWordBankQuiz
   | CategorizeQuiz
-  | InlineChoiceQuiz;
+  | InlineChoiceQuiz
+  | WriteSentencesQuiz;
 
 /** A lesson containing multiple quizzes */
 export interface Lektion {

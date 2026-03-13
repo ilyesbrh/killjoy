@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import type { MatchingQuiz } from "../types/quiz";
 
 interface Props {
@@ -6,18 +6,97 @@ interface Props {
   onComplete?: (score: number, total: number) => void;
 }
 
+interface Coords {
+  x: number;
+  y: number;
+}
+
 export default function Matching({ quiz, onComplete }: Props) {
   const total = quiz.left.length;
+  const containerRef = useRef<HTMLDivElement>(null);
+  const leftRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const rightRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
-  // pairs: leftIndex -> rightIndex
   const [pairs, setPairs] = useState<Record<number, number>>(() => {
     if (quiz.givenPair) return { [quiz.givenPair.left]: quiz.givenPair.right };
     return {};
   });
   const [selectedLeft, setSelectedLeft] = useState<number | null>(null);
+  const [selectedRight, setSelectedRight] = useState<number | null>(null);
   const [checked, setChecked] = useState(false);
+  const [lineCoords, setLineCoords] = useState<
+    { from: Coords; to: Coords; leftIdx: number }[]
+  >([]);
 
   const usedRightIndices = new Set(Object.values(pairs));
+
+  // Recompute SVG line coordinates whenever pairs change
+  const updateLines = useCallback(() => {
+    if (!containerRef.current) return;
+    const containerRect = containerRef.current.getBoundingClientRect();
+    const coords: { from: Coords; to: Coords; leftIdx: number }[] = [];
+
+    for (const [l, r] of Object.entries(pairs)) {
+      const lEl = leftRefs.current[Number(l)];
+      const rEl = rightRefs.current[r];
+      if (!lEl || !rEl) continue;
+      const lRect = lEl.getBoundingClientRect();
+      const rRect = rEl.getBoundingClientRect();
+      coords.push({
+        leftIdx: Number(l),
+        from: {
+          x: lRect.right - containerRect.left,
+          y: lRect.top + lRect.height / 2 - containerRect.top,
+        },
+        to: {
+          x: rRect.left - containerRect.left,
+          y: rRect.top + rRect.height / 2 - containerRect.top,
+        },
+      });
+    }
+    setLineCoords(coords);
+  }, [pairs]);
+
+  useEffect(() => {
+    updateLines();
+    window.addEventListener("resize", updateLines);
+    return () => window.removeEventListener("resize", updateLines);
+  }, [updateLines]);
+
+  const tryPair = useCallback(
+    (lIdx: number, rIdx: number) => {
+      if (checked) return;
+      const isGivenLeft =
+        quiz.givenPair !== undefined && lIdx === quiz.givenPair.left;
+      const isGivenRight =
+        quiz.givenPair !== undefined && rIdx === quiz.givenPair.right;
+      if (isGivenLeft || isGivenRight) {
+        setSelectedLeft(null);
+        setSelectedRight(null);
+        return;
+      }
+
+      setPairs((prev) => {
+        const next = { ...prev };
+        // Remove any existing pair using this right
+        for (const [l, r] of Object.entries(next)) {
+          if (
+            r === rIdx &&
+            !(quiz.givenPair && Number(l) === quiz.givenPair.left)
+          ) {
+            delete next[Number(l)];
+          }
+        }
+        // Remove any existing pair from this left
+        delete next[lIdx];
+        next[lIdx] = rIdx;
+        return next;
+      });
+      setSelectedLeft(null);
+      setSelectedRight(null);
+    },
+    [checked, quiz.givenPair]
+  );
 
   const handleLeftClick = useCallback(
     (idx: number) => {
@@ -32,44 +111,52 @@ export default function Matching({ quiz, onComplete }: Props) {
           return next;
         });
         setSelectedLeft(null);
+        setSelectedRight(null);
+        return;
+      }
+
+      // If a right is already selected, make the pair
+      if (selectedRight !== null) {
+        tryPair(idx, selectedRight);
         return;
       }
 
       setSelectedLeft((prev) => (prev === idx ? null : idx));
+      setSelectedRight(null);
     },
-    [checked, pairs, quiz.givenPair]
+    [checked, pairs, quiz.givenPair, selectedRight, tryPair]
   );
 
   const handleRightClick = useCallback(
     (idx: number) => {
       if (checked) return;
-      if (selectedLeft === null) return;
+      if (quiz.givenPair && idx === quiz.givenPair.right) return;
 
-      // If this right is already used by given pair, skip
-      if (
-        quiz.givenPair &&
-        usedRightIndices.has(idx) &&
-        pairs[quiz.givenPair.left] === idx
-      )
+      // If this right is already used, unpair it
+      const pairedLeft = Object.entries(pairs).find(([, r]) => r === idx);
+      if (pairedLeft) {
+        const lIdx = Number(pairedLeft[0]);
+        if (quiz.givenPair && lIdx === quiz.givenPair.left) return;
+        setPairs((prev) => {
+          const next = { ...prev };
+          delete next[lIdx];
+          return next;
+        });
+        setSelectedLeft(null);
+        setSelectedRight(null);
         return;
+      }
 
-      // If this right is used by another left, remove that pairing first
-      setPairs((prev) => {
-        const next = { ...prev };
-        for (const [l, r] of Object.entries(next)) {
-          if (
-            r === idx &&
-            !(quiz.givenPair && Number(l) === quiz.givenPair.left)
-          ) {
-            delete next[Number(l)];
-          }
-        }
-        next[selectedLeft!] = idx;
-        return next;
-      });
+      // If a left is already selected, make the pair
+      if (selectedLeft !== null) {
+        tryPair(selectedLeft, idx);
+        return;
+      }
+
+      setSelectedRight((prev) => (prev === idx ? null : idx));
       setSelectedLeft(null);
     },
-    [checked, selectedLeft, pairs, quiz.givenPair, usedRightIndices]
+    [checked, pairs, quiz.givenPair, selectedLeft, tryPair]
   );
 
   const handleCheck = () => {
@@ -89,6 +176,7 @@ export default function Matching({ quiz, onComplete }: Props) {
       return {};
     });
     setSelectedLeft(null);
+    setSelectedRight(null);
     setChecked(false);
   };
 
@@ -100,6 +188,11 @@ export default function Matching({ quiz, onComplete }: Props) {
     return pairs[leftIdx] === quiz.correctPairs[leftIdx]
       ? "correct"
       : "incorrect";
+  };
+
+  const getLineColor = (leftIdx: number) => {
+    if (!checked) return "#3b82f6"; // blue-500
+    return getPairStatus(leftIdx) === "correct" ? "#22c55e" : "#ef4444";
   };
 
   return (
@@ -126,124 +219,118 @@ export default function Matching({ quiz, onComplete }: Props) {
         )}
       </div>
 
-      {/* Matching grid */}
-      <div className="space-y-2">
-        {quiz.left.map((item, lIdx) => {
-          const isGiven =
-            quiz.givenPair !== undefined && lIdx === quiz.givenPair.left;
-          const pairedRight = pairs[lIdx];
-          const status = getPairStatus(lIdx);
-          const isSelected = selectedLeft === lIdx;
+      {/* Two-column matching area with SVG lines */}
+      <div ref={containerRef} className="relative">
+        {/* SVG overlay for lines */}
+        <svg className="absolute inset-0 w-full h-full pointer-events-none z-10">
+          {lineCoords.map(({ from, to, leftIdx }) => (
+            <line
+              key={leftIdx}
+              x1={from.x}
+              y1={from.y}
+              x2={to.x}
+              y2={to.y}
+              stroke={getLineColor(leftIdx)}
+              strokeWidth={2.5}
+              strokeLinecap="round"
+            />
+          ))}
+        </svg>
 
-          return (
-            <div key={lIdx} className="flex items-center gap-3">
-              {/* Left item */}
-              <button
-                onClick={() => handleLeftClick(lIdx)}
-                disabled={checked || isGiven}
-                className={`
-                  flex-1 flex items-center gap-3 px-4 py-3 rounded-lg border text-left transition-all
-                  ${
-                    checked
-                      ? status === "correct"
-                        ? "border-green-400 bg-green-50"
-                        : status === "incorrect"
-                        ? "border-red-400 bg-red-50"
-                        : "border-gray-200 bg-white"
-                      : isSelected
-                      ? "border-blue-500 bg-blue-50 ring-2 ring-blue-200"
-                      : pairedRight !== undefined
-                      ? "border-blue-300 bg-blue-50"
-                      : "border-gray-200 bg-white hover:border-gray-400"
-                  }
-                  ${isGiven ? "cursor-default" : "cursor-pointer"}
-                `}
-              >
-                <span className="text-sm font-bold text-gray-500 w-4">
-                  {item.label}
-                </span>
-                <span className="text-base text-gray-800">{item.text}</span>
-              </button>
+        <div className="flex gap-12">
+          {/* Left column */}
+          <div className="flex-1 space-y-2">
+            {quiz.left.map((item, lIdx) => {
+              const isGiven =
+                quiz.givenPair !== undefined && lIdx === quiz.givenPair.left;
+              const isPaired = pairs[lIdx] !== undefined;
+              const isSelected = selectedLeft === lIdx;
+              const status = getPairStatus(lIdx);
 
-              {/* Connector */}
-              <div className="flex-shrink-0 w-8 flex items-center justify-center">
-                {pairedRight !== undefined ? (
-                  <div
-                    className={`w-full h-0.5 ${
+              return (
+                <button
+                  key={lIdx}
+                  ref={(el) => {
+                    leftRefs.current[lIdx] = el;
+                  }}
+                  onClick={() => handleLeftClick(lIdx)}
+                  disabled={checked || isGiven}
+                  className={`
+                    w-full flex items-center gap-3 px-4 py-3 rounded-lg border text-left transition-all
+                    ${
                       checked
                         ? status === "correct"
-                          ? "bg-green-500"
-                          : "bg-red-500"
-                        : "bg-blue-400"
-                    }`}
-                  />
-                ) : (
-                  <div className="w-full h-0.5 bg-gray-200 border-dashed border-t border-gray-300" />
-                )}
-              </div>
-
-              {/* Right item (shows the matched one, or a placeholder) */}
-              <button
-                onClick={() => {
-                  if (pairedRight !== undefined) {
-                    // Clicking the right side of a pair — do nothing, click left to unpair
-                  }
-                }}
-                className={`
-                  flex-1 px-4 py-3 rounded-lg border text-left transition-all
-                  ${
-                    pairedRight !== undefined
-                      ? checked
-                        ? status === "correct"
                           ? "border-green-400 bg-green-50"
-                          : "border-red-400 bg-red-50"
-                        : "border-blue-300 bg-blue-50"
-                      : "border-gray-200 bg-gray-50 text-gray-400"
-                  }
-                `}
-              >
-                <span className="text-base">
-                  {pairedRight !== undefined ? quiz.right[pairedRight] : "..."}
-                </span>
-                {checked && status === "incorrect" && (
-                  <span className="ml-2 text-xs text-green-600">
-                    ({quiz.right[quiz.correctPairs[lIdx]]})
+                          : status === "incorrect"
+                          ? "border-red-400 bg-red-50"
+                          : "border-gray-200 bg-white"
+                        : isSelected
+                        ? "border-blue-500 bg-blue-100 ring-2 ring-blue-300"
+                        : isPaired
+                        ? "border-blue-300 bg-blue-50"
+                        : "border-gray-200 bg-white hover:border-gray-400 hover:bg-gray-50"
+                    }
+                    ${isGiven ? "cursor-default" : "cursor-pointer"}
+                  `}
+                >
+                  <span className="text-sm font-bold text-gray-400 w-4">
+                    {item.label}
                   </span>
-                )}
-              </button>
-            </div>
-          );
-        })}
-      </div>
+                  <span className="text-base text-gray-800">{item.text}</span>
+                </button>
+              );
+            })}
+          </div>
 
-      {/* Available right items to pick from */}
-      {selectedLeft !== null && (
-        <div className="mt-4 p-4 bg-gray-50 rounded-lg border border-blue-200">
-          <p className="text-sm text-gray-500 mb-2">Wählen Sie:</p>
-          <div className="flex flex-wrap gap-2">
+          {/* Right column */}
+          <div className="flex-1 space-y-2">
             {quiz.right.map((text, rIdx) => {
+              const isGiven =
+                quiz.givenPair !== undefined && rIdx === quiz.givenPair.right;
               const isUsed = usedRightIndices.has(rIdx);
+              const isSelected = selectedRight === rIdx;
+
+              // Find which left is paired to this right (for status)
+              const pairedLeftIdx = Object.entries(pairs).find(
+                ([, r]) => r === rIdx
+              );
+              const status = pairedLeftIdx
+                ? getPairStatus(Number(pairedLeftIdx[0]))
+                : "neutral";
+
               return (
                 <button
                   key={rIdx}
+                  ref={(el) => {
+                    rightRefs.current[rIdx] = el;
+                  }}
                   onClick={() => handleRightClick(rIdx)}
-                  disabled={isUsed}
+                  disabled={checked || isGiven}
                   className={`
-                    px-3 py-2 rounded-lg border text-sm transition-all
+                    w-full px-4 py-3 rounded-lg border text-left transition-all
                     ${
-                      isUsed
-                        ? "bg-gray-100 text-gray-400 border-gray-200 cursor-default line-through"
-                        : "bg-white text-gray-800 border-gray-300 hover:border-blue-400 hover:bg-blue-50 cursor-pointer"
+                      checked
+                        ? status === "correct"
+                          ? "border-green-400 bg-green-50"
+                          : status === "incorrect"
+                          ? "border-red-400 bg-red-50"
+                          : "border-gray-200 bg-white"
+                        : isSelected
+                        ? "border-blue-500 bg-blue-100 ring-2 ring-blue-300"
+                        : isUsed
+                        ? "border-blue-300 bg-blue-50"
+                        : "border-gray-200 bg-white hover:border-gray-400 hover:bg-gray-50"
                     }
+                    ${isGiven ? "cursor-default" : "cursor-pointer"}
                   `}
                 >
-                  {text}
+                  <span className="text-base text-gray-800">{text}</span>
                 </button>
               );
             })}
           </div>
         </div>
-      )}
+      </div>
 
       {/* Actions */}
       <div className="flex gap-3 mt-8">

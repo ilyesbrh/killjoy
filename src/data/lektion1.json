@@ -360,6 +360,138 @@
           ]
         }
       ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 8,
+      "reference": "KB 6a",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            {
+              "speaker": "square",
+              "segments": [
+                "Woher komm",
+                { "id": "8a1", "answer": "st" },
+                " du?"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": [
+                "Ich komm",
+                { "id": "8a2", "answer": "e" },
+                " aus Spanien. Und du?"
+              ]
+            },
+            {
+              "speaker": "square",
+              "segments": [
+                "Ich komm",
+                { "id": "8a3", "answer": "e" },
+                " aus dem Iran."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            {
+              "speaker": "square",
+              "segments": [
+                "Hallo. Ich heiß",
+                { "id": "8b1", "answer": "e" },
+                " Maria. Und wie heiß",
+                { "id": "8b2", "answer": "t" },
+                " du?"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": [
+                "Ich heiß",
+                { "id": "8b3", "answer": "e" },
+                " Michael."
+              ]
+            }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            {
+              "speaker": "square",
+              "segments": [
+                "Guten Tag, Frau Matard. Woher komm",
+                { "id": "8c1", "answer": "en" },
+                " Sie? Aus Frankreich?"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": [
+                "Nein, ich komm",
+                { "id": "8c2", "answer": "e" },
+                " aus der Schweiz."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "write-sentences",
+      "exerciseNumber": 9,
+      "reference": "KB 6c",
+      "section": "KOMMUNIKATION",
+      "instruction": "Schreiben Sie Sätze zu den Fotos.",
+      "givenCard": 0,
+      "cards": [
+        {
+          "label": "A",
+          "name": "Philipp Lahm",
+          "country": "Deutschland",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Philipp_Lahm_%282011%29.jpg/400px-Philipp_Lahm_%282011%29.jpg",
+          "expectedSentences": [
+            "Das ist Philipp Lahm.",
+            "Er kommt aus Deutschland."
+          ]
+        },
+        {
+          "label": "B",
+          "name": "Mozart",
+          "country": "Österreich",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Wolfgang-amadeus-mozart_1.jpg/400px-Wolfgang-amadeus-mozart_1.jpg",
+          "expectedSentences": [
+            "Das ist Mozart.",
+            "Er kommt aus Österreich."
+          ]
+        },
+        {
+          "label": "C",
+          "name": "Prinz Felipe",
+          "country": "Spanien",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Prince_Felipe_of_Asturias_2012.jpg/400px-Prince_Felipe_of_Asturias_2012.jpg",
+          "expectedSentences": [
+            "Das ist Prinz Felipe.",
+            "Er kommt aus Spanien."
+          ]
+        },
+        {
+          "label": "D",
+          "name": "Martina Hingis",
+          "country": "die Schweiz",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Martina_Hingis_%28cropped%29.jpg/400px-Martina_Hingis_%28cropped%29.jpg",
+          "expectedSentences": [
+            "Das ist Martina Hingis.",
+            "Sie kommt aus der Schweiz."
+          ]
+        }
+      ]
     }
   ]
 }
