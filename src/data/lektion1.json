@@ -290,22 +290,22 @@
       "items": [
         {
           "label": "1",
-          "description": "Junge Leute auf einer Party",
+          "image": "/du-freunde-cafe.png",
           "correctCategory": 0
         },
         {
           "label": "2",
-          "description": "Zwei Personen im Restaurant",
+          "image": "/sie-arztpraxis.png",
           "correctCategory": 1
         },
         {
           "label": "3",
-          "description": "Junge Leute beim Kaffee",
+          "image": "/du-familie-abendessen.png",
           "correctCategory": 0
         },
         {
           "label": "4",
-          "description": "An der Rezeption",
+          "image": "/sie-rezeption.png",
           "correctCategory": 1
         }
       ]
