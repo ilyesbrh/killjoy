@@ -1,0 +1,106 @@
+{
+  "lektion": 1,
+  "title": "Hallo! Ich bin Nicole...",
+  "quizzes": [
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 1,
+      "reference": "KB 2",
+      "section": "STRUKTUREN",
+      "instruction": "Ordnen Sie zu.",
+      "wordBank": ["heiße", "du", "Hallo", "heißt", "ich", "wer", "wie"],
+      "dialogues": [
+        [
+          {
+            "speaker": "square",
+            "segments": [
+              "Hallo! Ich bin Wiebke. Und ",
+              { "id": "1a", "answer": "wer" },
+              " bist ",
+              { "id": "1b", "answer": "du" },
+              "?"
+            ]
+          },
+          {
+            "speaker": "triangle",
+            "segments": [
+              { "id": "1c", "answer": "Hallo" },
+              ", ",
+              { "id": "1d", "answer": "ich" },
+              " bin Stefan."
+            ]
+          }
+        ],
+        [
+          {
+            "speaker": "square",
+            "segments": [
+              "Ich heiße René. Und ",
+              { "id": "2a", "answer": "wie" },
+              " ",
+              { "id": "2b", "answer": "heißt" },
+              " du?"
+            ]
+          },
+          {
+            "speaker": "triangle",
+            "segments": [
+              "Ich ",
+              { "id": "2c", "answer": "heiße" },
+              " Alfred."
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "reorder",
+      "exerciseNumber": 2,
+      "reference": "KB 3",
+      "section": "KOMMUNIKATION",
+      "instruction": "Sortieren Sie.",
+      "givenFirst": 4,
+      "sentences": [
+        "Ja, ich komme aus Deutschland. Und woher kommst du, Roberto? Aus Portugal?",
+        "Aus Brasilien? Wow!",
+        "Ich heiße Melanie.",
+        "Nein, ich komme aus Brasilien.",
+        "Hallo! Ich heiße Roberto, und wer bist du?",
+        "Und woher kommst du? Aus Deutschland?"
+      ],
+      "correctOrder": [4, 2, 5, 0, 3, 1]
+    },
+    {
+      "type": "matching",
+      "exerciseNumber": 3,
+      "reference": "KB 3",
+      "section": "STRUKTUREN",
+      "instruction": "Ordnen Sie zu.",
+      "left": [
+        { "label": "a", "text": "Wie" },
+        { "label": "b", "text": "Ich heiße" },
+        { "label": "c", "text": "Woher" },
+        { "label": "d", "text": "Ich komme" },
+        { "label": "e", "text": "Wer" },
+        { "label": "f", "text": "Ich" }
+      ],
+      "right": [
+        "bin Pedro.",
+        "kommst du?",
+        "aus der Schweiz.",
+        "heißt du?",
+        "bist du?",
+        "Sandra."
+      ],
+      "correctPairs": {
+        "0": 3,
+        "1": 5,
+        "2": 1,
+        "3": 2,
+        "4": 4,
+        "5": 0
+      },
+      "givenPair": { "left": 0, "right": 3 }
+    }
+  ]
+}
