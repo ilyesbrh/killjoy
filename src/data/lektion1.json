@@ -187,6 +187,23 @@
           ]
         }
       ]
+    },
+    {
+      "type": "image-word-bank",
+      "exerciseNumber": 5,
+      "reference": "KB 4",
+      "section": "WÖRTER",
+      "title": "Länder",
+      "instruction": "Welches Land passt? Ordnen Sie zu.",
+      "wordBank": ["Deutschland", "Frankreich", "Österreich", "die Schweiz", "die Türkei"],
+      "givenCard": 2,
+      "cards": [
+        { "label": "A", "caption": "Brandenburger Tor", "answer": "Deutschland" },
+        { "label": "B", "caption": "Eiffelturm", "answer": "Frankreich" },
+        { "label": "C", "caption": "Stephansdom", "answer": "Österreich" },
+        { "label": "D", "caption": "Matterhorn", "answer": "die Schweiz" },
+        { "label": "E", "caption": "Hagia Sophia", "answer": "die Türkei" }
+      ]
     }
   ]
 }

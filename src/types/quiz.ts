@@ -79,8 +79,32 @@ export interface FillInBlankQuiz {
   dialogues: { label?: string; lines: DialogueLine[] }[];
 }
 
+/** "Welches Land passt?" — assign words from a bank to labelled image cards */
+export interface ImageWordBankQuiz {
+  type: "image-word-bank";
+  exerciseNumber: number;
+  reference?: string;
+  section?: string;
+  instruction: string;
+  title?: string;
+  wordBank: string[];
+  cards: {
+    label: string;
+    caption: string;
+    image?: string;
+    answer: string;
+  }[];
+  /** Index of a pre-filled card shown as hint */
+  givenCard?: number;
+}
+
 /** Union of all quiz types — extend this as we add more */
-export type Quiz = WordBankFillQuiz | ReorderQuiz | MatchingQuiz | FillInBlankQuiz;
+export type Quiz =
+  | WordBankFillQuiz
+  | ReorderQuiz
+  | MatchingQuiz
+  | FillInBlankQuiz
+  | ImageWordBankQuiz;
 
 /** A lesson containing multiple quizzes */
 export interface Lektion {
