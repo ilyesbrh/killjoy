@@ -198,11 +198,36 @@
       "wordBank": ["Deutschland", "Frankreich", "Österreich", "die Schweiz", "die Türkei"],
       "givenCard": 2,
       "cards": [
-        { "label": "A", "caption": "Brandenburger Tor", "answer": "Deutschland" },
-        { "label": "B", "caption": "Eiffelturm", "answer": "Frankreich" },
-        { "label": "C", "caption": "Stephansdom", "answer": "Österreich" },
-        { "label": "D", "caption": "Matterhorn", "answer": "die Schweiz" },
-        { "label": "E", "caption": "Hagia Sophia", "answer": "die Türkei" }
+        {
+          "label": "A",
+          "caption": "Brandenburger Tor",
+          "answer": "Deutschland",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Berlin_Brandenburg_Gate.JPG/400px-Berlin_Brandenburg_Gate.JPG"
+        },
+        {
+          "label": "B",
+          "caption": "Eiffelturm",
+          "answer": "Frankreich",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Eiffel_Tower_Paris_01.JPG/400px-Eiffel_Tower_Paris_01.JPG"
+        },
+        {
+          "label": "C",
+          "caption": "Stephansdom",
+          "answer": "Österreich",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Wien_-_Stephansdom.JPG/400px-Wien_-_Stephansdom.JPG"
+        },
+        {
+          "label": "D",
+          "caption": "Matterhorn",
+          "answer": "die Schweiz",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/3818_-_Riffelberg_-_Matterhorn_viewed_from_Gornergratbahn.JPG/400px-3818_-_Riffelberg_-_Matterhorn_viewed_from_Gornergratbahn.JPG"
+        },
+        {
+          "label": "E",
+          "caption": "Hagia Sophia",
+          "answer": "die Türkei",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Istanbul_Hagia_Sophia_Sultanahmed.JPG/400px-Istanbul_Hagia_Sophia_Sultanahmed.JPG"
+        }
       ]
     }
   ]
