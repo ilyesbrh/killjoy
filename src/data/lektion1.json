@@ -277,6 +277,89 @@
           "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Great_Wall_of_China_July_2006.JPG/400px-Great_Wall_of_China_July_2006.JPG"
         }
       ]
+    },
+    {
+      "type": "categorize",
+      "exerciseNumber": 7,
+      "reference": "KB 6a",
+      "section": "KOMMUNIKATION",
+      "title": "du oder Sie?",
+      "instruction": "Ordnen Sie zu.",
+      "categories": ["du", "Sie"],
+      "givenItems": [[0, 0]],
+      "items": [
+        {
+          "label": "1",
+          "description": "Junge Leute auf einer Party",
+          "correctCategory": 0
+        },
+        {
+          "label": "2",
+          "description": "Zwei Personen im Restaurant",
+          "correctCategory": 1
+        },
+        {
+          "label": "3",
+          "description": "Junge Leute beim Kaffee",
+          "correctCategory": 0
+        },
+        {
+          "label": "4",
+          "description": "An der Rezeption",
+          "correctCategory": 1
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 8,
+      "reference": "KB 6a",
+      "section": "KOMMUNIKATION",
+      "title": "du oder Sie?",
+      "instruction": "Kreuzen Sie an.",
+      "givenAnswer": 0,
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "Woher kommen ",
+            { "id": "7a", "options": ["du", "Sie"], "correct": 1 },
+            ", Herr Svendson?"
+          ]
+        },
+        {
+          "label": "b",
+          "segments": [
+            "Hallo, ich bin Tine. Und wer bist ",
+            { "id": "7b", "options": ["du", "Sie"], "correct": 0 },
+            "?"
+          ]
+        },
+        {
+          "label": "c",
+          "segments": [
+            "Kolja, woher kommst ",
+            { "id": "7c", "options": ["du", "Sie"], "correct": 0 },
+            "?"
+          ]
+        },
+        {
+          "label": "d",
+          "segments": [
+            "Frau Klein, woher kommen ",
+            { "id": "7d", "options": ["du", "Sie"], "correct": 1 },
+            "?"
+          ]
+        },
+        {
+          "label": "e",
+          "segments": [
+            "Woher kommst ",
+            { "id": "7e", "options": ["du", "Sie"], "correct": 0 },
+            ", Shema?"
+          ]
+        }
+      ]
     }
   ]
 }

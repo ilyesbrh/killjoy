@@ -98,13 +98,57 @@ export interface ImageWordBankQuiz {
   givenCard?: number;
 }
 
+/** "Ordnen Sie zu" — sort items into categories (e.g. du vs. Sie) */
+export interface CategorizeQuiz {
+  type: "categorize";
+  exerciseNumber: number;
+  reference?: string;
+  section?: string;
+  instruction: string;
+  title?: string;
+  categories: string[];
+  items: {
+    label: string;
+    description?: string;
+    image?: string;
+    correctCategory: number;
+  }[];
+  /** Pre-assigned hints: [itemIndex, categoryIndex] */
+  givenItems?: [number, number][];
+}
+
+/** An inline choice embedded in a sentence */
+export interface InlineChoice {
+  id: string;
+  options: string[];
+  correct: number;
+}
+
+/** "Kreuzen Sie an" — pick inline radio choices within sentences */
+export interface InlineChoiceQuiz {
+  type: "inline-choice";
+  exerciseNumber: number;
+  reference?: string;
+  section?: string;
+  instruction: string;
+  title?: string;
+  questions: {
+    label: string;
+    segments: (string | InlineChoice)[];
+  }[];
+  /** Index of a pre-answered question (as hint) */
+  givenAnswer?: number;
+}
+
 /** Union of all quiz types — extend this as we add more */
 export type Quiz =
   | WordBankFillQuiz
   | ReorderQuiz
   | MatchingQuiz
   | FillInBlankQuiz
-  | ImageWordBankQuiz;
+  | ImageWordBankQuiz
+  | CategorizeQuiz
+  | InlineChoiceQuiz;
 
 /** A lesson containing multiple quizzes */
 export interface Lektion {

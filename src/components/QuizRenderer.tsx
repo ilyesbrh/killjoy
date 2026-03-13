@@ -4,6 +4,8 @@ import Reorder from "./Reorder";
 import Matching from "./Matching";
 import FillInBlank from "./FillInBlank";
 import ImageWordBank from "./ImageWordBank";
+import Categorize from "./Categorize";
+import InlineChoice from "./InlineChoice";
 
 interface Props {
   quiz: Quiz;
@@ -26,6 +28,10 @@ export default function QuizRenderer({ quiz, onComplete }: Props) {
       return <FillInBlank quiz={quiz} onComplete={onComplete} />;
     case "image-word-bank":
       return <ImageWordBank quiz={quiz} onComplete={onComplete} />;
+    case "categorize":
+      return <Categorize quiz={quiz} onComplete={onComplete} />;
+    case "inline-choice":
+      return <InlineChoice quiz={quiz} onComplete={onComplete} />;
     default:
       return (
         <div className="p-4 text-red-600">
