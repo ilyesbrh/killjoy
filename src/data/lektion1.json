@@ -229,6 +229,54 @@
           "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/Istanbul_Hagia_Sophia_Sultanahmed.JPG/400px-Istanbul_Hagia_Sophia_Sultanahmed.JPG"
         }
       ]
+    },
+    {
+      "type": "image-word-bank",
+      "exerciseNumber": 6,
+      "reference": "KB 4",
+      "section": "BASISTRAINING",
+      "title": "Länder",
+      "instruction": "Welches Land passt? Ordnen Sie zu.",
+      "wordBank": ["USA", "Großbritannien", "Italien", "Ägypten", "Brasilien", "China"],
+      "givenCard": 0,
+      "cards": [
+        {
+          "label": "A",
+          "caption": "Statue of Liberty",
+          "answer": "USA",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Statue_of_Liberty_7.jpg/400px-Statue_of_Liberty_7.jpg"
+        },
+        {
+          "label": "B",
+          "caption": "Big Ben",
+          "answer": "Großbritannien",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Big_Ben_Elizabeth_Tower_Full_View.JPG/400px-Big_Ben_Elizabeth_Tower_Full_View.JPG"
+        },
+        {
+          "label": "C",
+          "caption": "Kolosseum",
+          "answer": "Italien",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/0_Colosseum_-_Rome_111001_%281%29.JPG/400px-0_Colosseum_-_Rome_111001_%281%29.JPG"
+        },
+        {
+          "label": "D",
+          "caption": "Pyramiden von Gizeh",
+          "answer": "Ägypten",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Giza-pyramids.JPG/400px-Giza-pyramids.JPG"
+        },
+        {
+          "label": "E",
+          "caption": "Cristo Redentor",
+          "answer": "Brasilien",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Christ_on_Corcovado_mountain.JPG/400px-Christ_on_Corcovado_mountain.JPG"
+        },
+        {
+          "label": "F",
+          "caption": "Chinesische Mauer",
+          "answer": "China",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Great_Wall_of_China_July_2006.JPG/400px-Great_Wall_of_China_July_2006.JPG"
+        }
+      ]
     }
   ]
 }
