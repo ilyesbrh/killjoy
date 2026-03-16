@@ -21,25 +21,36 @@ interface Props {
  * Extend the switch as new quiz types are added.
  */
 export default function QuizRenderer({ quiz, onComplete, onReset, stateKey }: Props) {
+  let content: React.ReactNode;
+
   switch (quiz.type) {
     case "word-bank-fill":
-      return <WordBankFill quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      content = <WordBankFill quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      break;
     case "reorder":
-      return <Reorder quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      content = <Reorder quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      break;
     case "matching":
-      return <Matching quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      content = <Matching quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      break;
     case "fill-in-blank":
-      return <FillInBlank quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      content = <FillInBlank quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      break;
     case "image-word-bank":
-      return <ImageWordBank quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      content = <ImageWordBank quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      break;
     case "categorize":
-      return <Categorize quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      content = <Categorize quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      break;
     case "inline-choice":
-      return <InlineChoice quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      content = <InlineChoice quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      break;
     case "write-sentences":
-      return <WriteSentences quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      content = <WriteSentences quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      break;
     case "table-fill":
-      return <TableFill quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      content = <TableFill quiz={quiz} onComplete={onComplete} onReset={onReset} stateKey={stateKey} />;
+      break;
     default:
       return (
         <div className="p-4 text-red-600">
@@ -47,4 +58,30 @@ export default function QuizRenderer({ quiz, onComplete, onReset, stateKey }: Pr
         </div>
       );
   }
+
+  return (
+    <>
+      {quiz.audio && <SoundCloudPlayer url={quiz.audio} />}
+      {content}
+    </>
+  );
+}
+
+function SoundCloudPlayer({ url }: { url: string }) {
+  const embedUrl = `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=%236366f1&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false`;
+
+  return (
+    <div className="max-w-2xl mx-auto px-6 mb-2">
+      <iframe
+        title="Audio"
+        width="100%"
+        height="80"
+        scrolling="no"
+        frameBorder="no"
+        allow="autoplay"
+        src={embedUrl}
+        className="rounded-lg"
+      />
+    </div>
+  );
 }

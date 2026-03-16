@@ -28,6 +28,8 @@ export interface WordBankFillQuiz {
   section?: string;
   /** Instruction text (e.g. "Ordnen Sie zu.") */
   instruction: string;
+  /** SoundCloud track URL for listening exercises */
+  audio?: string;
   /** Pool of words the user picks from */
   wordBank: string[];
   /** Groups of dialogue lines (each group is one conversation) */
@@ -41,6 +43,7 @@ export interface ReorderQuiz {
   reference?: string;
   section?: string;
   instruction: string;
+  audio?: string;
   /** Sentences displayed in scrambled order */
   sentences: string[];
   /** Correct order as indices into the sentences array (0-based) */
@@ -58,6 +61,7 @@ export interface MatchingQuiz {
   reference?: string;
   section?: string;
   instruction: string;
+  audio?: string;
   /** Left-side items with labels (a, b, c...) */
   left: { label: string; text: string }[];
   /** Right-side items (displayed in a fixed order) */
@@ -75,6 +79,7 @@ export interface FillInBlankQuiz {
   reference?: string;
   section?: string;
   instruction: string;
+  audio?: string;
   /** Labelled dialogue groups (e.g. "a", "b") */
   dialogues: { label?: string; lines: DialogueLine[] }[];
 }
@@ -86,6 +91,7 @@ export interface ImageWordBankQuiz {
   reference?: string;
   section?: string;
   instruction: string;
+  audio?: string;
   title?: string;
   wordBank: string[];
   cards: {
@@ -105,6 +111,7 @@ export interface CategorizeQuiz {
   reference?: string;
   section?: string;
   instruction: string;
+  audio?: string;
   title?: string;
   categories: string[];
   items: {
@@ -131,6 +138,7 @@ export interface InlineChoiceQuiz {
   reference?: string;
   section?: string;
   instruction: string;
+  audio?: string;
   title?: string;
   questions: {
     label: string;
@@ -147,6 +155,7 @@ export interface WriteSentencesQuiz {
   reference?: string;
   section?: string;
   instruction: string;
+  audio?: string;
   title?: string;
   cards: {
     label: string;
@@ -166,6 +175,7 @@ export interface TableFillQuiz {
   reference?: string;
   section?: string;
   instruction: string;
+  audio?: string;
   /** Column header verbs (e.g. ["heißen", "kommen", "sein"]) */
   columns: string[];
   /** Rows with a pronoun label and cells (pre-filled string or Blank) */
