@@ -1,26 +1,25 @@
-import { useState, useCallback } from "react";
+import { useCallback } from "react";
 import type { ReorderQuiz } from "../types/quiz";
+import { useQuizState } from "../useQuizState";
 
 interface Props {
   quiz: ReorderQuiz;
   onComplete?: (score: number, total: number) => void;
+  onReset?: () => void;
+  stateKey?: string;
 }
 
-export default function Reorder({ quiz, onComplete }: Props) {
+export default function Reorder({ quiz, onComplete, onReset, stateKey }: Props) {
   const total = quiz.sentences.length;
 
-  // assignments[i] = the order number (1-based) assigned to sentence i, or null
-  const [assignments, setAssignments] = useState<(number | null)[]>(() =>
-    quiz.sentences.map((_, i) => {
+  const [assignments, setAssignments] = useQuizState<(number | null)[]>(
+    stateKey ? `${stateKey}-a` : undefined,
+    () => quiz.sentences.map((_, i) => {
       if (quiz.givenFirst !== undefined && i === quiz.givenFirst) return 1;
       return null;
     })
   );
-  const [checked, setChecked] = useState(false);
-
-  // Next number to assign
-  const nextNumber =
-    Math.max(0, ...assignments.map((a) => a ?? 0)) + 1;
+  const [checked, setChecked] = useQuizState(stateKey ? `${stateKey}-c` : undefined, false);
 
   const handleClick = useCallback(
     (idx: number) => {
@@ -74,6 +73,7 @@ export default function Reorder({ quiz, onComplete }: Props) {
       })
     );
     setChecked(false);
+    onReset?.();
   };
 
   const allAssigned = assignments.every((a) => a !== null);

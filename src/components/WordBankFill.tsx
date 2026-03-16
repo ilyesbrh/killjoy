@@ -1,22 +1,22 @@
 import { useState, useCallback } from "react";
 import type { WordBankFillQuiz, Blank, DialogueLine } from "../types/quiz";
+import { useQuizState } from "../useQuizState";
 
 interface Props {
   quiz: WordBankFillQuiz;
   onComplete?: (score: number, total: number) => void;
+  onReset?: () => void;
+  stateKey?: string;
 }
 
 function isBlank(segment: string | Blank): segment is Blank {
   return typeof segment !== "string";
 }
 
-export default function WordBankFill({ quiz, onComplete }: Props) {
-  // Track which word is placed in which blank: blankId -> word
-  const [placements, setPlacements] = useState<Record<string, string>>({});
-  // Track which word bank item is currently selected
+export default function WordBankFill({ quiz, onComplete, onReset, stateKey }: Props) {
+  const [placements, setPlacements] = useQuizState<Record<string, string>>(stateKey ? `${stateKey}-p` : undefined, {});
+  const [checked, setChecked] = useQuizState(stateKey ? `${stateKey}-c` : undefined, false);
   const [selectedWord, setSelectedWord] = useState<string | null>(null);
-  // Track checked state
-  const [checked, setChecked] = useState(false);
 
   // Collect all blanks for scoring
   const allBlanks: Blank[] = quiz.dialogues
@@ -30,9 +30,6 @@ export default function WordBankFill({ quiz, onComplete }: Props) {
   const bankAvailability = quiz.wordBank.map((word, idx) => {
     const totalInBank = quiz.wordBank
       .slice(0, idx + 1)
-      .filter((w) => w === word).length;
-    const usedCount = placedWords
-      .slice(0, placedWords.length)
       .filter((w) => w === word).length;
     // For duplicate words, track per-occurrence
     const occurrencesUsed = placedWords.filter((w) => w === word).length;
@@ -92,6 +89,7 @@ export default function WordBankFill({ quiz, onComplete }: Props) {
     setPlacements({});
     setSelectedWord(null);
     setChecked(false);
+    onReset?.();
   };
 
   const getBlankStatus = (blank: Blank) => {

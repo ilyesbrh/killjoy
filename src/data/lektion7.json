@@ -1,0 +1,277 @@
+{
+  "lektion": 7,
+  "title": "Du kannst wirklich toll …!",
+  "quizzes": [
+    {
+      "type": "matching",
+      "exerciseNumber": 1,
+      "reference": "KB 2",
+      "section": "WÖRTER",
+      "instruction": "Ordnen Sie zu.",
+      "left": [
+        { "label": "a", "text": "Gitarre spielen" },
+        { "label": "b", "text": "Ski fahren" },
+        { "label": "c", "text": "singen" },
+        { "label": "d", "text": "backen" },
+        { "label": "e", "text": "Tennis spielen" },
+        { "label": "f", "text": "schwimmen" },
+        { "label": "g", "text": "kochen" }
+      ],
+      "right": [
+        "to play the guitar",
+        "to ski",
+        "to sing",
+        "to bake",
+        "to play tennis",
+        "to swim",
+        "to cook"
+      ],
+      "correctPairs": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6
+      }
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 2,
+      "reference": "KB 2",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie können in der richtigen Form.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Meine Schwester Lisa kann sehr gut malen."] },
+            { "speaker": "square", "segments": ["a Mama und Papa ", { "id": "2a", "answer": "können" }, " gut tanzen."] },
+            { "speaker": "square", "segments": ["b Mein Bruder Niklas ", { "id": "2b", "answer": "kann" }, " super Fußball spielen."] },
+            { "speaker": "square", "segments": ["c Oma und Opa ", { "id": "2c", "answer": "können" }, " sehr gut Schach spielen."] },
+            { "speaker": "square", "segments": ["d Und wir ", { "id": "2d", "answer": "können" }, " alle gut schwimmen."] },
+            { "speaker": "square", "segments": ["e Und ich? Ich ", { "id": "2e", "answer": "kann" }, " nicht gut malen, nicht tanzen, nicht Fußball spielen ..."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 3,
+      "reference": "KB 6",
+      "section": "STRUKTUREN",
+      "instruction": "Wer kann was? Kreuzen Sie an.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "Sie kann ",
+            { "id": "3a", "options": ["toll", "nicht so gut", "sehr gut", "gar nicht"], "correct": 0 },
+            " Ski fahren."
+          ]
+        },
+        {
+          "label": "b",
+          "segments": [
+            "Er kann ",
+            { "id": "3b", "options": ["toll", "nicht so gut", "sehr gut", "gar nicht"], "correct": 2 },
+            " schwimmen."
+          ]
+        },
+        {
+          "label": "c",
+          "segments": [
+            "Sie kann ",
+            { "id": "3c", "options": ["gut", "nicht gut", "ein bisschen"], "correct": 0 },
+            " singen."
+          ]
+        },
+        {
+          "label": "d",
+          "segments": [
+            "Er kann ",
+            { "id": "3d", "options": ["sehr gut", "ein bisschen", "gar nicht"], "correct": 1 },
+            " Rad fahren."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 4,
+      "reference": "KB 6",
+      "section": "KOMMUNIKATION",
+      "instruction": "Ordnen Sie zu.",
+      "wordBank": ["fast nie", "oft", "immer", "nie", "manchmal"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["100% → ", { "id": "4a", "answer": "immer" }] },
+          { "speaker": "square", "segments": ["75% → ", { "id": "4b", "answer": "oft" }] },
+          { "speaker": "square", "segments": ["25% → ", { "id": "4c", "answer": "manchmal" }] },
+          { "speaker": "square", "segments": ["5% → ", { "id": "4d", "answer": "fast nie" }] },
+          { "speaker": "square", "segments": ["0% → ", { "id": "4e", "answer": "nie" }] }
+        ]
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 5,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie die Verben in der richtigen Form.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Du ", { "id": "5a", "answer": "kannst" }, " gut backen. (können)"] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Mein Sohn ", { "id": "5b", "answer": "liest" }, " nicht gern. (lesen)"] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "5c", "answer": "Fährst" }, " du gern Auto? (fahren)"] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "5d", "answer": "Können" }, " wir Fußball spielen? (können)"] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "5e", "answer": "Triffst" }, " du heute deine Freunde? (treffen)"] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 6,
+      "section": "TEST",
+      "instruction": "Komplimente machen und sich bedanken. Ergänzen Sie.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Sie können wirklich ", { "id": "6a", "answer": "super" }, " schwimmen."] },
+            { "speaker": "triangle", "segments": [{ "id": "6b", "answer": "Herzlichen" }, " Dank!"] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Deine Augen sind so schön."] },
+            { "speaker": "triangle", "segments": ["Oh, ", { "id": "6c", "answer": "danke" }, "!"] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Du kannst ", { "id": "6d", "answer": "toll" }, " backen."] },
+            { "speaker": "triangle", "segments": [{ "id": "6e", "answer": "Vielen" }, " Dank."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Du kannst sehr g", { "id": "6f", "answer": "ut" }, " tanzen."] },
+            { "speaker": "triangle", "segments": ["Danke s", { "id": "6g", "answer": "ehr" }, "!"] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 7,
+      "section": "BASISTRAINING",
+      "instruction": "Ergänzen Sie den Chat.",
+      "wordBank": ["Leider kann ich nicht Ski fahren", "Was sind deine Hobbys", "Spielst du nicht gern Fußball", "das macht Spaß"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["Roll2000: Und was machst du so in der Freizeit?"] },
+          { "speaker": "triangle", "segments": ["sugar_333: Ich spiele gern Fußball."] },
+          { "speaker": "square", "segments": ["Roll2000: Wirklich? Aber du bist doch eine Frau. Oder???"] },
+          { "speaker": "triangle", "segments": ["sugar_333: Na klar! Frauen können auch Fußball spielen, oder? ", { "id": "7a", "answer": "Spielst du nicht gern Fußball" }, "?"] },
+          { "speaker": "square", "segments": ["Roll2000: Nein, nicht so gern."] },
+          { "speaker": "triangle", "segments": ["sugar_333: ", { "id": "7b", "answer": "Was sind deine Hobbys" }, "?"] },
+          { "speaker": "square", "segments": ["Roll2000: Ich fahre gern Ski und sehr oft Rad."] },
+          { "speaker": "triangle", "segments": ["sugar_333: ", { "id": "7c", "answer": "Leider kann ich nicht Ski fahren" }, ". Aber ich fahre auch gern Rad und ich lerne Boxen."] },
+          { "speaker": "square", "segments": ["Roll2000: Wow! Boxen!"] },
+          { "speaker": "triangle", "segments": ["sugar_333: ", { "id": "7d", "answer": "das macht Spaß" }, "!!! Aber ich kann noch nicht gut boxen. Keine Angst!"] }
+        ]
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 8,
+      "section": "BASISTRAINING",
+      "instruction": "Ergänzen Sie a/ä oder e/ie. Schreiben Sie das ganze Verb.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Ich spiele Fußball und fahre Ski. ", { "id": "8a1", "answer": "Fährst" }, " du auch Ski?"] },
+            { "speaker": "triangle", "segments": ["Nein. Ich ", { "id": "8a2", "answer": "lese" }, " lieber. Was ", { "id": "8a3", "answer": "liest" }, " du so?"] },
+            { "speaker": "square", "segments": ["Ich ", { "id": "8a4", "answer": "lese" }, " gern Krimis."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Was macht ihr heute Abend?"] },
+            { "speaker": "triangle", "segments": ["Wir ", { "id": "8b1", "answer": "treffen" }, " Carla."] },
+            { "speaker": "square", "segments": [{ "id": "8b2", "answer": "Trefft" }, " ihr auch Paul und Lisa?"] },
+            { "speaker": "triangle", "segments": ["Ja, wir gehen ins Kino."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 9,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie die Hobbys. (Tipp: Die Buchstaben sind durcheinander.)",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Meine Hobbys sind Musik hören, ", { "id": "9a1", "answer": "tanzen" }, " und ", { "id": "9a2", "answer": "Freunde treffen" }, "."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Meine Hobbys sind ", { "id": "9b1", "answer": "Fußball spielen" }, " und ", { "id": "9b2", "answer": "Rad fahren" }, "."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Wir ", { "id": "9c1", "answer": "lesen" }, ", ", { "id": "9c2", "answer": "fotografieren" }, " und ", { "id": "9c3", "answer": "backen" }, " gern."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 10,
+      "section": "TEST",
+      "instruction": "Was macht Niklas in seiner Freizeit? Ergänzen Sie.",
+      "wordBank": ["sehr oft", "nie", "oft", "manchmal"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["Niklas geht ", { "id": "10a", "answer": "manchmal" }, " ins Kino."] },
+          { "speaker": "square", "segments": [{ "id": "10b", "answer": "Oft" }, " surft er im Internet."] },
+          { "speaker": "square", "segments": ["Er spielt ", { "id": "10c", "answer": "nie" }, " Schach, aber er spielt ", { "id": "10d", "answer": "sehr oft" }, " Fußball."] }
+        ]
+      ]
+    }
+  ]
+}

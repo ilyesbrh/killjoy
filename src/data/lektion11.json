@@ -1,0 +1,270 @@
+{
+  "lektion": 11,
+  "title": "Was hast du heute gemacht?",
+  "quizzes": [
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 1,
+      "reference": "KB 2",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie um — am — von … bis — ab.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Am Montag frühstückt Lisa ", { "id": "1a", "answer": "um" }, " 7 Uhr."] },
+            { "speaker": "square", "segments": [{ "id": "1b", "answer": "Ab" }, " 8 Uhr arbeitet sie."] },
+            { "speaker": "square", "segments": [{ "id": "1c", "answer": "Von" }, " 18 ", { "id": "1d", "answer": "bis" }, " 19 Uhr kauft sie ein und kocht."] },
+            { "speaker": "square", "segments": [{ "id": "1e", "answer": "Am" }, " Abend geht sie mit Klaus ins Kino."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 2,
+      "reference": "KB 3",
+      "section": "STRUKTUREN",
+      "instruction": "Was machst du gern? Wie heißen die Verben?",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["NACHEM → ", { "id": "2a", "answer": "machen" }] },
+            { "speaker": "square", "segments": ["FAHLESCN → ", { "id": "2b", "answer": "schlafen" }] },
+            { "speaker": "square", "segments": ["HENFENERS → ", { "id": "2c", "answer": "fernsehen" }] },
+            { "speaker": "square", "segments": ["RAFEHN → ", { "id": "2d", "answer": "fahren" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 3,
+      "reference": "KB 5",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie haben und das Partizip.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Am Sonntag ", { "id": "3a1", "answer": "habe" }, " ich lange ", { "id": "3a2", "answer": "geschlafen" }, "."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Wo ", { "id": "3b1", "answer": "haben" }, " Sie Deutsch ", { "id": "3b2", "answer": "gelernt" }, "?"] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "3c1", "answer": "Hast" }, " du deine Schwester auch zu deiner Party ", { "id": "3c2", "answer": "eingeladen" }, "?"] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Was ", { "id": "3d1", "answer": "habt" }, " ihr zum Mittagessen ", { "id": "3d2", "answer": "gegessen" }, "?"] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": ["Gestern ", { "id": "3e1", "answer": "habe" }, " ich ein neues Fahrrad ", { "id": "3e2", "answer": "gekauft" }, "."] }
+          ]
+        },
+        {
+          "label": "f",
+          "lines": [
+            { "speaker": "square", "segments": ["Ich ", { "id": "3f1", "answer": "habe" }, " heute noch nicht Zeitung ", { "id": "3f2", "answer": "gelesen" }, "."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "categorize",
+      "exerciseNumber": 4,
+      "reference": "KB 5",
+      "section": "STRUKTUREN",
+      "instruction": "Ordnen Sie zu: (…)ge…t oder (…)ge…en?",
+      "categories": ["(…)ge…t", "(…)ge…en"],
+      "items": [
+        { "label": "gearbeitet → arbeiten", "correctCategory": 0 },
+        { "label": "gewohnt → wohnen", "correctCategory": 0 },
+        { "label": "gesucht → suchen", "correctCategory": 0 },
+        { "label": "gelernt → lernen", "correctCategory": 0 },
+        { "label": "gesagt → sagen", "correctCategory": 0 },
+        { "label": "eingekauft → einkaufen", "correctCategory": 0 },
+        { "label": "gesprochen → sprechen", "correctCategory": 1 },
+        { "label": "eingeladen → einladen", "correctCategory": 1 },
+        { "label": "geschrieben → schreiben", "correctCategory": 1 },
+        { "label": "gefunden → finden", "correctCategory": 1 },
+        { "label": "gesungen → singen", "correctCategory": 1 },
+        { "label": "gesehen → sehen", "correctCategory": 1 },
+        { "label": "getrunken → trinken", "correctCategory": 1 },
+        { "label": "angerufen → anrufen", "correctCategory": 1 },
+        { "label": "genommen → nehmen", "correctCategory": 1 }
+      ]
+    },
+    {
+      "type": "matching",
+      "exerciseNumber": 5,
+      "section": "TEST",
+      "instruction": "Was passt? Ordnen Sie zu.",
+      "left": [
+        { "label": "a", "text": "die Hausaufgaben" },
+        { "label": "b", "text": "Fahrrad" },
+        { "label": "c", "text": "Spanisch" },
+        { "label": "d", "text": "die Zeitung" },
+        { "label": "e", "text": "Freunde" },
+        { "label": "f", "text": "das Zimmer" }
+      ],
+      "right": [
+        "machen",
+        "fahren",
+        "lernen",
+        "lesen",
+        "einladen",
+        "aufräumen"
+      ],
+      "correctPairs": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      }
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 6,
+      "section": "TEST",
+      "instruction": "Schreiben Sie Sätze im Perfekt.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "6a1", "answer": "Hast" }, " du heute ", { "id": "6a2", "answer": "gearbeitet" }, "? (heute / arbeiten / du)"] },
+            { "speaker": "triangle", "segments": ["Ja, aber nur bis 14 Uhr."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "6b1", "answer": "Hast" }, " du Monika ", { "id": "6b2", "answer": "gesehen" }, "? (sehen / Monika / du)"] },
+            { "speaker": "triangle", "segments": ["Ja, letzte Woche."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Was ", { "id": "6c1", "answer": "hast" }, " du zum Frühstück ", { "id": "6c2", "answer": "gegessen" }, "? (zum Frühstück / essen / du)"] },
+            { "speaker": "triangle", "segments": ["Müsli."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Was ", { "id": "6d1", "answer": "hast" }, " du heute ", { "id": "6d2", "answer": "gemacht" }, "? (heute / machen / du)"] },
+            { "speaker": "triangle", "segments": ["Nicht viel. Ich ", { "id": "6d3", "answer": "habe" }, " bis 12 Uhr ", { "id": "6d4", "answer": "geschlafen" }, "."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 7,
+      "section": "BASISTRAINING",
+      "instruction": "Ergänzen Sie haben in der richtigen Form.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "7a", "answer": "Haben" }, " wir jetzt alles für die Party?"] },
+            { "speaker": "triangle", "segments": ["Ich denke ja."] },
+            { "speaker": "square", "segments": [{ "id": "7b", "answer": "Hast" }, " du auch Brot gekauft?"] },
+            { "speaker": "triangle", "segments": ["Ja klar. Das ", { "id": "7c", "answer": "habe" }, " ich doch heute Morgen schon gekauft."] },
+            { "speaker": "square", "segments": ["Und wo ist der Geburtstagskuchen?"] },
+            { "speaker": "triangle", "segments": ["Den Kuchen ", { "id": "7d", "answer": "hat" }, " Julia gebacken. Sie bringt ihn heute Abend zur Party mit."] },
+            { "speaker": "square", "segments": ["Sehr gut. Und was ", { "id": "7e", "answer": "haben" }, " wir zu trinken?"] },
+            { "speaker": "triangle", "segments": ["Wein, Mineralwasser und Saft."] },
+            { "speaker": "square", "segments": ["Super! Und wo ", { "id": "7f", "answer": "habt" }, " ihr das Geschenk für Julia?"] },
+            { "speaker": "triangle", "segments": ["Das ist noch in Claudias Auto."] },
+            { "speaker": "square", "segments": ["Gut, ich glaube, jetzt ", { "id": "7g", "answer": "haben" }, " wir wirklich alles."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 8,
+      "section": "BASISTRAINING",
+      "instruction": "Finden Sie die Partizipien und ergänzen Sie. Dennis hat letzten Freitag ...",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Musik ", { "id": "8b", "answer": "gehört" }] },
+            { "speaker": "square", "segments": ["Tennis ", { "id": "8c", "answer": "gespielt" }] },
+            { "speaker": "square", "segments": ["seine Freundin am Bahnhof ", { "id": "8d", "answer": "abgeholt" }] },
+            { "speaker": "square", "segments": ["Freunde in einem Café ", { "id": "8e", "answer": "getroffen" }] },
+            { "speaker": "square", "segments": ["Abendessen ", { "id": "8f", "answer": "gekocht" }] },
+            { "speaker": "square", "segments": ["in der Disco ", { "id": "8g", "answer": "getanzt" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 9,
+      "section": "BASISTRAINING",
+      "instruction": "Antworten Sie auf die SMS. Verwenden Sie das Perfekt.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Holst Du bitte Paula am Bahnhof ab?"] },
+            { "speaker": "triangle", "segments": ["Ich habe Paula schon ", { "id": "9a", "answer": "abgeholt" }, "."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Essen wir heute Abend zusammen?"] },
+            { "speaker": "triangle", "segments": ["Ja natürlich! Wir haben heute ", { "id": "9b", "answer": "eingekauft" }, " und kochen jetzt. Wir haben auch Susanne zum Essen ", { "id": "9c", "answer": "eingeladen" }, ". Ich habe super Wein ", { "id": "9d", "answer": "mitgebracht" }, "."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 10,
+      "section": "BASISTRAINING",
+      "instruction": "Richtig oder falsch? Lesen Sie die E-Mail und kreuzen Sie an. — Hallo Nina, ich habe im Mai bei einer neuen Firma als Marketing-Assistentin angefangen. Der Job ist sehr interessant und meine Kollegen sind sehr nett und lustig. In der Mittagspause essen wir immer zusammen, reden und lachen viel. Ich arbeite täglich von 8.30 Uhr bis 17.30 oder 18.00 Uhr. Nach der Arbeit gehe ich oft mit meinen Kollegen noch in eine Kneipe oder wir treffen uns bei meiner Kollegin Tamara. Sie hat viele nette Freunde, wie zum Beispiel Rainer. — Chiara",
+      "questions": [
+        { "label": "a", "segments": ["Chiara hat eine neue Arbeit. — ", { "id": "10a", "options": ["richtig", "falsch"], "correct": 0 }] },
+        { "label": "b", "segments": ["Sie hat viel Spaß mit ihren Kollegen. — ", { "id": "10b", "options": ["richtig", "falsch"], "correct": 0 }] },
+        { "label": "c", "segments": ["Sie arbeitet jeden Tag bis 19 Uhr. — ", { "id": "10c", "options": ["richtig", "falsch"], "correct": 1 }] },
+        { "label": "d", "segments": ["Sie geht am Abend immer mit ihren Kollegen in Kneipen. — ", { "id": "10d", "options": ["richtig", "falsch"], "correct": 1 }] },
+        { "label": "e", "segments": ["Sie besucht gern ihre Kollegin Tamara. — ", { "id": "10e", "options": ["richtig", "falsch"], "correct": 0 }] },
+        { "label": "f", "segments": ["Sie findet Rainer nett. — ", { "id": "10f", "options": ["richtig", "falsch"], "correct": 0 }] }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 11,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie den Chat. Schreiben Sie im Perfekt.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "triangle", "segments": ["NEYLA: Hallo Kelubia, wie geht's? Was hast Du heute alles gemacht?"] },
+            { "speaker": "square", "segments": ["Kelubia: Ach, ich habe lange geschlafen. Dann habe ich ", { "id": "11a", "answer": "eingekauft" }, "."] },
+            { "speaker": "square", "segments": ["Von 15 bis 17 Uhr habe ich Tennis ", { "id": "11b", "answer": "gespielt" }, "."] },
+            { "speaker": "square", "segments": ["Und Du? Was hast du ", { "id": "11c", "answer": "gemacht" }, "?"] },
+            { "speaker": "triangle", "segments": ["NEYLA: Am Vormittag habe ich mit Anna Deutsch ", { "id": "11d", "answer": "gelernt" }, ". Am Nachmittag habe ich ", { "id": "11e", "answer": "gearbeitet" }, "."] }
+          ]
+        }
+      ]
+    }
+  ]
+}

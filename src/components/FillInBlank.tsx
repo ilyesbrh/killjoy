@@ -1,22 +1,24 @@
-import { useState } from "react";
 import type { FillInBlankQuiz, Blank, DialogueLine } from "../types/quiz";
+import { useQuizState } from "../useQuizState";
 
 interface Props {
   quiz: FillInBlankQuiz;
   onComplete?: (score: number, total: number) => void;
+  onReset?: () => void;
+  stateKey?: string;
 }
 
 function isBlank(segment: string | Blank): segment is Blank {
   return typeof segment !== "string";
 }
 
-export default function FillInBlank({ quiz, onComplete }: Props) {
+export default function FillInBlank({ quiz, onComplete, onReset, stateKey }: Props) {
   const allBlanks: Blank[] = quiz.dialogues
     .flatMap((d) => d.lines)
     .flatMap((line) => line.segments.filter(isBlank));
 
-  const [answers, setAnswers] = useState<Record<string, string>>({});
-  const [checked, setChecked] = useState(false);
+  const [answers, setAnswers] = useQuizState<Record<string, string>>(stateKey ? `${stateKey}-a` : undefined, {});
+  const [checked, setChecked] = useQuizState(stateKey ? `${stateKey}-c` : undefined, false);
 
   const handleChange = (id: string, value: string) => {
     if (checked) return;
@@ -36,6 +38,7 @@ export default function FillInBlank({ quiz, onComplete }: Props) {
   const handleReset = () => {
     setAnswers({});
     setChecked(false);
+    onReset?.();
   };
 
   const getStatus = (blank: Blank) => {

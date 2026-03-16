@@ -1,0 +1,397 @@
+{
+  "lektion": 5,
+  "title": "Was ist das? — Das ist ein F.",
+  "quizzes": [
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 1,
+      "reference": "KB 2",
+      "section": "WÖRTER",
+      "instruction": "Ergänzen und vergleichen Sie.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["die Brille → ", { "id": "1a", "answer": "glasses" }, " (Englisch)"] },
+            { "speaker": "square", "segments": ["der Schlüssel → ", { "id": "1b", "answer": "key" }, " (Englisch)"] },
+            { "speaker": "square", "segments": ["die Flasche → ", { "id": "1c", "answer": "bottle" }, " (Englisch)"] },
+            { "speaker": "square", "segments": ["der Regenschirm → ", { "id": "1d", "answer": "umbrella" }, " (Englisch)"] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "categorize",
+      "exerciseNumber": 2,
+      "reference": "KB 3",
+      "section": "WÖRTER",
+      "instruction": "Ordnen Sie die Materialien zu.",
+      "categories": ["Glas", "Holz", "Metall", "Papier", "Plastik/Kunststoff"],
+      "items": [
+        { "label": "Flasche", "correctCategory": 0 },
+        { "label": "Tisch", "correctCategory": 1 },
+        { "label": "Schlüssel", "correctCategory": 2 },
+        { "label": "Buch", "correctCategory": 3 },
+        { "label": "Feuerzeug", "correctCategory": 4 }
+      ]
+    },
+    {
+      "type": "categorize",
+      "exerciseNumber": 3,
+      "reference": "KB 4",
+      "section": "WÖRTER",
+      "instruction": "Ordnen Sie die Farben zu.",
+      "categories": ["blau", "braun", "gelb", "grün", "orange", "rot", "schwarz", "weiß"],
+      "items": [
+        { "label": "Himmel", "description": "der Himmel", "correctCategory": 0 },
+        { "label": "Schokolade", "description": "die Schokolade", "correctCategory": 1 },
+        { "label": "Banane", "description": "die Banane", "correctCategory": 2 },
+        { "label": "Gras", "description": "das Gras", "correctCategory": 3 },
+        { "label": "Orange", "description": "die Orange", "correctCategory": 4 },
+        { "label": "Tomate", "description": "die Tomate", "correctCategory": 5 },
+        { "label": "Nacht", "description": "die Nacht", "correctCategory": 6 },
+        { "label": "Schnee", "description": "der Schnee", "correctCategory": 7 }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 4,
+      "section": "TRAINING: SCHREIBEN",
+      "instruction": "Formulare. Ordnen Sie zu.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Paul Paulsen → ", { "id": "4a", "answer": "Familienname" }] },
+            { "speaker": "square", "segments": ["Diplom-Ingenieur → ", { "id": "4b", "answer": "Beruf" }] },
+            { "speaker": "square", "segments": ["Resselstr. 15 → ", { "id": "4c", "answer": "Straße" }] },
+            { "speaker": "square", "segments": ["6020 Innsbruck → ", { "id": "4d", "answer": "PLZ" }, " und ", { "id": "4e", "answer": "Ort" }] },
+            { "speaker": "square", "segments": ["0043 / 676 - 37 20 207 → ", { "id": "4f", "answer": "Telefon" }] },
+            { "speaker": "square", "segments": ["paul@paul.at → ", { "id": "4g", "answer": "E-Mail" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 5,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie ein/eine/kein/keine.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Danke für die Hilfe."] },
+            { "speaker": "triangle", "segments": ["Bitte, das ist ", { "id": "5a", "answer": "kein" }, " Problem."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Wer ist Amelie?"] },
+            { "speaker": "triangle", "segments": ["Sie ist ", { "id": "5b", "answer": "eine" }, " Freundin von Sarah."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Hier ist der Bleistift!"] },
+            { "speaker": "triangle", "segments": ["Das ist doch ", { "id": "5c", "answer": "kein" }, " Bleistift, das ist ", { "id": "5d", "answer": "ein" }, " Kugelschreiber!"] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Wie heißt das Wort? 'Doch' oder 'noch'?"] },
+            { "speaker": "triangle", "segments": ["'Noch'. Das ist ", { "id": "5e", "answer": "ein" }, " 'n'."] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": ["Was kostet die Tasche?"] },
+            { "speaker": "triangle", "segments": ["Das ist ", { "id": "5f", "answer": "keine" }, " Tasche, das ist ", { "id": "5g", "answer": "eine" }, " Geldbörse."] }
+          ]
+        },
+        {
+          "label": "f",
+          "lines": [
+            { "speaker": "square", "segments": ["Wie heißt das auf Deutsch?"] },
+            { "speaker": "triangle", "segments": ["Das ist ", { "id": "5h", "answer": "ein" }, " Fotoapparat."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 6,
+      "section": "BASISTRAINING",
+      "instruction": "Ergänzen Sie ein/ein/eine und der/das/die.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Hier ist ", { "id": "6a1", "answer": "ein" }, " Feuerzeug. ", { "id": "6a2", "answer": "Das" }, " Feuerzeug ist praktisch."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Das ist ", { "id": "6b1", "answer": "eine" }, " Kinderbrille. ", { "id": "6b2", "answer": "Die" }, " Brille ist sehr leicht."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Hier ist ", { "id": "6c1", "answer": "ein" }, " Fotoapparat. ", { "id": "6c2", "answer": "Der" }, " Fotoapparat kostet 299 Euro."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Hier ist ", { "id": "6d1", "answer": "eine" }, " Kette. ", { "id": "6d2", "answer": "Die" }, " Kette ist modern."] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": ["Das ist ", { "id": "6e1", "answer": "ein" }, " Buch. ", { "id": "6e2", "answer": "Das" }, " Buch ist interessant."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 7,
+      "section": "BASISTRAINING",
+      "instruction": "Was ist richtig? Markieren Sie.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": ["Guten Tag. Ich brauche ", { "id": "7a", "options": ["eine", "die"], "correct": 0 }, " Brille."]
+        },
+        {
+          "label": "b",
+          "segments": ["Was kostet ", { "id": "7b1", "options": ["eine", "die"], "correct": 1 }, " Couch? — ", { "id": "7b2", "options": ["Eine", "Die"], "correct": 1 }, " Couch kostet 299 Euro."]
+        },
+        {
+          "label": "c",
+          "segments": ["Wo ist ", { "id": "7c", "options": ["ein", "der"], "correct": 1 }, " Schlüssel? — Hier ist er!"]
+        },
+        {
+          "label": "d",
+          "segments": ["Ist ", { "id": "7d", "options": ["ein", "das"], "correct": 1 }, " Buch gut? — Ja, sehr gut."]
+        }
+      ],
+      "givenAnswer": 0
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 8,
+      "section": "BASISTRAINING",
+      "instruction": "Ergänzen Sie ein – eine – kein – keine.",
+      "dialogues": [
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Das ist ", { "id": "8b1", "answer": "kein" }, " Sofa. — Das ist ", { "id": "8b2", "answer": "ein" }, " Sofa."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Das ist ", { "id": "8c1", "answer": "kein" }, " Sonderangebot. — Das ist ", { "id": "8c2", "answer": "ein" }, " Sonderangebot."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Das ist ", { "id": "8d1", "answer": "keine" }, " Stadt. — Das ist ", { "id": "8d2", "answer": "eine" }, " Stadt."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 9,
+      "section": "BASISTRAINING",
+      "instruction": "Was ist das? Was glauben Sie? Ergänzen Sie.",
+      "dialogues": [
+        {
+          "label": "2",
+          "lines": [
+            { "speaker": "square", "segments": ["Was ist das? Eine Kette? Eine Flasche?"] },
+            { "speaker": "triangle", "segments": ["Das ist ", { "id": "9a1", "answer": "keine" }, " Kette, das ist ", { "id": "9a2", "answer": "eine" }, " Flasche."] }
+          ]
+        },
+        {
+          "label": "3",
+          "lines": [
+            { "speaker": "square", "segments": ["Was ist das? Ein Schrank? Ein Tisch?"] },
+            { "speaker": "triangle", "segments": ["Das ist ", { "id": "9b1", "answer": "kein" }, " Schrank, das ist ", { "id": "9b2", "answer": "ein" }, " Tisch."] }
+          ]
+        },
+        {
+          "label": "4",
+          "lines": [
+            { "speaker": "square", "segments": ["Was ist das? Eine Brille? Eine Lampe?"] },
+            { "speaker": "triangle", "segments": ["Das ist ", { "id": "9c1", "answer": "keine" }, " Brille, das ist ", { "id": "9c2", "answer": "eine" }, " Lampe."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 10,
+      "section": "BASISTRAINING",
+      "instruction": "nicht oder kein-? Kreuzen Sie an.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": ["Das ist ", { "id": "10a", "options": ["nicht", "keine"], "correct": 0 }, " schwer."]
+        },
+        {
+          "label": "b",
+          "segments": ["Ich habe ", { "id": "10b", "options": ["nicht", "keine"], "correct": 1 }, " Kinder."]
+        },
+        {
+          "label": "c",
+          "segments": ["Ich finde das Sofa ", { "id": "10c", "options": ["nicht", "kein"], "correct": 0 }, " schön."]
+        },
+        {
+          "label": "d",
+          "segments": ["Ich lebe ", { "id": "10d", "options": ["nicht", "keine"], "correct": 0 }, " in Deutschland."]
+        },
+        {
+          "label": "e",
+          "segments": ["Das ist ", { "id": "10e", "options": ["nicht", "kein"], "correct": 0 }, " richtig."]
+        }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 11,
+      "section": "BASISTRAINING",
+      "instruction": "Ordnen Sie zu, ergänzen und vergleichen Sie.",
+      "wordBank": ["keine", "kein", "nicht", "nicht"],
+      "dialogues": [
+        [{ "speaker": "square", "segments": ["Das ist ", { "id": "11a", "answer": "keine" }, " Flasche."] }],
+        [{ "speaker": "square", "segments": ["Das ist ", { "id": "11b", "answer": "kein" }, " Schlüssel."] }],
+        [{ "speaker": "square", "segments": ["Ich bin ", { "id": "11c", "answer": "nicht" }, " verheiratet."] }],
+        [{ "speaker": "square", "segments": ["Ich komme ", { "id": "11d", "answer": "nicht" }, " aus Graz."] }]
+      ]
+    },
+    {
+      "type": "matching",
+      "exerciseNumber": 12,
+      "section": "BASISTRAINING",
+      "instruction": "Ordnen Sie zu. Was ist aus welchem Material?",
+      "left": [
+        { "label": "a", "text": "Die Lampe" },
+        { "label": "b", "text": "Der Stuhl" },
+        { "label": "c", "text": "Das Buch" },
+        { "label": "d", "text": "Die Flasche" },
+        { "label": "e", "text": "Der Schlüssel" }
+      ],
+      "right": ["ist aus Metall.", "ist aus Plastik.", "ist aus Glas.", "ist aus Papier.", "ist aus Holz."],
+      "correctPairs": { "0": 1, "1": 4, "2": 3, "3": 2, "4": 0 }
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 13,
+      "section": "BASISTRAINING",
+      "instruction": "Wie schreibt man das? Ordnen Sie zu.",
+      "wordBank": ["heißt", "schreibt", "bitte", "kein Problem"],
+      "dialogues": [
+        [{ "speaker": "square", "segments": ["Wie ", { "id": "13a", "answer": "heißt" }, " das auf Deutsch?"] }],
+        [{ "speaker": "square", "segments": ["Wie ", { "id": "13b", "answer": "schreibt" }, " man das?"] }],
+        [{ "speaker": "square", "segments": ["Wie ", { "id": "13c", "answer": "bitte" }, "?"] }],
+        [{ "speaker": "square", "segments": ["Bitteschön, ", { "id": "13d", "answer": "kein Problem" }, "."] }]
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 14,
+      "section": "TRAINING: SCHREIBEN",
+      "instruction": "Lesen Sie die Informationen über Jurj Kulintsev und ergänzen Sie die Kundenkarte. — Jurj Kulintsev kommt aus Russland. Jetzt wohnt er zusammen mit seiner Frau in der Schweiz, in der Helvetiastraße 18 in 3005 Bern. Er arbeitet als Programmierer bei DATNET.",
+      "dialogues": [
+        {
+          "label": "Kundenkarte",
+          "lines": [
+            { "speaker": "square", "segments": ["Vorname: ", { "id": "14a", "answer": "Jurj" }] },
+            { "speaker": "square", "segments": ["PLZ, Ort: ", { "id": "14b", "answer": "3005" }, " ", { "id": "14c", "answer": "Bern" }] },
+            { "speaker": "square", "segments": ["Beruf: ", { "id": "14d", "answer": "Programmierer" }] },
+            { "speaker": "square", "segments": ["Straße: ", { "id": "14e", "answer": "Helvetiastraße 18" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "categorize",
+      "exerciseNumber": 15,
+      "section": "TEST",
+      "instruction": "Ordnen Sie die Wörter zu.",
+      "categories": ["Farben", "Formen", "Gegenstände", "Materialien"],
+      "items": [
+        { "label": "blau", "correctCategory": 0 },
+        { "label": "orange", "correctCategory": 0 },
+        { "label": "eckig", "correctCategory": 1 },
+        { "label": "rund", "correctCategory": 1 },
+        { "label": "Feuerzeug", "correctCategory": 2 },
+        { "label": "Seife", "correctCategory": 2 },
+        { "label": "Kunststoff", "correctCategory": 3 },
+        { "label": "Metall", "correctCategory": 3 }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 16,
+      "section": "TEST",
+      "instruction": "Kreuzen Sie an: richtig oder falsch?",
+      "questions": [
+        {
+          "label": "a",
+          "segments": ["Familienname: Maria — ", { "id": "16a", "options": ["richtig", "falsch"], "correct": 1 }]
+        },
+        {
+          "label": "b",
+          "segments": ["Postleitzahl: 6003 — ", { "id": "16b", "options": ["richtig", "falsch"], "correct": 0 }]
+        },
+        {
+          "label": "c",
+          "segments": ["Wohnort: Luzern — ", { "id": "16c", "options": ["richtig", "falsch"], "correct": 0 }]
+        },
+        {
+          "label": "d",
+          "segments": ["Straße: Bahnhofstr. — ", { "id": "16d", "options": ["richtig", "falsch"], "correct": 0 }]
+        },
+        {
+          "label": "e",
+          "segments": ["Geburtsdatum: 3066 — ", { "id": "16e", "options": ["richtig", "falsch"], "correct": 1 }]
+        },
+        {
+          "label": "f",
+          "segments": ["E-Mail: evali@t-on.ch — ", { "id": "16f", "options": ["richtig", "falsch"], "correct": 0 }]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 17,
+      "section": "TEST",
+      "instruction": "Was sagen die Personen? Ergänzen Sie.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Entschuldigung, 'a biro', ", { "id": "17a", "answer": "wie" }, " ", { "id": "17b", "answer": "heißt" }, " ", { "id": "17c", "answer": "das" }, " auf Deutsch?"] },
+            { "speaker": "triangle", "segments": ["Ah, ", { "id": "17d", "answer": "das" }, " ", { "id": "17e", "answer": "ist" }, " ein Kugelschreiber."] },
+            { "speaker": "square", "segments": [{ "id": "17f", "answer": "Wie" }, " ", { "id": "17g", "answer": "bitte" }, "?"] },
+            { "speaker": "triangle", "segments": ["Ein Kugelschreiber."] },
+            { "speaker": "square", "segments": ["Ah, danke. Und noch eine Frage, ", { "id": "17h", "answer": "wie" }, " ", { "id": "17i", "answer": "schreibt" }, " ", { "id": "17j", "answer": "man" }, " das?"] },
+            { "speaker": "triangle", "segments": ["K-U-G-E-L-S-C-H-R-E-I-B-E-R."] },
+            { "speaker": "square", "segments": ["Vielen ", { "id": "17k", "answer": "Dank" }, "!"] },
+            { "speaker": "triangle", "segments": ["Bitte, kein ", { "id": "17l", "answer": "Problem" }, "!"] }
+          ]
+        }
+      ]
+    }
+  ]
+}

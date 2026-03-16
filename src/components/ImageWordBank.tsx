@@ -1,22 +1,25 @@
 import { useState, useCallback } from "react";
 import type { ImageWordBankQuiz } from "../types/quiz";
+import { useQuizState } from "../useQuizState";
 
 interface Props {
   quiz: ImageWordBankQuiz;
   onComplete?: (score: number, total: number) => void;
+  onReset?: () => void;
+  stateKey?: string;
 }
 
-export default function ImageWordBank({ quiz, onComplete }: Props) {
+export default function ImageWordBank({ quiz, onComplete, onReset, stateKey }: Props) {
   const total = quiz.cards.length;
 
   // cardIndex -> word placed
-  const [placements, setPlacements] = useState<Record<number, string>>(() => {
+  const [placements, setPlacements] = useQuizState<Record<number, string>>(stateKey ? `${stateKey}-p` : undefined, () => {
     if (quiz.givenCard !== undefined)
       return { [quiz.givenCard]: quiz.cards[quiz.givenCard].answer };
     return {};
   });
   const [selectedWord, setSelectedWord] = useState<string | null>(null);
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useQuizState(stateKey ? `${stateKey}-c` : undefined, false);
 
   const placedWords = Object.values(placements);
 
@@ -82,6 +85,7 @@ export default function ImageWordBank({ quiz, onComplete }: Props) {
     });
     setSelectedWord(null);
     setChecked(false);
+    onReset?.();
   };
 
   const allFilled = quiz.cards.every((_, i) => placements[i] !== undefined);

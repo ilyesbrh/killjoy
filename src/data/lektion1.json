@@ -492,6 +492,586 @@
           ]
         }
       ]
+    },
+    {
+      "type": "table-fill",
+      "exerciseNumber": 10,
+      "reference": "KB 7",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie und markieren Sie die Endungen.",
+      "columns": ["heißen", "kommen", "sein"],
+      "rows": [
+        {
+          "label": "ich",
+          "cells": [
+            "heiße",
+            { "id": "10a", "answer": "komme" },
+            "bin"
+          ]
+        },
+        {
+          "label": "du",
+          "cells": [
+            { "id": "10b", "answer": "heißt" },
+            { "id": "10c", "answer": "kommst" },
+            { "id": "10d", "answer": "bist" }
+          ]
+        },
+        {
+          "label": "Sie",
+          "cells": [
+            { "id": "10e", "answer": "heißen" },
+            { "id": "10f", "answer": "kommen" },
+            { "id": "10g", "answer": "sind" }
+          ]
+        },
+        {
+          "label": "er/sie",
+          "cells": [
+            { "id": "10h", "answer": "heißt" },
+            { "id": "10i", "answer": "kommt" },
+            { "id": "10j", "answer": "ist" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 11,
+      "reference": "KB 7",
+      "section": "STRUKTUREN",
+      "instruction": "Was ist richtig? Markieren Sie.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "Wer ",
+            { "id": "11a", "options": ["bist", "ist", "sind"], "correct": 0 },
+            " das?"
+          ]
+        },
+        {
+          "label": "b",
+          "segments": [
+            "Das ",
+            { "id": "11b", "options": ["bin", "sind", "ist"], "correct": 2 },
+            " Frau Wachter."
+          ]
+        },
+        {
+          "label": "c",
+          "segments": [
+            "Woher ",
+            { "id": "11c", "options": ["komme", "kommst", "kommen"], "correct": 2 },
+            " Sie?"
+          ]
+        },
+        {
+          "label": "d",
+          "segments": [
+            "Peter ",
+            { "id": "11d", "options": ["komme", "kommst", "kommt"], "correct": 2 },
+            " aus Spanien."
+          ]
+        },
+        {
+          "label": "e",
+          "segments": [
+            "Woher ",
+            { "id": "11e", "options": ["kommst", "kommt", "kommen"], "correct": 2 },
+            " Frau Wallander?"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "exerciseNumber": 12,
+      "reference": "KB 8",
+      "section": "KOMMUNIKATION",
+      "instruction": "Wie geht's? Ordnen Sie zu.",
+      "left": [
+        { "label": "a", "text": "😄" },
+        { "label": "b", "text": "🙂" },
+        { "label": "c", "text": "😐" },
+        { "label": "d", "text": "😟" },
+        { "label": "e", "text": "😊" }
+      ],
+      "right": [
+        "Nicht so gut.",
+        "Sehr gut, danke.",
+        "Super gut!",
+        "Es geht.",
+        "Gut, danke."
+      ],
+      "correctPairs": {
+        "0": 2,
+        "1": 4,
+        "2": 3,
+        "3": 0,
+        "4": 1
+      },
+      "givenPair": { "left": 0, "right": 2 }
+    },
+    {
+      "type": "categorize",
+      "exerciseNumber": 13,
+      "reference": "KB 8",
+      "section": "KOMMUNIKATION",
+      "instruction": "Begrüßung und Abschied — Ordnen Sie zu.",
+      "categories": ["Begrüßung", "Abschied"],
+      "items": [
+        { "label": "Hallo", "image": "/greeting_hallo.png", "correctCategory": 0 },
+        { "label": "Auf Wiedersehen", "image": "/greeting_auf-wiedersehen.png", "correctCategory": 1 },
+        { "label": "Guten Tag", "image": "/greeting_guten-tag.png", "correctCategory": 0 },
+        { "label": "Tschüs", "image": "/greeting_tschuess.png", "correctCategory": 1 },
+        { "label": "Guten Morgen", "image": "/greeting_guten-morgen.png", "correctCategory": 0 },
+        { "label": "Gute Nacht", "image": "/greeting_gute-nacht.png", "correctCategory": 1 },
+        { "label": "Guten Abend", "image": "/greeting_guten-abend.png", "correctCategory": 0 }
+      ],
+      "givenItems": [[0, 0]]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 14,
+      "reference": "KB 8",
+      "section": "KOMMUNIKATION",
+      "instruction": "Ergänzen Sie.",
+      "wordBank": ["Und wie geht es dir?", "Und Ihnen?", "Wie geht es Ihnen?", "Wie geht's?"],
+      "dialogues": [
+        [
+          {
+            "speaker": "square",
+            "segments": [
+              "Guten Tag Herr Stein! ",
+              { "id": "14a1", "answer": "Wie geht es Ihnen?" }
+            ]
+          },
+          {
+            "speaker": "triangle",
+            "segments": [
+              "Gut, danke. ",
+              { "id": "14a2", "answer": "Und Ihnen?" }
+            ]
+          },
+          {
+            "speaker": "square",
+            "segments": ["Auch gut."]
+          }
+        ],
+        [
+          {
+            "speaker": "square",
+            "segments": [
+              "Hallo Svenja! ",
+              { "id": "14b1", "answer": "Wie geht's?" }
+            ]
+          },
+          {
+            "speaker": "triangle",
+            "segments": [
+              "Sehr gut! ",
+              { "id": "14b2", "answer": "Und wie geht es dir?" }
+            ]
+          },
+          {
+            "speaker": "square",
+            "segments": ["Ach, nicht so gut."]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 15,
+      "section": "TRAINING: HÖREN",
+      "instruction": "Ergänzen Sie in den Fragen: wie, woher oder wer?",
+      "wordBank": ["Wie", "Woher", "Wer"],
+      "dialogues": [
+        [
+          {
+            "speaker": "square",
+            "segments": [
+              "Wie heißt du?"
+            ]
+          },
+          {
+            "speaker": "triangle",
+            "segments": [
+              "Mein Name ist Miguel Muroz."
+            ]
+          }
+        ],
+        [
+          {
+            "speaker": "square",
+            "segments": [
+              { "id": "15a", "answer": "Woher" },
+              " kommst du?"
+            ]
+          },
+          {
+            "speaker": "triangle",
+            "segments": ["Aus Spanien."]
+          }
+        ],
+        [
+          {
+            "speaker": "square",
+            "segments": [
+              "Und ",
+              { "id": "15b", "answer": "wer" },
+              " ist das?"
+            ]
+          },
+          {
+            "speaker": "triangle",
+            "segments": ["Das ist Frau Burgos."]
+          }
+        ],
+        [
+          {
+            "speaker": "square",
+            "segments": [
+              "Hallo, Frau Burgos. ",
+              { "id": "15c", "answer": "Wie" },
+              " geht es Ihnen?"
+            ]
+          },
+          {
+            "speaker": "triangle",
+            "segments": ["Gut, danke. Und Ihnen?"]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "matching",
+      "exerciseNumber": 16,
+      "section": "TRAINING: HÖREN",
+      "instruction": "Ordnen Sie die passenden Antworten zu.",
+      "left": [
+        { "label": "1", "text": "Wie heißt du?" },
+        { "label": "2", "text": "Woher kommst du?" },
+        { "label": "3", "text": "Und wer ist das?" },
+        { "label": "4", "text": "Wie geht es Ihnen?" }
+      ],
+      "right": [
+        "Ich heiße Miguel. / Ich komme aus Spanien.",
+        "Aus Spanien.",
+        "Das ist Frau Burgos. / Das ist Anna Burgos.",
+        "Gut, danke. Und Ihnen? / Danke, gut."
+      ],
+      "correctPairs": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3
+      }
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 17,
+      "section": "TEST",
+      "instruction": "Was passt zusammen? Ordnen Sie zu.",
+      "wordBank": ["Abend", "Morgen", "Auf", "Guten", "Nacht", "Gute", "Guten", "Wiedersehen", "Tag", "Guten"],
+      "dialogues": [
+        [
+          {
+            "speaker": "square",
+            "segments": [
+              "Guten ",
+              { "id": "t1a", "answer": "Tag" }
+            ]
+          }
+        ],
+        [
+          {
+            "speaker": "square",
+            "segments": [
+              { "id": "t1b1", "answer": "Guten" },
+              " ",
+              { "id": "t1b2", "answer": "Morgen" }
+            ]
+          }
+        ],
+        [
+          {
+            "speaker": "square",
+            "segments": [
+              { "id": "t1c1", "answer": "Guten" },
+              " ",
+              { "id": "t1c2", "answer": "Abend" }
+            ]
+          }
+        ],
+        [
+          {
+            "speaker": "square",
+            "segments": [
+              { "id": "t1d1", "answer": "Gute" },
+              " ",
+              { "id": "t1d2", "answer": "Nacht" }
+            ]
+          }
+        ],
+        [
+          {
+            "speaker": "square",
+            "segments": [
+              { "id": "t1e1", "answer": "Auf" },
+              " ",
+              { "id": "t1e2", "answer": "Wiedersehen" }
+            ]
+          }
+        ]
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 18,
+      "section": "TEST",
+      "instruction": "Was ist richtig? Kreuzen Sie an.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "Hallo, ",
+            { "id": "t2a1", "options": ["wer", "bist", "kommst"], "correct": 0 },
+            " bist du? — Ich ",
+            { "id": "t2a2", "options": ["bin", "komme"], "correct": 0 },
+            " Max."
+          ]
+        },
+        {
+          "label": "b",
+          "segments": [
+            "Und der ",
+            { "id": "t2b1", "options": ["Familienname", "Vorname"], "correct": 0 },
+            "? — Wachter."
+          ]
+        },
+        {
+          "label": "c",
+          "segments": [
+            { "id": "t2c1", "options": ["Woher", "Wie"], "correct": 0 },
+            " kommst du? — Aus ",
+            { "id": "t2c2", "options": ["Aus dem", ""], "correct": 0 },
+            " Österreich."
+          ]
+        },
+        {
+          "label": "d",
+          "segments": [
+            "Und ",
+            { "id": "t2d1", "options": ["was", "wie"], "correct": 1 },
+            " geht es dir? — Nein. Sehr gut!"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 19,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie die Verben in der richtigen Form.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            {
+              "speaker": "square",
+              "segments": [
+                "Wie ",
+                { "id": "t3a1", "answer": "heißt" },
+                " du? (heißen)"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": [
+                "Ich ",
+                { "id": "t3a2", "answer": "heiße" },
+                " Marie. (heißen)"
+              ]
+            },
+            {
+              "speaker": "square",
+              "segments": [
+                "Und woher ",
+                { "id": "t3a3", "answer": "kommst" },
+                " du? (kommen)"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": ["Aus der Schweiz."]
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            {
+              "speaker": "square",
+              "segments": [
+                "Und wie ",
+                { "id": "t3b1", "answer": "heißen" },
+                " Sie? (heißen)"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": ["Juana Weinrich."]
+            },
+            {
+              "speaker": "square",
+              "segments": [
+                "Woher ",
+                { "id": "t3b2", "answer": "kommen" },
+                " Sie? (kommen)"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": ["Aus der Schweiz."]
+            }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            {
+              "speaker": "square",
+              "segments": [
+                "Wer ",
+                { "id": "t3c1", "answer": "bist" },
+                " du? (sein)"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": [
+                "Ich ",
+                { "id": "t3c2", "answer": "bin" },
+                " Paco. (sein)"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            {
+              "speaker": "square",
+              "segments": [
+                "Wer ",
+                { "id": "t3d1", "answer": "ist" },
+                " das? (sein)"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": [
+                "Frau Delgado. Sie ",
+                { "id": "t3d2", "answer": "kommt" },
+                " aus Spanien. (kommen)"
+              ]
+            }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            {
+              "speaker": "square",
+              "segments": [
+                "Woher ",
+                { "id": "t3e1", "answer": "kommen" },
+                " Sie? (kommen)"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": [
+                "Ich ",
+                { "id": "t3e2", "answer": "komme" },
+                " aus Deutschland. (kommen)"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 20,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            {
+              "speaker": "square",
+              "segments": [
+                "Hallo Susi, ",
+                { "id": "t4a1", "answer": "wie geht es dir" },
+                "?"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": ["Gut, danke."]
+            },
+            {
+              "speaker": "square",
+              "segments": [
+                "Und ",
+                { "id": "t4a2", "answer": "dir" },
+                "?"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": ["Auch gut."]
+            }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            {
+              "speaker": "square",
+              "segments": [
+                "Guten Morgen Herr Bux, und ",
+                { "id": "t4b1", "answer": "Ihnen" },
+                "?"
+              ]
+            },
+            {
+              "speaker": "triangle",
+              "segments": ["Gut, danke."]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "reorder",
+      "exerciseNumber": 21,
+      "section": "TEST",
+      "instruction": "Ordnen Sie und schreiben Sie Gespräche.",
+      "givenFirst": 0,
+      "sentences": [
+        "Ich bin Elisa, und du?",
+        "Ich heiße Johanna.",
+        "Ich komme aus Italien, und du?",
+        "Aus der Türkei.",
+        "Wie geht's?",
+        "Sehr gut. Und dir?"
+      ],
+      "correctOrder": [0, 1, 2, 3, 4, 5]
     }
   ]
 }

@@ -1,0 +1,183 @@
+{
+  "lektion": 10,
+  "title": "Ich steige jetzt in die U-Bahn ein.",
+  "quizzes": [
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 1,
+      "reference": "KB 2",
+      "section": "WÖRTER",
+      "instruction": "Wie heißen die Wörter? Ergänzen Sie.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Wann sind wir am ", { "id": "1a", "answer": "Flughafen" }, "? — In 40 Minuten."] },
+            { "speaker": "square", "segments": ["Wie heißt der nächste ", { "id": "1b", "answer": "Halt" }, "? — Mönckebergstraße."] },
+            { "speaker": "square", "segments": [{ "id": "1c", "answer": "Vorsicht" }, " an der Bahnsteigkante."] },
+            { "speaker": "square", "segments": ["Ich suche die U2 zum Olympiazentrum."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 2,
+      "reference": "KB 3",
+      "section": "STRUKTUREN",
+      "instruction": "Markieren Sie die Verben und notieren Sie den Infinitiv.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Frau Alvarez kommt um 17.35 Uhr am Flughafen an. → ", { "id": "2a", "answer": "ankommen" }] },
+            { "speaker": "square", "segments": ["Ich steige am Kolumbusplatz aus. → ", { "id": "2b", "answer": "aussteigen" }] },
+            { "speaker": "square", "segments": ["Ich rufe dich an. → ", { "id": "2c", "answer": "anrufen" }] },
+            { "speaker": "square", "segments": ["Ich kaufe heute ein. → ", { "id": "2d", "answer": "einkaufen" }] },
+            { "speaker": "square", "segments": ["Wir sehen fern. → ", { "id": "2e", "answer": "fernsehen" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 3,
+      "reference": "KB 5",
+      "section": "STRUKTUREN",
+      "instruction": "Trennbar oder nicht? Ergänzen Sie, wo nötig.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Steigt ihr am Goetheplatz ", { "id": "3a", "answer": "ein" }, "? (einsteigen)"] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Wann telefonierst du mit Oma? (telefonieren)"] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Heute Abend sehen wir ", { "id": "3c", "answer": "fern" }, ". Kommst du auch? (fernsehen)"] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Wo steigst du ", { "id": "3d", "answer": "um" }, "? (umsteigen)"] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": ["Am Sonntag frühstücke ich erst um 12 Uhr. (frühstücken)"] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "exerciseNumber": 4,
+      "reference": "KB 6",
+      "section": "WÖRTER",
+      "instruction": "Ergänzen und vergleichen Sie: Verkehrsmittel.",
+      "left": [
+        { "label": "a", "text": "train" },
+        { "label": "b", "text": "plane" },
+        { "label": "c", "text": "taxi" },
+        { "label": "d", "text": "tram/streetcar" },
+        { "label": "e", "text": "bus" },
+        { "label": "f", "text": "underground" }
+      ],
+      "right": [
+        "Zug",
+        "Flugzeug",
+        "Taxi",
+        "Straßenbahn",
+        "Bus",
+        "U-Bahn"
+      ],
+      "correctPairs": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      }
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 5,
+      "section": "TEST",
+      "instruction": "Wie heißen die Wörter?",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Straßen", { "id": "5a", "answer": "bahn" }] },
+            { "speaker": "square", "segments": ["Flug", { "id": "5b", "answer": "hafen" }, " / Flug", { "id": "5c", "answer": "zeug" }] },
+            { "speaker": "square", "segments": ["Bahn", { "id": "5d", "answer": "steig" }] },
+            { "speaker": "square", "segments": ["Halte", { "id": "5e", "answer": "stelle" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 6,
+      "section": "TEST",
+      "instruction": "Ordnen Sie zu.",
+      "wordBank": ["Gleis", "Koffer", "U-Bahn", "Gepäck", "Taxi", "Halt", "Zug"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["Guten Tag. Haben Sie ", { "id": "6a", "answer": "Gepäck" }, "? — Ja, zwei ", { "id": "6b", "answer": "Koffer" }, " und die Tasche."] },
+          { "speaker": "square", "segments": ["Nächster ", { "id": "6c", "answer": "Halt" }, ": Königsplatz."] },
+          { "speaker": "square", "segments": ["Es ist schon sehr spät. Jetzt fährt keine ", { "id": "6d", "answer": "U-Bahn" }, " mehr. — Dann nehmen wir ein ", { "id": "6e", "answer": "Taxi" }, "."] },
+          { "speaker": "square", "segments": ["Wo fährt der ", { "id": "6f", "answer": "Zug" }, " nach Stuttgart ab? — Auf ", { "id": "6g", "answer": "Gleis" }, " 15."] }
+        ]
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 7,
+      "section": "BASISTRAINING",
+      "instruction": "Mike in München. Ordnen Sie die Fragen zu.",
+      "wordBank": ["Wann kommst du", "Holst du mich ab", "Nimmst du den Zug", "Hast du Zeit"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["Hallo Tom, hier ist Mike."] },
+          { "speaker": "triangle", "segments": ["Hallo Mike, wie geht's?"] },
+          { "speaker": "square", "segments": ["Gut, danke. Ich bin nächste Woche in München und möchte dich gern besuchen. ", { "id": "7a", "answer": "Hast du Zeit" }, "?"] },
+          { "speaker": "triangle", "segments": ["Ja natürlich! ", { "id": "7b", "answer": "Wann kommst du" }, "?"] },
+          { "speaker": "square", "segments": ["Am Mittwoch, um 20:50 Uhr."] },
+          { "speaker": "triangle", "segments": [{ "id": "7c", "answer": "Nimmst du den Zug" }, "?"] },
+          { "speaker": "square", "segments": ["Ja. Ich komme am Ostbahnhof an. ", { "id": "7d", "answer": "Holst du mich ab" }, "?"] },
+          { "speaker": "triangle", "segments": ["Na klar, gern. Ich arbeite bis 20 Uhr. Dann hole ich dich ab."] },
+          { "speaker": "square", "segments": ["Danke, dann bis Mittwoch!"] }
+        ]
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 8,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie das Gespräch mit trennbaren Verben.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "triangle", "segments": ["Guten Morgen Ella, hier ist Karin. Wo bist du?"] },
+            { "speaker": "square", "segments": ["Hallo Karin. Ich steige gerade in den Zug ein."] },
+            { "speaker": "triangle", "segments": ["Wann ", { "id": "8b", "answer": "kommst du an" }, "?"] },
+            { "speaker": "square", "segments": ["Um 09.35 Uhr am Ostbahnhof und um 09.45 Uhr am Hauptbahnhof."] },
+            { "speaker": "triangle", "segments": ["Kannst du am Hauptbahnhof ", { "id": "8c", "answer": "aussteigen" }, "?"] },
+            { "speaker": "square", "segments": ["Ja. Ich ", { "id": "8d", "answer": "hole dich ab" }, "."] },
+            { "speaker": "triangle", "segments": ["Super, vielen Dank."] },
+            { "speaker": "square", "segments": ["Ich ", { "id": "8e", "answer": "kaufe Brötchen ein" }, ", dann können wir zusammen frühstücken."] },
+            { "speaker": "triangle", "segments": ["Gute Idee. Also dann, bis bald."] }
+          ]
+        }
+      ]
+    }
+  ]
+}

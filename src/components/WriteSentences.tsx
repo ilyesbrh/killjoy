@@ -1,22 +1,24 @@
-import { useState } from "react";
 import type { WriteSentencesQuiz } from "../types/quiz";
+import { useQuizState } from "../useQuizState";
 
 interface Props {
   quiz: WriteSentencesQuiz;
   onComplete?: (score: number, total: number) => void;
+  onReset?: () => void;
+  stateKey?: string;
 }
 
-export default function WriteSentences({ quiz, onComplete }: Props) {
+export default function WriteSentences({ quiz, onComplete, onReset, stateKey }: Props) {
   const total = quiz.cards.length;
 
-  const [answers, setAnswers] = useState<Record<number, string>>(() => {
+  const [answers, setAnswers] = useQuizState<Record<number, string>>(stateKey ? `${stateKey}-a` : undefined, () => {
     const init: Record<number, string> = {};
     if (quiz.givenCard !== undefined) {
       init[quiz.givenCard] = quiz.cards[quiz.givenCard].expectedSentences.join(" ");
     }
     return init;
   });
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useQuizState(stateKey ? `${stateKey}-c` : undefined, false);
 
   const isGiven = (idx: number) => quiz.givenCard === idx;
 
@@ -50,6 +52,7 @@ export default function WriteSentences({ quiz, onComplete }: Props) {
     }
     setAnswers(init);
     setChecked(false);
+    onReset?.();
   };
 
   const allFilled = quiz.cards.every(

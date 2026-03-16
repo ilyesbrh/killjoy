@@ -1,16 +1,19 @@
-import { useState, useCallback } from "react";
+import { useCallback } from "react";
 import type { CategorizeQuiz } from "../types/quiz";
+import { useQuizState } from "../useQuizState";
 
 interface Props {
   quiz: CategorizeQuiz;
   onComplete?: (score: number, total: number) => void;
+  onReset?: () => void;
+  stateKey?: string;
 }
 
-export default function Categorize({ quiz, onComplete }: Props) {
+export default function Categorize({ quiz, onComplete, onReset, stateKey }: Props) {
   const total = quiz.items.length;
 
   // assignments: itemIndex -> categoryIndex
-  const [assignments, setAssignments] = useState<Record<number, number>>(() => {
+  const [assignments, setAssignments] = useQuizState<Record<number, number>>(stateKey ? `${stateKey}-a` : undefined, () => {
     const init: Record<number, number> = {};
     if (quiz.givenItems) {
       for (const [item, cat] of quiz.givenItems) {
@@ -19,7 +22,7 @@ export default function Categorize({ quiz, onComplete }: Props) {
     }
     return init;
   });
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useQuizState(stateKey ? `${stateKey}-c` : undefined, false);
 
   const isGiven = (itemIdx: number) =>
     quiz.givenItems?.some(([i]) => i === itemIdx) ?? false;
@@ -58,6 +61,7 @@ export default function Categorize({ quiz, onComplete }: Props) {
     }
     setAssignments(init);
     setChecked(false);
+    onReset?.();
   };
 
   const allAssigned = quiz.items.every((_, i) => assignments[i] !== undefined);

@@ -1,0 +1,541 @@
+{
+  "lektion": 2,
+  "title": "Ich bin Journalistin.",
+  "quizzes": [
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 1,
+      "reference": "KB 2b",
+      "section": "WÖRTER",
+      "instruction": "Wie heißen die Berufe? Ordnen Sie zu.",
+      "wordBank": ["Architektin", "Ärztin", "Lehrer", "Schauspieler", "Sekretärin", "Verkäufer"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": [{ "id": "1a", "answer": "Architektin" }] },
+          { "speaker": "square", "segments": [{ "id": "1b", "answer": "Ärztin" }] },
+          { "speaker": "square", "segments": [{ "id": "1c", "answer": "Lehrer" }] },
+          { "speaker": "square", "segments": [{ "id": "1d", "answer": "Schauspieler" }] },
+          { "speaker": "square", "segments": [{ "id": "1e", "answer": "Sekretärin" }] },
+          { "speaker": "square", "segments": [{ "id": "1f", "answer": "Verkäufer" }] }
+        ]
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 2,
+      "reference": "KB 2c",
+      "section": "STRUKTUREN",
+      "instruction": "Ordnen Sie zu.",
+      "wordBank": ["arbeite", "habe", "mache", "bin"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["a Ich ", { "id": "2a", "answer": "mache" }, " eine Ausbildung als Krankenschwester."] },
+          { "speaker": "square", "segments": ["b Ich ", { "id": "2b", "answer": "bin" }, " Schülerin."] },
+          { "speaker": "square", "segments": ["c Ich ", { "id": "2c", "answer": "arbeite" }, " als Journalistin."] },
+          { "speaker": "square", "segments": ["d Ich ", { "id": "2d", "answer": "habe" }, " einen Job als Verkäufer."] }
+        ]
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 3,
+      "reference": "KB 2c",
+      "section": "WÖRTER",
+      "instruction": "Ordnen Sie zu.",
+      "wordBank": ["geschieden", "leben", "Single", "verheiratet", "nicht verheiratet", "zwei Kinder"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["a Stefan und Tanja sind ", { "id": "3a", "answer": "verheiratet" }, "."] },
+          { "speaker": "square", "segments": ["b Sie haben ", { "id": "3b", "answer": "zwei Kinder" }, "."] },
+          { "speaker": "square", "segments": ["c Maike und Martin sind ", { "id": "3c", "answer": "geschieden" }, "."] },
+          { "speaker": "square", "segments": ["d Maria ist ", { "id": "3d", "answer": "Single" }, "."] },
+          { "speaker": "square", "segments": ["e Tom und Klara sind ", { "id": "3e", "answer": "nicht verheiratet" }, ", aber sie ", { "id": "3f", "answer": "leben" }, " zusammen."] }
+        ]
+      ]
+    },
+    {
+      "type": "matching",
+      "exerciseNumber": 4,
+      "reference": "KB 3",
+      "section": "STRUKTUREN",
+      "instruction": "Ordnen Sie zu.",
+      "left": [
+        { "label": "a", "text": "Ich arbeite als" },
+        { "label": "b", "text": "Frau Stern arbeitet bei" },
+        { "label": "c", "text": "Katharina hat" },
+        { "label": "d", "text": "Peter macht" },
+        { "label": "e", "text": "Herr Wagner ist" }
+      ],
+      "right": [
+        "Friseurin.",
+        "Siemens.",
+        "einen Job als Kellnerin.",
+        "eine Ausbildung als Mechatroniker bei Airbus.",
+        "Ingenieur von Beruf."
+      ],
+      "correctPairs": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 5,
+      "reference": "KB 4",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie die Verben in der richtigen Form.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Was ", { "id": "5a1", "answer": "machst" }, " (machen) du beruflich?"] },
+            { "speaker": "triangle", "segments": ["Ich ", { "id": "5a2", "answer": "bin" }, " (sein) Studentin und ", { "id": "5a3", "answer": "habe" }, " (haben) einen Job als Verkäuferin."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Wo ", { "id": "5b1", "answer": "wohnt" }, " (wohnen) ihr?"] },
+            { "speaker": "triangle", "segments": ["Wir ", { "id": "5b2", "answer": "wohnen" }, " (wohnen) in Dortmund."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Wir ", { "id": "5c1", "answer": "leben" }, " (leben) zusammen und ", { "id": "5c2", "answer": "haben" }, " (haben) ein Kind."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Wer ", { "id": "5d1", "answer": "ist" }, " (sein) das? — Das ", { "id": "5d2", "answer": "sind" }, " (sein) Joachim und Philipp."] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": ["Niklas und Felix ", { "id": "5e1", "answer": "arbeiten" }, " (arbeiten) bei Hansebek."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table-fill",
+      "exerciseNumber": 6,
+      "reference": "KB 4",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie und markieren Sie die Endungen.",
+      "columns": ["machen", "leben", "wohnen", "arbeiten"],
+      "rows": [
+        {
+          "label": "ich",
+          "cells": [
+            "mache",
+            { "id": "6a", "answer": "lebe" },
+            { "id": "6b", "answer": "wohne" },
+            { "id": "6c", "answer": "arbeite" }
+          ]
+        },
+        {
+          "label": "du",
+          "cells": [
+            { "id": "6d", "answer": "machst" },
+            { "id": "6e", "answer": "lebst" },
+            { "id": "6f", "answer": "wohnst" },
+            "arbeitest"
+          ]
+        },
+        {
+          "label": "er/sie",
+          "cells": [
+            { "id": "6g", "answer": "macht" },
+            { "id": "6h", "answer": "lebt" },
+            { "id": "6i", "answer": "wohnt" },
+            "arbeitet"
+          ]
+        },
+        {
+          "label": "wir",
+          "cells": [
+            { "id": "6j", "answer": "machen" },
+            "leben",
+            { "id": "6k", "answer": "wohnen" },
+            { "id": "6l", "answer": "arbeiten" }
+          ]
+        },
+        {
+          "label": "ihr",
+          "cells": [
+            { "id": "6m", "answer": "macht" },
+            { "id": "6n", "answer": "lebt" },
+            "wohnt",
+            { "id": "6o", "answer": "arbeitet" }
+          ]
+        },
+        {
+          "label": "sie/Sie",
+          "cells": [
+            { "id": "6p", "answer": "machen" },
+            { "id": "6q", "answer": "leben" },
+            { "id": "6r", "answer": "wohnen" },
+            { "id": "6s", "answer": "arbeiten" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 7,
+      "reference": "KB 4",
+      "section": "STRUKTUREN",
+      "instruction": "Was ist richtig? Kreuzen Sie an.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "Svenja und Torben sind verheiratet. ",
+            { "id": "7a", "options": ["Sie", "Ich"], "correct": 0 },
+            " haben keine Kinder."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 8,
+      "reference": "KB 5",
+      "section": "WÖRTER",
+      "instruction": "Markieren Sie und notieren Sie die Zahlen.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["neunzehn = ", { "id": "8a", "answer": "19" }] },
+            { "speaker": "square", "segments": ["fünfundachtzig = ", { "id": "8b", "answer": "85" }] },
+            { "speaker": "square", "segments": ["zwanzig = ", { "id": "8c", "answer": "20" }] },
+            { "speaker": "square", "segments": ["sechsunddreißig = ", { "id": "8d", "answer": "36" }] },
+            { "speaker": "square", "segments": ["acht = ", { "id": "8e", "answer": "8" }] },
+            { "speaker": "square", "segments": ["drei = ", { "id": "8f", "answer": "3" }] },
+            { "speaker": "square", "segments": ["siebenundsiebzig = ", { "id": "8g", "answer": "77" }] },
+            { "speaker": "square", "segments": ["sechzehn = ", { "id": "8h", "answer": "16" }] },
+            { "speaker": "square", "segments": ["neun = ", { "id": "8i", "answer": "9" }] },
+            { "speaker": "square", "segments": ["dreiundzwanzig = ", { "id": "8j", "answer": "23" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 9,
+      "reference": "KB 5",
+      "section": "WÖRTER",
+      "instruction": "Rechenaufgaben. Lesen Sie laut und ergänzen Sie.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["fünfzehn + siebenunddreißig = ", { "id": "9a", "answer": "zweiundfünfzig" }] },
+            { "speaker": "square", "segments": ["sechsundfünfzig + acht = ", { "id": "9b", "answer": "vierundsechzig" }] },
+            { "speaker": "square", "segments": ["dreiunddreißig + neun = ", { "id": "9c", "answer": "zweiundvierzig" }] },
+            { "speaker": "square", "segments": ["fünfundzwanzig + siebenundsechzig = ", { "id": "9d", "answer": "zweiundneunzig" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 10,
+      "section": "TEST",
+      "instruction": "Wer ist richtig? Kreuzen Sie an.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "■ Wo arbeitest du? ▲ ",
+            { "id": "10a", "options": ["Als IT-Spezialist.", "Bei EASY COMPUTER."], "correct": 1 }
+          ]
+        },
+        {
+          "label": "b",
+          "segments": [
+            "■ ",
+            { "id": "10b", "options": ["Woher", "Wie"], "correct": 0 },
+            " kommst du?"
+          ]
+        },
+        {
+          "label": "c",
+          "segments": [
+            "■ Was machen Sie gerade? ▲ ",
+            { "id": "10c", "options": ["Ich glaube, sie macht eine Ausbildung als Friseurin.", "Ich mache eine Ausbildung als Friseurin."], "correct": 1 }
+          ]
+        },
+        {
+          "label": "d",
+          "segments": [
+            "■ Wie alt sind die Kinder? ▲ ",
+            { "id": "10d", "options": ["Zwei, drei und fünf.", "Sie ist zehn."], "correct": 0 }
+          ]
+        },
+        {
+          "label": "e",
+          "segments": [
+            "■ Wo arbeiten Sie? ▲ ",
+            { "id": "10e", "options": ["In Frankfurt.", "Aus Frankfurt."], "correct": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 11,
+      "reference": "KB 3b",
+      "section": "STRUKTUREN",
+      "instruction": "Ordnen Sie zu.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "Herr Peters lebt allein. ",
+            { "id": "11a", "options": ["Er", "Sie"], "correct": 0 },
+            " ist geschieden."
+          ]
+        },
+        {
+          "label": "b",
+          "segments": [
+            "Melanie ist Single. ",
+            { "id": "11b", "options": ["Sie", "Ich"], "correct": 0 },
+            " lebt allein."
+          ]
+        },
+        {
+          "label": "c",
+          "segments": [
+            "Ich habe zwei Kinder. ",
+            { "id": "11c", "options": ["Sie", "Er"], "correct": 0 },
+            " heißen Finn und Mika."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 12,
+      "reference": "KB 4b",
+      "section": "STRUKTUREN",
+      "instruction": "Was ist richtig? Kreuzen Sie an.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "Svenja und Torben sind verheiratet. ",
+            { "id": "12a", "options": ["Sie", "Ich"], "correct": 0 },
+            " haben keine Kinder."
+          ]
+        },
+        {
+          "label": "b",
+          "segments": [
+            "Herr Peters lebt allein. ",
+            { "id": "12b", "options": ["Er", "Sie"], "correct": 0 },
+            " ist geschieden."
+          ]
+        },
+        {
+          "label": "c",
+          "segments": [
+            "Melanie ist Single. ",
+            { "id": "12c", "options": ["Sie", "Ich"], "correct": 0 },
+            " lebt allein."
+          ]
+        },
+        {
+          "label": "d",
+          "segments": [
+            "Ich habe zwei Kinder. ",
+            { "id": "12d", "options": ["Sie", "Er"], "correct": 0 },
+            " heißen Finn und Mika."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 13,
+      "section": "BASISTRAINING",
+      "instruction": "Lesen Sie das Porträt und beantworten Sie die Fragen.",
+      "title": "Ich heiße Marie Durant und komme aus Luxemburg. Momentan lebe ich in Heidelberg. Ich arbeite hier als Journalistin. Ich bin nicht verheiratet, aber ich lebe mit meinem Partner zusammen. Er heißt Steven und ist zurzeit arbeitslos. Wir haben ein Kind. Julie ist jetzt schon 3 Jahre alt.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "Was ist Marie Durant von Beruf? ",
+            { "id": "13a", "options": ["Journalistin", "Lehrerin", "Ärztin"], "correct": 0 }
+          ]
+        },
+        {
+          "label": "b",
+          "segments": [
+            "Was macht Steven beruflich? ",
+            { "id": "13b", "options": ["Er ist arbeitslos.", "Er ist Journalist.", "Er ist Ingenieur."], "correct": 0 }
+          ]
+        },
+        {
+          "label": "c",
+          "segments": [
+            "Sind Marie und Steven verheiratet? ",
+            { "id": "13c", "options": ["Nein.", "Ja."], "correct": 0 }
+          ]
+        },
+        {
+          "label": "d",
+          "segments": [
+            "Marie und Steven haben zwei Kinder. ",
+            { "id": "13d", "options": ["Nein.", "Ja."], "correct": 0 }
+          ]
+        },
+        {
+          "label": "e",
+          "segments": [
+            "Wo wohnen Marie und Steven? ",
+            { "id": "13e", "options": ["In Heidelberg.", "In Luxemburg.", "In München."], "correct": 0 }
+          ]
+        },
+        {
+          "label": "f",
+          "segments": [
+            "Wie alt ist Julie? ",
+            { "id": "13f", "options": ["3 Jahre.", "5 Jahre.", "1 Jahr."], "correct": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "exerciseNumber": 14,
+      "section": "TRAINING: LESEN",
+      "instruction": "Angaben zur Person. Was passt zusammen? Verbinden Sie.",
+      "left": [
+        { "label": "a", "text": "Was studieren Sie?" },
+        { "label": "b", "text": "Sind Sie verheiratet?" },
+        { "label": "c", "text": "Wie alt sind Sie?" },
+        { "label": "d", "text": "Was machen Sie beruflich?" },
+        { "label": "e", "text": "Wie heißen Sie?" },
+        { "label": "f", "text": "Woher kommen Sie?" }
+      ],
+      "right": [
+        "Ausbildung",
+        "Familienstand",
+        "Alter",
+        "Beruf",
+        "Name",
+        "Herkunft"
+      ],
+      "correctPairs": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      }
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 15,
+      "section": "TEST",
+      "instruction": "Ordnen Sie zu.",
+      "wordBank": ["Alter", "Wohnort", "Beruf", "Herkunft", "Name", "Arbeitgeber", "Familienstand"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["a ", "Name", ": Maria Oberhuber"] },
+          { "speaker": "square", "segments": ["b ", { "id": "t1b", "answer": "Wohnort" }, ": 83026 Rosenheim"] },
+          { "speaker": "square", "segments": ["c ", { "id": "t1c", "answer": "Herkunft" }, ": Deutschland"] },
+          { "speaker": "square", "segments": ["d ", { "id": "t1d", "answer": "Alter" }, ": 33 Jahre"] },
+          { "speaker": "square", "segments": ["e ", { "id": "t1e", "answer": "Familienstand" }, ": verheiratet"] },
+          { "speaker": "square", "segments": ["f ", { "id": "t1f", "answer": "Beruf" }, ": Lehrerin"] },
+          { "speaker": "square", "segments": ["g ", { "id": "t1g", "answer": "Arbeitgeber" }, ": Sprachschule Rosenheim"] }
+        ]
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 16,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie die Zahlen.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["a neunundneunzig = ", { "id": "t2a", "answer": "99" }] },
+            { "speaker": "square", "segments": ["b fünfundfünfzig = ", { "id": "t2b", "answer": "55" }] },
+            { "speaker": "square", "segments": ["c fünfundvierzig = ", { "id": "t2c", "answer": "45" }] },
+            { "speaker": "square", "segments": ["d fünfzehn = ", { "id": "t2d", "answer": "15" }] },
+            { "speaker": "square", "segments": ["e fünfzig = ", { "id": "t2e", "answer": "50" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 17,
+      "section": "TEST",
+      "instruction": "Wie heißen die Berufe?",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["a ", { "id": "t3a", "answer": "Verkäuferin" }] },
+            { "speaker": "square", "segments": ["b ", { "id": "t3b", "answer": "Krankenschwester" }] },
+            { "speaker": "square", "segments": ["c ", { "id": "t3c", "answer": "Studentin" }] },
+            { "speaker": "square", "segments": ["d ", { "id": "t3d", "answer": "Schauspielerin" }] },
+            { "speaker": "square", "segments": ["e ", { "id": "t3e", "answer": "Mechatroniker" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 18,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Wo ", { "id": "t4a1", "answer": "studiert" }, " (studieren) er? In Hamburg?"] },
+            { "speaker": "triangle", "segments": ["Nein, er studiert nicht in Hamburg."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Alina und Rainer, wo ", { "id": "t4b1", "answer": "wohnt" }, " (wohnen) ihr? In München?"] },
+            { "speaker": "triangle", "segments": ["Ja."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Wie alt ", { "id": "t4c1", "answer": "sind" }, " (sein) Sie? 35?"] },
+            { "speaker": "triangle", "segments": ["Nein, ich ", { "id": "t4c2", "answer": "bin" }, " ..."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Wo ", { "id": "t4d1", "answer": "arbeitest" }, " (arbeiten) du? Bei Siemens?"] },
+            { "speaker": "triangle", "segments": ["Ja, ich ..."] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": ["Woher ", { "id": "t4e1", "answer": "kommen" }, " (kommen) Sinem und Selina? Aus der Schweiz?"] },
+            { "speaker": "triangle", "segments": ["Nein, sie ..."] }
+          ]
+        }
+      ]
+    }
+  ]
+}

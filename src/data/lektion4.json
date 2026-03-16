@@ -1,0 +1,402 @@
+{
+  "lektion": 4,
+  "title": "Der Tisch ist schön!",
+  "quizzes": [
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 1,
+      "reference": "KB 2",
+      "section": "WÖRTER",
+      "instruction": "Ergänzen und vergleichen Sie: ein/eine — der/das/die.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Das ist ein Stift. ", { "id": "1a", "answer": "Der" }, " Stift ist rot."] },
+            { "speaker": "square", "segments": ["Das ist ", { "id": "1b", "answer": "eine" }, " Maus. ", { "id": "1c", "answer": "Die" }, " Maus ist klein."] },
+            { "speaker": "square", "segments": ["Das ist ", { "id": "1d", "answer": "ein" }, " Feuerzeug. ", { "id": "1e", "answer": "Das" }, " Feuerzeug kostet zwei Euro."] },
+            { "speaker": "square", "segments": ["Das sind ", { "id": "1f", "answer": "–" }, " Briefmarken. ", { "id": "1g", "answer": "Die" }, " Briefmarken sind schön."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 2,
+      "reference": "KB 3",
+      "section": "WÖRTER",
+      "instruction": "Wie heißt der Plural? Ergänzen Sie.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["der Laptop → die ", { "id": "2a", "answer": "Laptops" }] },
+            { "speaker": "square", "segments": ["die Briefmarke → die ", { "id": "2b", "answer": "Briefmarken" }] },
+            { "speaker": "square", "segments": ["das Handy → die ", { "id": "2c", "answer": "Handys" }] },
+            { "speaker": "square", "segments": ["der Drucker → die ", { "id": "2d", "answer": "Drucker" }] },
+            { "speaker": "square", "segments": ["der Computer → die ", { "id": "2e", "answer": "Computer" }] },
+            { "speaker": "square", "segments": ["das Telefon → die ", { "id": "2f", "answer": "Telefone" }] },
+            { "speaker": "square", "segments": ["der Stift → die ", { "id": "2g", "answer": "Stifte" }] },
+            { "speaker": "square", "segments": ["die Rechnung → die ", { "id": "2h", "answer": "Rechnungen" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 3,
+      "reference": "KB 6",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie den Artikel (Nominativ und Akkusativ).",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Oh! Der Tisch ist praktisch!"] },
+            { "speaker": "triangle", "segments": ["Hm, ich finde ", { "id": "3a", "answer": "den" }, " Tisch hässlich."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Schau mal, die Couch, die ist nicht schlecht!"] },
+            { "speaker": "triangle", "segments": ["Findest du? Ich finde ", { "id": "3b", "answer": "die" }, " Couch zu groß."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Aber der Schrank ist super!"] },
+            { "speaker": "triangle", "segments": ["Na ja, ich finde ", { "id": "3c", "answer": "den" }, " Schrank zu teuer."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Und das Bett? Wie findest du das?"] },
+            { "speaker": "triangle", "segments": ["Es geht. Ich finde ", { "id": "3d", "answer": "das" }, " Bett zu klein."] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": ["Aber die Bilder! Die sind wirklich schön."] },
+            { "speaker": "triangle", "segments": ["Ja, ich finde ", { "id": "3e", "answer": "die" }, " Bilder auch schön."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 4,
+      "reference": "KB 6",
+      "section": "STRUKTUREN",
+      "instruction": "Im Büro. Schreiben Sie mit ein/eine/einen — kein/keine/keinen.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Jutta hat ", { "id": "4a", "answer": "einen" }, " Computer, aber ", { "id": "4b", "answer": "keinen" }, " Laptop."] },
+            { "speaker": "square", "segments": ["Sie hat Bleistifte, aber ", { "id": "4c", "answer": "keine" }, " Kugelschreiber."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 5,
+      "reference": "KB 6",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie den Artikel (der/das/die – ein/eine/einen – kein/keine/keinen).",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Peter, ", { "id": "5a1", "answer": "der" }, " Termin mit Firma MAGUS ist heute um 14.00 Uhr!"] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Wir haben ", { "id": "5b1", "answer": "keine" }, " Briefmarken. Haben Sie Zeit? Kaufen Sie bitte ", { "id": "5b2", "answer": "–" }, " Briefmarken?"] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Tim hat einen Computer und ", { "id": "5c1", "answer": "einen" }, " Bildschirm, aber ", { "id": "5c2", "answer": "keinen" }, " Drucker. Hast du ", { "id": "5c3", "answer": "einen" }, " Drucker?"] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 6,
+      "section": "TEST",
+      "instruction": "Ordnen Sie zu.",
+      "wordBank": ["Termin", "E-Mail", "Telefonnummer", "Büro", "Rechnung", "Kalender"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["Wie ist die ", { "id": "6a", "answer": "Telefonnummer" }, " von Frau Schön?"] },
+          { "speaker": "square", "segments": ["Wann ist der Termin mit Firma Kloss? — Ich weiß nicht. Ich finde den ", { "id": "6b", "answer": "Kalender" }, " nicht."] },
+          { "speaker": "square", "segments": ["Was machst du? — Ich schreibe eine ", { "id": "6c", "answer": "E-Mail" }, " an Peter."] },
+          { "speaker": "square", "segments": ["Das macht 499 Euro. Hier ist die ", { "id": "6d", "answer": "Rechnung" }, "."] },
+          { "speaker": "square", "segments": ["Wann ist denn der ", { "id": "6e", "answer": "Termin" }, " mit Frau Hintze? — Um 17 Uhr."] },
+          { "speaker": "square", "segments": ["Wo ist der Chef? — Im ", { "id": "6f", "answer": "Büro" }, "."] }
+        ]
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 7,
+      "section": "TEST",
+      "instruction": "Was ist richtig? Markieren Sie.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "Ich suche ",
+            { "id": "7a", "options": ["der", "den"], "correct": 1 },
+            " Kalender."
+          ]
+        },
+        {
+          "label": "b",
+          "segments": [
+            "Ich suche ",
+            { "id": "7b", "options": ["ein", "einen"], "correct": 1 },
+            " Bleistift."
+          ]
+        },
+        {
+          "label": "c",
+          "segments": [
+            "Hast du ",
+            { "id": "7c", "options": ["kein", "keinen"], "correct": 1 },
+            " Schlüssel?"
+          ]
+        },
+        {
+          "label": "d",
+          "segments": [
+            "Was kostet ",
+            { "id": "7d", "options": ["der", "den"], "correct": 0 },
+            " Computer?"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 8,
+      "section": "TEST",
+      "instruction": "Ein Telefongespräch. Ordnen Sie zu.",
+      "wordBank": ["Wo ist denn", "Vielen Dank", "Auf Wiederhören", "Hier ist", "Guten Tag"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["Wimmer."] },
+          { "speaker": "triangle", "segments": [{ "id": "8a", "answer": "Guten Tag" }, ", Herr Wimmer. ", { "id": "8b", "answer": "Hier ist" }, " Bugatu."] },
+          { "speaker": "square", "segments": ["Hallo, Frau Bugatu."] },
+          { "speaker": "triangle", "segments": ["Ich habe eine Frage, Herr Wimmer. ", { "id": "8c", "answer": "Wo ist denn" }, " der Laptop?"] },
+          { "speaker": "square", "segments": ["Frau Schneider hat den Laptop."] },
+          { "speaker": "triangle", "segments": ["Ach ja, richtig. ", { "id": "8d", "answer": "Vielen Dank" }, ". ", { "id": "8e", "answer": "Auf Wiederhören" }, ", Herr Wimmer."] },
+          { "speaker": "square", "segments": ["Tschüs, Frau Bugatu."] }
+        ]
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 9,
+      "reference": "KB 2",
+      "section": "KOMMUNIKATION",
+      "instruction": "Ergänzen Sie das Gespräch.",
+      "wordBank": ["Er ist wirklich schön, aber sehr teuer.", "Nur 55 Euro! Das ist aber günstig!", "Und wie viel kostet der Stuhl?", "Was kostet denn das Bild?", "Ja, bitte."],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["Guten Tag, brauchen Sie Hilfe?"] },
+          { "speaker": "triangle", "segments": [{ "id": "9a", "answer": "Ja, bitte." }] },
+          { "speaker": "square", "segments": ["55 Euro!"] },
+          { "speaker": "triangle", "segments": [{ "id": "9b", "answer": "Nur 55 Euro! Das ist aber günstig!" }] },
+          { "speaker": "square", "segments": ["Ja, das ist ein Sonderangebot."] },
+          { "speaker": "triangle", "segments": [{ "id": "9c", "answer": "Und wie viel kostet der Stuhl?" }] },
+          { "speaker": "square", "segments": ["Der Stuhl kostet 1200 Euro. Der Designer heißt Nilsson."] },
+          { "speaker": "triangle", "segments": [{ "id": "9d", "answer": "Er ist wirklich schön, aber sehr teuer." }] },
+          { "speaker": "square", "segments": ["Finden Sie?"] }
+        ]
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 10,
+      "reference": "KB 2",
+      "section": "WÖRTER",
+      "instruction": "Meine Möbel. Ergänzen Sie die Nomen mit Artikel.",
+      "wordBank": ["das Bett", "das Bild", "die Lampe", "der Sessel", "der Stuhl", "das Sofa", "der Tisch", "der Schrank", "der Teppich"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": [{ "id": "10a", "answer": "das Bett" }] },
+          { "speaker": "square", "segments": [{ "id": "10b", "answer": "das Bild" }] },
+          { "speaker": "square", "segments": [{ "id": "10c", "answer": "die Lampe" }] },
+          { "speaker": "square", "segments": [{ "id": "10d", "answer": "der Sessel" }] },
+          { "speaker": "square", "segments": [{ "id": "10e", "answer": "der Stuhl" }] },
+          { "speaker": "square", "segments": [{ "id": "10f", "answer": "das Sofa" }] },
+          { "speaker": "square", "segments": [{ "id": "10g", "answer": "der Tisch" }] },
+          { "speaker": "square", "segments": [{ "id": "10h", "answer": "der Schrank" }] },
+          { "speaker": "square", "segments": [{ "id": "10i", "answer": "der Teppich" }] }
+        ]
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 11,
+      "reference": "KB 6",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie die Personalpronomen.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Was kostet denn ", { "id": "11a1", "answer": "der" }, " Teppich?"] },
+            { "speaker": "triangle", "segments": [{ "id": "11a2", "answer": "Er" }, " kostet 799 Euro."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Das Bild ist sehr modern."] },
+            { "speaker": "triangle", "segments": [{ "id": "11b1", "answer": "Es" }, " ist von Pablo Picasso."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Der Schrank ist billig und ", { "id": "11c1", "answer": "er" }, " ist praktisch."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Die Lampe ist nicht schlecht. ", { "id": "11d1", "answer": "Sie" }, " kostet nur 78 Euro."] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": ["Der Tisch ist sehr teuer. ", { "id": "11e1", "answer": "Er" }, " kommt aus Italien."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 12,
+      "section": "WÖRTER",
+      "instruction": "Schön oder hässlich? Notieren Sie die Wörter.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["1 wserch → ", { "id": "12a", "answer": "schwer" }] },
+            { "speaker": "square", "segments": ["2 hichasls → ", { "id": "12b", "answer": "hässlich" }] },
+            { "speaker": "square", "segments": ["3 galn → ", { "id": "12c", "answer": "lang" }] },
+            { "speaker": "square", "segments": ["4 nösch → ", { "id": "12d", "answer": "schön" }] },
+            { "speaker": "square", "segments": ["5 nielk → ", { "id": "12e", "answer": "klein" }] },
+            { "speaker": "square", "segments": ["6 zurk → ", { "id": "12f", "answer": "kurz" }] },
+            { "speaker": "square", "segments": ["7 orßg → ", { "id": "12g", "answer": "groß" }] },
+            { "speaker": "square", "segments": ["8 tielch → ", { "id": "12h", "answer": "leicht" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 13,
+      "section": "TEST",
+      "instruction": "Schreiben Sie die Zahlen.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["a Das kostet fünfhunderttausendfünfundvierzig Euro: ", { "id": "t1a", "answer": "500045" }] },
+            { "speaker": "square", "segments": ["b Das kostet achthundertdreiundzwanzig Euro: ", { "id": "t1b", "answer": "823" }] },
+            { "speaker": "square", "segments": ["c Das kostet dreitausendneunhundertachtundsiebzig Euro: ", { "id": "t1c", "answer": "3978" }] },
+            { "speaker": "square", "segments": ["d Das kostet achthundertvierundachtzigtausend Euro: ", { "id": "t1d", "answer": "884000" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 14,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie die Möbel.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["a ", { "id": "t2a", "answer": "Tisch" }] },
+            { "speaker": "square", "segments": ["b ", { "id": "t2b", "answer": "Teppich" }] },
+            { "speaker": "square", "segments": ["c ", { "id": "t2c", "answer": "Stuhl" }] },
+            { "speaker": "square", "segments": ["d ", { "id": "t2d", "answer": "Lampe" }] },
+            { "speaker": "square", "segments": ["e ", { "id": "t2e", "answer": "Bett" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 15,
+      "section": "TEST",
+      "instruction": "Wie heißt das Gegenteil? Ergänzen Sie.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["a groß – ", { "id": "t3a", "answer": "klein" }] },
+            { "speaker": "square", "segments": ["b schön – ", { "id": "t3b", "answer": "hässlich" }] },
+            { "speaker": "square", "segments": ["c kurz – ", { "id": "t3c", "answer": "lang" }] },
+            { "speaker": "square", "segments": ["d billig – ", { "id": "t3d", "answer": "teuer" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 16,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie den Artikel.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Wie viel kostet ", { "id": "t4a1", "answer": "der" }, " Teppich?"] },
+            { "speaker": "triangle", "segments": ["299 Euro."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "t4b1", "answer": "Die" }, " Couch ist wirklich schön."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "t4c1", "answer": "Das" }, " Sofa kostet 3999 Euro."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Ja und so praktisch! Was? Das ist aber sehr teuer!"] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "t4e1", "answer": "Der" }, " Stuhl ist günstig."] }
+          ]
+        },
+        {
+          "label": "f",
+          "lines": [
+            { "speaker": "square", "segments": ["Finden Sie? ", { "id": "t4f1", "answer": "Der" }, " Sessel kostet 19,99 Euro."] }
+          ]
+        }
+      ]
+    }
+  ]
+}

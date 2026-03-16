@@ -159,6 +159,22 @@ export interface WriteSentencesQuiz {
   givenCard?: number;
 }
 
+/** "Ergänzen Sie" — fill blanks in a verb conjugation table */
+export interface TableFillQuiz {
+  type: "table-fill";
+  exerciseNumber: number;
+  reference?: string;
+  section?: string;
+  instruction: string;
+  /** Column header verbs (e.g. ["heißen", "kommen", "sein"]) */
+  columns: string[];
+  /** Rows with a pronoun label and cells (pre-filled string or Blank) */
+  rows: {
+    label: string;
+    cells: (string | Blank)[];
+  }[];
+}
+
 /** Union of all quiz types — extend this as we add more */
 export type Quiz =
   | WordBankFillQuiz
@@ -168,7 +184,8 @@ export type Quiz =
   | ImageWordBankQuiz
   | CategorizeQuiz
   | InlineChoiceQuiz
-  | WriteSentencesQuiz;
+  | WriteSentencesQuiz
+  | TableFillQuiz;
 
 /** A lesson containing multiple quizzes */
 export interface Lektion {

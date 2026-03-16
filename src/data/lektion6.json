@@ -1,0 +1,324 @@
+{
+  "lektion": 6,
+  "title": "Ich brauche kein Büro.",
+  "quizzes": [
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 1,
+      "reference": "KB 3",
+      "section": "WÖRTER",
+      "instruction": "Wie heißt der Plural? Ergänzen Sie.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["die Rechnung → die ", { "id": "1a", "answer": "Rechnungen" }] },
+            { "speaker": "square", "segments": ["die Briefmarke → die ", { "id": "1b", "answer": "Briefmarken" }] },
+            { "speaker": "square", "segments": ["der Stift → die ", { "id": "1c", "answer": "Stifte" }] },
+            { "speaker": "square", "segments": ["das Handy → die ", { "id": "1d", "answer": "Handys" }] },
+            { "speaker": "square", "segments": ["das Formular → die ", { "id": "1e", "answer": "Formulare" }] },
+            { "speaker": "square", "segments": ["der Drucker → die ", { "id": "1f", "answer": "Drucker" }] },
+            { "speaker": "square", "segments": ["der Termin → die ", { "id": "1g", "answer": "Termine" }] },
+            { "speaker": "square", "segments": ["der Kalender → die ", { "id": "1h", "answer": "Kalender" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 2,
+      "reference": "KB 6",
+      "section": "STRUKTUREN",
+      "instruction": "Was ist richtig? Markieren Sie.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "Ich suche ",
+            { "id": "2a", "options": ["der/den"], "correct": 0 },
+            " Kalender. — ",
+            { "id": "2b", "options": ["Der/Den"], "correct": 0 },
+            " Kalender ist hier."
+          ]
+        },
+        {
+          "label": "b",
+          "segments": [
+            "Sie haben um 10 Uhr ",
+            { "id": "2c", "options": ["ein", "einen"], "correct": 1 },
+            " Termin mit Frau Berg."
+          ]
+        },
+        {
+          "label": "c",
+          "segments": [
+            "Ich suche ",
+            { "id": "2d", "options": ["ein", "einen"], "correct": 1 },
+            " Bleistift. — Ich habe nur ",
+            { "id": "2e", "options": ["ein", "einen"], "correct": 1 },
+            " Kugelschreiber."
+          ]
+        },
+        {
+          "label": "d",
+          "segments": [
+            "Hast du ",
+            { "id": "2f", "options": ["kein", "keinen"], "correct": 1 },
+            " Schlüssel? — Nein, aber Herr Loos hat ",
+            { "id": "2g", "options": ["ein", "einen"], "correct": 1 },
+            " Schlüssel."
+          ]
+        },
+        {
+          "label": "e",
+          "segments": [
+            "Was kostet ",
+            { "id": "2h", "options": ["der", "den"], "correct": 0 },
+            " Computer? — Nur 499 Euro."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 3,
+      "section": "TEST",
+      "instruction": "Ordnen Sie zu.",
+      "wordBank": ["Termin", "E-Mail", "Telefonnummer", "Büro", "Rechnung", "Kalender"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["Wie ist die ", { "id": "3a", "answer": "Telefonnummer" }, " von Frau Schön? — 06391 - 3467"] },
+          { "speaker": "square", "segments": ["Wann ist der Termin mit Firma Kloss? — Ich finde den ", { "id": "3b", "answer": "Kalender" }, " nicht."] },
+          { "speaker": "square", "segments": ["Was machst du? — Ich schreibe eine ", { "id": "3c", "answer": "E-Mail" }, " an Peter."] },
+          { "speaker": "square", "segments": ["Das macht 499 Euro. Hier ist die ", { "id": "3d", "answer": "Rechnung" }, "."] },
+          { "speaker": "square", "segments": ["Wann ist denn der ", { "id": "3e", "answer": "Termin" }, " mit Frau Hintze? — Um 17 Uhr."] },
+          { "speaker": "square", "segments": ["Wo ist der Chef? — Im ", { "id": "3f", "answer": "Büro" }, "."] }
+        ]
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 4,
+      "section": "BASISTRAINING",
+      "instruction": "Ergänzen und vergleichen Sie.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Das ist ", { "id": "4a", "answer": "eine" }, " Maus. — This is a mouse."] },
+            { "speaker": "square", "segments": [{ "id": "4b", "answer": "Die" }, " Maus ist klein. — The mouse is small."] },
+            { "speaker": "square", "segments": ["Das ist ", { "id": "4c", "answer": "ein" }, " Feuerzeug. — This is a lighter."] },
+            { "speaker": "square", "segments": [{ "id": "4d", "answer": "Das" }, " Feuerzeug kostet zwei Euro. — The lighter costs two euro."] },
+            { "speaker": "square", "segments": [{ "id": "4e", "answer": "Die" }, " Briefmarken sind schön. — The stamps are nice."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "categorize",
+      "exerciseNumber": 5,
+      "section": "BASISTRAINING",
+      "instruction": "Wie heißt der Plural? Ordnen Sie die Nomen zu.",
+      "categories": ["-(e)n", "-e", "-er / -", "-s"],
+      "items": [
+        { "label": "Briefmarke", "correctCategory": 0 },
+        { "label": "Rechnung", "correctCategory": 0 },
+        { "label": "Stift", "correctCategory": 1 },
+        { "label": "Telefon", "correctCategory": 1 },
+        { "label": "Bildschirm", "correctCategory": 1 },
+        { "label": "Computer", "correctCategory": 2 },
+        { "label": "Drucker", "correctCategory": 2 },
+        { "label": "Kalender", "correctCategory": 2 },
+        { "label": "Notizbuch", "correctCategory": 2 },
+        { "label": "Laptop", "correctCategory": 3 },
+        { "label": "Handy", "correctCategory": 3 },
+        { "label": "E-Mail", "correctCategory": 3 }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 6,
+      "section": "BASISTRAINING",
+      "instruction": "Ergänzen Sie die Pluralform und (wenn nötig) den Umlaut (ä/ö/ü).",
+      "dialogues": [
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Wir haben ", { "id": "6b1", "answer": "Tische" }, ", ", { "id": "6b2", "answer": "Stühle" }, " und ", { "id": "6b3", "answer": "Schränke" }, "."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Hier finden Sie ", { "id": "6c", "answer": "Handys" }, "! Gut und günstig!"] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Im Juli kommen die ", { "id": "6d", "answer": "Briefmarken" }, " zur Fußball-WM."] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": ["Sonderangebote für ", { "id": "6e1", "answer": "Computer" }, " und ", { "id": "6e2", "answer": "Drucker" }, "."] }
+          ]
+        },
+        {
+          "label": "f",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "6f1", "answer": "Geldbörsen" }, " und ", { "id": "6f2", "answer": "Taschen" }, " aus Leder!"] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table-fill",
+      "exerciseNumber": 7,
+      "section": "BASISTRAINING",
+      "instruction": "Ergänzen Sie die Tabelle: Nominativ und Akkusativ.",
+      "columns": ["Nominativ", "Akkusativ"],
+      "rows": [
+        { "label": "maskulin", "cells": ["der Schlüssel", { "id": "7a", "answer": "den Schlüssel" }] },
+        { "label": "neutral", "cells": [{ "id": "7b", "answer": "das Wörterbuch" }, "das Wörterbuch"] },
+        { "label": "feminin", "cells": ["die Rechnung", { "id": "7c", "answer": "die Rechnung" }] },
+        { "label": "Plural", "cells": ["die Briefmarken", { "id": "7d", "answer": "die Briefmarken" }] }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 8,
+      "section": "BASISTRAINING",
+      "instruction": "Ergänzen Sie den Artikel.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Oh! Der Tisch ist praktisch!"] },
+            { "speaker": "triangle", "segments": ["Hm, ich finde ", { "id": "8a", "answer": "den" }, " Tisch hässlich."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Schau mal, die Couch, die ist nicht schlecht!"] },
+            { "speaker": "triangle", "segments": ["Findest du? Ich finde ", { "id": "8b", "answer": "die" }, " Couch zu groß."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Aber der Schrank ist super!"] },
+            { "speaker": "triangle", "segments": ["Na ja, ich finde ", { "id": "8c", "answer": "den" }, " Schrank zu teuer."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Und das Bett? Wie findest du das?"] },
+            { "speaker": "triangle", "segments": ["Es geht. Ich finde ", { "id": "8d", "answer": "das" }, " Bett zu klein."] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": ["Aber die Bilder! Die sind wirklich schön."] },
+            { "speaker": "triangle", "segments": ["Ja, ich finde ", { "id": "8e", "answer": "die" }, " Bilder auch schön."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 9,
+      "section": "BASISTRAINING",
+      "instruction": "Ergänzen Sie den Artikel (der/das/die – ein/eine/einen – kein/keine/keinen).",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Peter, ", { "id": "9a", "answer": "der" }, " Termin mit Firma MAGUS ist heute um 14.00 Uhr."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Tim hat ", { "id": "9c1", "answer": "einen" }, " Computer und ", { "id": "9c2", "answer": "einen" }, " Bildschirm, aber ", { "id": "9c3", "answer": "keinen" }, " Drucker. Hast du ", { "id": "9c4", "answer": "einen" }, " Drucker?"] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Hallo Elena, ich habe jetzt ", { "id": "9d", "answer": "einen" }, " Drucker. Danke!"] }
+          ]
+        },
+        {
+          "label": "f",
+          "lines": [
+            { "speaker": "square", "segments": ["Lieber Daniel, ich habe um 15 Uhr ", { "id": "9f", "answer": "keine" }, " Zeit. Tut mir leid."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 10,
+      "section": "BASISTRAINING",
+      "instruction": "Richtig oder falsch? Lesen Sie die E-Mail und kreuzen Sie an. — Hallo Frau Söder, ich habe um 10 Uhr einen Termin mit der Firma Grübel. Ich komme heute um 14 Uhr ins Büro. Schreiben Sie heute bitte auch die Rechnungen für die Firma Merz und die Firma Knapp? Ach ja, wie ist denn die Telefonnummer von Frau Pauli? Bitte schreiben Sie mir eine SMS. Vielen Dank. — R. Huber",
+      "questions": [
+        { "label": "a", "segments": ["Herr Huber hat heute einen Termin. — ", { "id": "10a", "options": ["richtig", "falsch"], "correct": 0 }] },
+        { "label": "b", "segments": ["Er sucht eine Rechnung. — ", { "id": "10b", "options": ["richtig", "falsch"], "correct": 1 }] },
+        { "label": "c", "segments": ["Er braucht eine Telefonnummer. — ", { "id": "10c", "options": ["richtig", "falsch"], "correct": 0 }] },
+        { "label": "d", "segments": ["Er schreibt eine SMS. — ", { "id": "10d", "options": ["richtig", "falsch"], "correct": 1 }] }
+      ]
+    },
+    {
+      "type": "table-fill",
+      "exerciseNumber": 11,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie den Plural und den Artikel im Singular.",
+      "columns": ["Singular", "Plural"],
+      "rows": [
+        { "label": "a", "cells": ["die Rechnung", "die Rechnungen"] },
+        { "label": "b", "cells": [{ "id": "11b1", "answer": "die Briefmarke" }, { "id": "11b2", "answer": "die Briefmarken" }] },
+        { "label": "c", "cells": [{ "id": "11c1", "answer": "der Stift" }, { "id": "11c2", "answer": "die Stifte" }] },
+        { "label": "d", "cells": [{ "id": "11d1", "answer": "das Handy" }, { "id": "11d2", "answer": "die Handys" }] },
+        { "label": "e", "cells": [{ "id": "11e1", "answer": "das Formular" }, { "id": "11e2", "answer": "die Formulare" }] },
+        { "label": "f", "cells": [{ "id": "11f1", "answer": "der Drucker" }, { "id": "11f2", "answer": "die Drucker" }] },
+        { "label": "g", "cells": [{ "id": "11g1", "answer": "der Termin" }, { "id": "11g2", "answer": "die Termine" }] },
+        { "label": "h", "cells": [{ "id": "11h1", "answer": "der Kalender" }, { "id": "11h2", "answer": "die Kalender" }] }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 12,
+      "section": "TEST",
+      "instruction": "Was ist richtig? Markieren Sie.",
+      "questions": [
+        { "label": "a", "segments": ["Ich suche ", { "id": "12a1", "options": ["der", "den"], "correct": 1 }, " Kalender. — ", { "id": "12a2", "options": ["Der", "Den"], "correct": 0 }, " Kalender ist hier."] },
+        { "label": "b", "segments": ["Sie haben um 10 Uhr ", { "id": "12b", "options": ["ein", "einen"], "correct": 1 }, " Termin mit Frau Berg."] },
+        { "label": "c", "segments": ["Ich suche ", { "id": "12c", "options": ["ein", "einen"], "correct": 1 }, " Bleistift."] },
+        { "label": "d", "segments": ["Hast du ", { "id": "12d", "options": ["kein", "keinen"], "correct": 1 }, " Schlüssel?"] },
+        { "label": "e", "segments": ["Was kostet ", { "id": "12e", "options": ["der", "den"], "correct": 0 }, " Computer?"] },
+        { "label": "f", "segments": ["Ich habe nur ", { "id": "12f", "options": ["ein", "einen"], "correct": 1 }, " Kugelschreiber."] },
+        { "label": "g", "segments": ["Herr Loos hat ", { "id": "12g", "options": ["ein", "einen"], "correct": 1 }, " Schlüssel."] }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 13,
+      "section": "TEST",
+      "instruction": "Ein Telefongespräch. Ordnen Sie zu.",
+      "wordBank": ["Wo ist denn", "Vielen Dank", "Auf Wiederhören", "Hier ist", "Guten Tag"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": [{ "id": "13a", "answer": "Guten Tag" }, ", Herr Wimmer. ", { "id": "13b", "answer": "Hier ist" }, " Bugatu."] },
+          { "speaker": "triangle", "segments": ["Hallo, Frau Bugatu."] },
+          { "speaker": "square", "segments": ["Ich habe eine Frage, Herr Wimmer. ", { "id": "13c", "answer": "Wo ist denn" }, " der Laptop?"] },
+          { "speaker": "triangle", "segments": ["Frau Schneider hat den Laptop."] },
+          { "speaker": "square", "segments": ["Ach ja, richtig. ", { "id": "13d", "answer": "Vielen Dank" }, ". ", { "id": "13e", "answer": "Auf Wiederhören" }, ", Herr Wimmer."] },
+          { "speaker": "triangle", "segments": ["Tschüs, Frau Bugatu."] }
+        ]
+      ]
+    }
+  ]
+}

@@ -1,9 +1,12 @@
 import { useState, useCallback, useRef, useEffect } from "react";
 import type { MatchingQuiz } from "../types/quiz";
+import { useQuizState } from "../useQuizState";
 
 interface Props {
   quiz: MatchingQuiz;
   onComplete?: (score: number, total: number) => void;
+  onReset?: () => void;
+  stateKey?: string;
 }
 
 interface Coords {
@@ -11,19 +14,22 @@ interface Coords {
   y: number;
 }
 
-export default function Matching({ quiz, onComplete }: Props) {
+export default function Matching({ quiz, onComplete, onReset, stateKey }: Props) {
   const total = quiz.left.length;
   const containerRef = useRef<HTMLDivElement>(null);
   const leftRefs = useRef<(HTMLButtonElement | null)[]>([]);
   const rightRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
-  const [pairs, setPairs] = useState<Record<number, number>>(() => {
-    if (quiz.givenPair) return { [quiz.givenPair.left]: quiz.givenPair.right };
-    return {};
-  });
+  const [pairs, setPairs] = useQuizState<Record<number, number>>(
+    stateKey ? `${stateKey}-p` : undefined,
+    () => {
+      if (quiz.givenPair) return { [quiz.givenPair.left]: quiz.givenPair.right };
+      return {};
+    }
+  );
   const [selectedLeft, setSelectedLeft] = useState<number | null>(null);
   const [selectedRight, setSelectedRight] = useState<number | null>(null);
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useQuizState(stateKey ? `${stateKey}-c` : undefined, false);
   const [lineCoords, setLineCoords] = useState<
     { from: Coords; to: Coords; leftIdx: number }[]
   >([]);
@@ -178,6 +184,7 @@ export default function Matching({ quiz, onComplete }: Props) {
     setSelectedLeft(null);
     setSelectedRight(null);
     setChecked(false);
+    onReset?.();
   };
 
   const allPaired = quiz.left.every((_, i) => pairs[i] !== undefined);

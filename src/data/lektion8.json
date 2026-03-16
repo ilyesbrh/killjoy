@@ -1,0 +1,201 @@
+{
+  "lektion": 8,
+  "title": "Kein Problem. Ich habe Zeit!",
+  "quizzes": [
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 1,
+      "reference": "KB 4",
+      "section": "WÖRTER",
+      "instruction": "Freizeitaktivitäten. Ergänzen Sie die Wörter.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["das ", { "id": "1a", "answer": "Schwimmbad" }] },
+            { "speaker": "square", "segments": ["das ", { "id": "1b", "answer": "Museum" }] },
+            { "speaker": "square", "segments": ["das ", { "id": "1c", "answer": "Café" }] },
+            { "speaker": "square", "segments": ["das ", { "id": "1d", "answer": "Restaurant" }] },
+            { "speaker": "square", "segments": ["das ", { "id": "1e", "answer": "Kino" }] },
+            { "speaker": "square", "segments": ["die ", { "id": "1f", "answer": "Disco" }] },
+            { "speaker": "square", "segments": ["das ", { "id": "1g", "answer": "Konzert" }] },
+            { "speaker": "square", "segments": ["das ", { "id": "1h", "answer": "Theater" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 2,
+      "reference": "KB 4",
+      "section": "STRUKTUREN",
+      "instruction": "Wie spät ist es? Ergänzen Sie.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["09:55 → ", { "id": "2a", "answer": "fünf vor zehn" }] },
+            { "speaker": "square", "segments": ["14:30 → ", { "id": "2b", "answer": "halb drei" }] },
+            { "speaker": "square", "segments": ["17:10 → ", { "id": "2c", "answer": "zehn nach fünf" }] },
+            { "speaker": "square", "segments": ["20:15 → ", { "id": "2d", "answer": "Viertel nach acht" }] },
+            { "speaker": "square", "segments": ["11:45 → ", { "id": "2e", "answer": "Viertel vor zwölf" }] },
+            { "speaker": "square", "segments": ["07:05 → ", { "id": "2f", "answer": "fünf nach sieben" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 3,
+      "reference": "KB 5",
+      "section": "KOMMUNIKATION",
+      "instruction": "Ordnen Sie zu.",
+      "wordBank": ["Da kann ich leider nicht.", "Das weiß ich noch nicht.", "Ja, bis dann.", "Zwei Uhr ist okay.", "Hm … Ja, warum nicht? Wann denn?"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["Sag mal, was machst du am Freitag?"] },
+          { "speaker": "triangle", "segments": [{ "id": "3a", "answer": "Das weiß ich noch nicht." }] },
+          { "speaker": "square", "segments": ["Fährst du mit mir Rad? Hast du Lust?"] },
+          { "speaker": "triangle", "segments": [{ "id": "3b", "answer": "Hm … Ja, warum nicht? Wann denn?" }] },
+          { "speaker": "square", "segments": ["Am Vormittag."] },
+          { "speaker": "triangle", "segments": [{ "id": "3c", "answer": "Da kann ich leider nicht." }, " Aber am Nachmittag habe ich Zeit."] },
+          { "speaker": "square", "segments": ["Gut. Treffen wir uns um vier Uhr?"] },
+          { "speaker": "triangle", "segments": ["Das ist zu spät. Kannst du vielleicht auch um zwei?"] },
+          { "speaker": "square", "segments": [{ "id": "3d", "answer": "Zwei Uhr ist okay." }] },
+          { "speaker": "triangle", "segments": ["Gut, dann bis Freitag."] },
+          { "speaker": "square", "segments": [{ "id": "3e", "answer": "Ja, bis dann." }, " Tschüs!"] }
+        ]
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 4,
+      "reference": "KB 7",
+      "section": "WÖRTER",
+      "instruction": "Ergänzen Sie die Wochentage und vergleichen Sie.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Monday → ", { "id": "4a", "answer": "Montag" }] },
+            { "speaker": "square", "segments": ["Tuesday → ", { "id": "4b", "answer": "Dienstag" }] },
+            { "speaker": "square", "segments": ["Wednesday → ", { "id": "4c", "answer": "Mittwoch" }] },
+            { "speaker": "square", "segments": ["Thursday → ", { "id": "4d", "answer": "Donnerstag" }] },
+            { "speaker": "square", "segments": ["Friday → ", { "id": "4e", "answer": "Freitag" }] },
+            { "speaker": "square", "segments": ["Saturday → ", { "id": "4f", "answer": "Samstag" }] },
+            { "speaker": "square", "segments": ["Sunday → ", { "id": "4g", "answer": "Sonntag" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 5,
+      "reference": "KB 7",
+      "section": "WÖRTER",
+      "instruction": "Ergänzen Sie die Tageszeiten.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["der ", { "id": "5a", "answer": "Morgen" }] },
+            { "speaker": "square", "segments": ["der ", { "id": "5b", "answer": "Vormittag" }] },
+            { "speaker": "square", "segments": ["der ", { "id": "5c", "answer": "Mittag" }] },
+            { "speaker": "square", "segments": ["der ", { "id": "5d", "answer": "Nachmittag" }] },
+            { "speaker": "square", "segments": ["der ", { "id": "5e", "answer": "Abend" }] },
+            { "speaker": "square", "segments": ["die ", { "id": "5f", "answer": "Nacht" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 6,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie um, am oder in.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Wann gehen wir ins Museum? — ", { "id": "6a", "answer": "Am" }, " Donnerstagabend."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Mein Freund ist Arzt. Er arbeitet oft ", { "id": "6b", "answer": "in" }, " der Nacht."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Können wir ", { "id": "6c", "answer": "am" }, " Sonntag nach Graz fahren?"] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Meine Eltern kommen ", { "id": "6d", "answer": "am" }, " Sonntag ", { "id": "6e", "answer": "um" }, " 11:30 Uhr."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 7,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie das Telefongespräch.",
+      "wordBank": ["Wann denn?", "Da habe ich Zeit.", "Hast du am Freitag Zeit?", "Leider kann ich nicht.", "Und am Samstag?"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["Hallo Paul, hier ist Annalena. ", { "id": "7a", "answer": "Hast du am Freitag Zeit?" }, " Vielleicht können wir ins Kino gehen."] },
+          { "speaker": "triangle", "segments": [{ "id": "7b", "answer": "Leider kann ich nicht." }, " Ich arbeite am Freitag."] },
+          { "speaker": "square", "segments": [{ "id": "7c", "answer": "Und am Samstag?" }] },
+          { "speaker": "triangle", "segments": [{ "id": "7d", "answer": "Da habe ich Zeit." }] },
+          { "speaker": "square", "segments": [{ "id": "7e", "answer": "Wann denn?" }] }
+        ]
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 8,
+      "section": "BASISTRAINING",
+      "instruction": "Fridas Tag. Ergänzen Sie die Tageszeiten.",
+      "wordBank": ["Am Morgen", "Am Vormittag", "Am Mittag", "Am Abend", "In der Nacht"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": [{ "id": "8a", "answer": "Am Morgen" }, " schwimmt sie."] },
+          { "speaker": "square", "segments": [{ "id": "8b", "answer": "Am Vormittag" }, " trinkt sie Kaffee."] },
+          { "speaker": "square", "segments": [{ "id": "8c", "answer": "Am Mittag" }, " isst sie."] },
+          { "speaker": "square", "segments": [{ "id": "8d", "answer": "Am Abend" }, " geht sie ins Kino."] },
+          { "speaker": "square", "segments": [{ "id": "8e", "answer": "In der Nacht" }, " geht sie in die Disco."] }
+        ]
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 9,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie die Orte.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Um 11 Uhr treffe ich meine Freundin im ", { "id": "9b", "answer": "Café" }, ". Wir trinken zusammen einen Kaffee."] },
+            { "speaker": "square", "segments": ["Am Nachmittag gehen wir ins ", { "id": "9c", "answer": "Kino" }, ", aber ich finde den Film nicht so gut."] },
+            { "speaker": "square", "segments": ["Dann besuchen wir ein ", { "id": "9d", "answer": "Museum" }, ", die Bilder sind sehr schön und modern."] },
+            { "speaker": "square", "segments": ["Jetzt ist es 23 Uhr. Meine Freunde und ich tanzen in einer ", { "id": "9e", "answer": "Disco" }, "."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table-fill",
+      "exerciseNumber": 10,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie die Uhrzeit und die Tageszeit.",
+      "columns": ["Im Gespräch", "Tageszeit"],
+      "rows": [
+        { "label": "10:50", "cells": [{ "id": "10a", "answer": "zehn vor elf" }, { "id": "10b", "answer": "Vormittag" }] },
+        { "label": "05:15", "cells": [{ "id": "10c", "answer": "Viertel nach fünf" }, { "id": "10d", "answer": "Morgen" }] },
+        { "label": "12:45", "cells": [{ "id": "10e", "answer": "Viertel vor eins" }, { "id": "10f", "answer": "Mittag" }] },
+        { "label": "20:30", "cells": [{ "id": "10g", "answer": "halb neun" }, { "id": "10h", "answer": "Abend" }] }
+      ]
+    }
+  ]
+}

@@ -1,12 +1,14 @@
-import { useState } from "react";
 import type {
   InlineChoiceQuiz,
   InlineChoice as InlineChoiceType,
 } from "../types/quiz";
+import { useQuizState } from "../useQuizState";
 
 interface Props {
   quiz: InlineChoiceQuiz;
   onComplete?: (score: number, total: number) => void;
+  onReset?: () => void;
+  stateKey?: string;
 }
 
 function isChoice(
@@ -15,7 +17,7 @@ function isChoice(
   return typeof segment !== "string";
 }
 
-export default function InlineChoice({ quiz, onComplete }: Props) {
+export default function InlineChoice({ quiz, onComplete, onReset, stateKey }: Props) {
   const allChoices: { qIdx: number; choice: InlineChoiceType }[] =
     quiz.questions.flatMap((q, qIdx) =>
       q.segments.filter(isChoice).map((choice) => ({ qIdx, choice }))
@@ -24,7 +26,7 @@ export default function InlineChoice({ quiz, onComplete }: Props) {
   const total = allChoices.length;
 
   // answers: choiceId -> selected option index
-  const [answers, setAnswers] = useState<Record<string, number>>(() => {
+  const [answers, setAnswers] = useQuizState<Record<string, number>>(stateKey ? `${stateKey}-a` : undefined, () => {
     const init: Record<string, number> = {};
     if (quiz.givenAnswer !== undefined) {
       const q = quiz.questions[quiz.givenAnswer];
@@ -36,7 +38,7 @@ export default function InlineChoice({ quiz, onComplete }: Props) {
     }
     return init;
   });
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useQuizState(stateKey ? `${stateKey}-c` : undefined, false);
 
   const isGivenQuestion = (qIdx: number) => quiz.givenAnswer === qIdx;
 
@@ -67,6 +69,7 @@ export default function InlineChoice({ quiz, onComplete }: Props) {
     }
     setAnswers(init);
     setChecked(false);
+    onReset?.();
   };
 
   const allAnswered = allChoices.every(({ choice }) =>

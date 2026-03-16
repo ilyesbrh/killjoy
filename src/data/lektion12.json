@@ -1,0 +1,325 @@
+{
+  "lektion": 12,
+  "title": "Was ist denn hier passiert?",
+  "quizzes": [
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 1,
+      "reference": "KB 2",
+      "section": "WÖRTER",
+      "instruction": "Monate und Jahreszeiten. Ergänzen Sie.",
+      "dialogues": [
+        {
+          "label": "Winter",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "1a", "answer": "Dezember" }, ", ", { "id": "1b", "answer": "Januar" }, ", ", { "id": "1c", "answer": "Februar" }] }
+          ]
+        },
+        {
+          "label": "Frühling",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "1d", "answer": "März" }, ", ", { "id": "1e", "answer": "April" }, ", ", { "id": "1f", "answer": "Mai" }] }
+          ]
+        },
+        {
+          "label": "Sommer",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "1g", "answer": "Juni" }, ", ", { "id": "1h", "answer": "Juli" }, ", ", { "id": "1i", "answer": "August" }] }
+          ]
+        },
+        {
+          "label": "Herbst",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "1j", "answer": "September" }, ", ", { "id": "1k", "answer": "Oktober" }, ", ", { "id": "1l", "answer": "November" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 2,
+      "reference": "KB 4",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie sein in der richtigen Form.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Marc ", { "id": "2a", "answer": "ist" }, " nach New York geflogen."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Ich ", { "id": "2b", "answer": "bin" }, " am Montag nicht in den Deutschkurs gekommen."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "2c", "answer": "Seid" }, " ihr schon einmal nach Zürich gefahren?"] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "2d", "answer": "Bist" }, " du nach Hamburg gefahren oder geflogen?"] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": ["Ich ", { "id": "2e", "answer": "bin" }, " mit Daniel in ein Konzert gegangen."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "categorize",
+      "exerciseNumber": 3,
+      "reference": "KB 4",
+      "section": "STRUKTUREN",
+      "instruction": "haben oder sein? Ordnen Sie die Partizipien zu.",
+      "categories": ["haben + ge…t/ge…en", "sein + ge…en"],
+      "items": [
+        { "label": "geschlafen", "correctCategory": 0 },
+        { "label": "gegessen", "correctCategory": 0 },
+        { "label": "gekauft", "correctCategory": 0 },
+        { "label": "gelernt", "correctCategory": 0 },
+        { "label": "getrunken", "correctCategory": 0 },
+        { "label": "geschwommen", "correctCategory": 1 },
+        { "label": "gefahren", "correctCategory": 1 },
+        { "label": "geflogen", "correctCategory": 1 },
+        { "label": "gekommen", "correctCategory": 1 },
+        { "label": "gegangen", "correctCategory": 1 },
+        { "label": "umgestiegen", "correctCategory": 1 },
+        { "label": "angekommen", "correctCategory": 1 }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 4,
+      "reference": "KB 6",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie war oder hatte.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Heute war ich im Kino. — Und wie ", { "id": "4a", "answer": "war" }, " der Film? — Langweilig!"] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Hast du eingekauft? — Nein, ich ", { "id": "4b", "answer": "hatte" }, " kein Geld."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Hast du kein Obst mehr? — Doch, gestern ", { "id": "4c", "answer": "hatte" }, " ich noch Äpfel und Orangen."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Wie ", { "id": "4d", "answer": "war" }, " die Party? — Schön. Ich ", { "id": "4e", "answer": "hatte" }, " viel Spaß."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 5,
+      "reference": "KB 6",
+      "section": "STRUKTUREN",
+      "instruction": "aus, in oder nach? Kreuzen Sie an.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "Monique und Jules leben zusammen ",
+            { "id": "5a", "options": ["aus", "in", "nach"], "correct": 1 },
+            " Berlin."
+          ]
+        },
+        {
+          "label": "b",
+          "segments": [
+            "Aber sie kommt ",
+            { "id": "5b", "options": ["aus", "in", "nach"], "correct": 0 },
+            " der Schweiz."
+          ]
+        },
+        {
+          "label": "c",
+          "segments": [
+            "Letzten Monat ist sie ",
+            { "id": "5c", "options": ["aus", "in", "nach"], "correct": 2 },
+            " Genf geflogen."
+          ]
+        },
+        {
+          "label": "d",
+          "segments": [
+            "Antoine ist im September ",
+            { "id": "5d", "options": ["aus", "in", "nach"], "correct": 2 },
+            " Deutschland gekommen."
+          ]
+        },
+        {
+          "label": "e",
+          "segments": [
+            "Er kommt ",
+            { "id": "5e", "options": ["aus", "in", "nach"], "correct": 0 },
+            " Paris."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 6,
+      "section": "TEST",
+      "instruction": "Was ist richtig? Kreuzen Sie an.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "Ich ",
+            { "id": "6a", "options": ["habe", "bin"], "correct": 0 },
+            " am Wochenende meinen Geburtstag gefeiert."
+          ]
+        },
+        {
+          "label": "b",
+          "segments": [
+            "Meine Freundin aus Wien ",
+            { "id": "6b", "options": ["hat", "ist"], "correct": 1 },
+            " auch gekommen."
+          ]
+        },
+        {
+          "label": "c",
+          "segments": [
+            "Am Abend ",
+            { "id": "6c", "options": ["haben", "sind"], "correct": 1 },
+            " wir in eine Bar gegangen."
+          ]
+        },
+        {
+          "label": "d",
+          "segments": [
+            "Wir ",
+            { "id": "6d", "options": ["haben", "sind"], "correct": 0 },
+            " Freunde getroffen."
+          ]
+        },
+        {
+          "label": "e",
+          "segments": [
+            "Später in der Nacht ",
+            { "id": "6e", "options": ["haben", "sind"], "correct": 0 },
+            " wir auch getanzt."
+          ]
+        },
+        {
+          "label": "f",
+          "segments": [
+            "Heute ",
+            { "id": "6f", "options": ["hat", "ist"], "correct": 1 },
+            " meine Freundin leider wieder abgefahren."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 7,
+      "section": "TEST",
+      "instruction": "Schreiben Sie Sätze im Perfekt.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Lucia kommt nach Lübeck. → Lucia ", { "id": "7a", "answer": "ist nach Lübeck gekommen" }, "."] },
+            { "speaker": "square", "segments": ["Wir fahren im Juli nach Hamburg. → Im Juli ", { "id": "7b", "answer": "sind wir nach Hamburg gefahren" }, "."] },
+            { "speaker": "square", "segments": ["Der Zug fährt um 12.30 Uhr ab. → Der Zug ", { "id": "7c", "answer": "ist um 12.30 Uhr abgefahren" }, "."] },
+            { "speaker": "square", "segments": ["Marcel fliegt nach Amsterdam. → Marcel ", { "id": "7d", "answer": "ist nach Amsterdam geflogen" }, "."] },
+            { "speaker": "square", "segments": ["Ich gehe mit Carla ins Kino. → Ich ", { "id": "7e", "answer": "bin mit Carla ins Kino gegangen" }, "."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 8,
+      "section": "BASISTRAINING",
+      "instruction": "Ergänzen Sie haben oder sein und das Partizip in der richtigen Form.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Wie war dein Abend?"] },
+            { "speaker": "triangle", "segments": ["Sehr gut. Wir ", { "id": "8a1", "answer": "haben" }, " zusammen eine Fischsuppe ", { "id": "8a2", "answer": "gekocht" }, ". Später ", { "id": "8a3", "answer": "sind" }, " wir noch in die Disco ", { "id": "8a4", "answer": "gegangen" }, "."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Ich ", { "id": "8b1", "answer": "bin" }, " mit dem Zug von München nach Flensburg ", { "id": "8b2", "answer": "gefahren" }, "."] },
+            { "speaker": "triangle", "segments": ["Wie oft ", { "id": "8b3", "answer": "bist" }, " du ", { "id": "8b4", "answer": "umgestiegen" }, "?"] },
+            { "speaker": "square", "segments": ["Nur einmal, in Hamburg."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 9,
+      "section": "BASISTRAINING",
+      "instruction": "Teresas Tagebuch. Schreiben Sie im Perfekt.",
+      "dialogues": [
+        {
+          "label": "Samstag",
+          "lines": [
+            { "speaker": "square", "segments": ["Max hat mich ", { "id": "9a", "answer": "abgeholt" }, ". Wir sind ins Kino ", { "id": "9b", "answer": "gegangen" }, ". Wir haben Doro und Jo ", { "id": "9c", "answer": "getroffen" }, "."] }
+          ]
+        },
+        {
+          "label": "Sonntag",
+          "lines": [
+            { "speaker": "square", "segments": ["Ich habe lange ", { "id": "9d", "answer": "geschlafen" }, ". Ich habe die Wohnung ", { "id": "9e", "answer": "aufgeräumt" }, "."] }
+          ]
+        },
+        {
+          "label": "Montag",
+          "lines": [
+            { "speaker": "square", "segments": ["Ich habe ", { "id": "9f", "answer": "gearbeitet" }, ". Ich habe Spanisch ", { "id": "9g", "answer": "gelernt" }, "."] }
+          ]
+        },
+        {
+          "label": "Dienstag",
+          "lines": [
+            { "speaker": "square", "segments": ["Ich bin in die Stadt ", { "id": "9h", "answer": "gefahren" }, ". Ich habe eine Kette ", { "id": "9i", "answer": "gekauft" }, "."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 10,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie den Chat.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["nicky1980: Hallo Leute, ich fliege im Sommer nach Deutschland. Wo gibt es ein gutes Reggae-Festival?"] },
+            { "speaker": "triangle", "segments": ["SUNSAMMY: Ein Fest ", { "id": "10a", "answer": "ist" }, " das 'Chiemsee Reggae Summer Festival'. Es ist sehr groß, es ", { "id": "10b", "answer": "hat" }, " 30.000 Besucher. Das Festival ", { "id": "10c", "answer": "dauert" }, " 3 Tage. Es ist im August."] },
+            { "speaker": "square", "segments": ["nicky1980: Ich war schon auf dem Festival! Ich habe viele nette Leute ", { "id": "10d", "answer": "getroffen" }, " und gute Musik ", { "id": "10e", "answer": "gehört" }, "."] }
+          ]
+        }
+      ]
+    }
+  ]
+}

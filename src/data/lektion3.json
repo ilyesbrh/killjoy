@@ -1,0 +1,468 @@
+{
+  "lektion": 3,
+  "title": "Das ist meine Mutter.",
+  "quizzes": [
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 1,
+      "reference": "KB 1",
+      "section": "STRUKTUREN",
+      "instruction": "Was passt? Kreuzen Sie an.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "Ist das ",
+            { "id": "1a", "options": ["dein", "deine"], "correct": 0 },
+            " Vater?"
+          ]
+        },
+        {
+          "label": "b",
+          "segments": [
+            "Ja, das ist ",
+            { "id": "1b", "options": ["mein", "meine"], "correct": 0 },
+            " Vater."
+          ]
+        },
+        {
+          "label": "c",
+          "segments": [
+            "Und das? Ist das ",
+            { "id": "1c", "options": ["dein", "deine"], "correct": 1 },
+            " Oma?"
+          ]
+        },
+        {
+          "label": "d",
+          "segments": [
+            "Nein, das ist nicht ",
+            { "id": "1d", "options": ["mein", "meine"], "correct": 1 },
+            " Oma. Das ist ",
+            { "id": "1e", "options": ["mein", "meine"], "correct": 1 },
+            " Mutter."
+          ]
+        },
+        {
+          "label": "e",
+          "segments": [
+            "Das hier ist ",
+            { "id": "1f", "options": ["mein", "meine"], "correct": 1 },
+            " Oma."
+          ]
+        },
+        {
+          "label": "f",
+          "segments": [
+            "Und das ist ",
+            { "id": "1g", "options": ["mein", "meine"], "correct": 0 },
+            " Opa."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "categorize",
+      "exerciseNumber": 2,
+      "reference": "KB 3",
+      "section": "KOMMUNIKATION",
+      "instruction": "Kreuzen Sie an: Ja/Nein-Fragen oder W-Fragen/Aussagen?",
+      "categories": ["Ja/Nein-Fragen", "W-Fragen/Aussagen"],
+      "items": [
+        { "label": "Ist Lisa geschieden?", "correctCategory": 0 },
+        { "label": "Sind das deine Kinder?", "correctCategory": 0 },
+        { "label": "Vroni ist nicht verheiratet.", "correctCategory": 1 }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 3,
+      "reference": "KB 3",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie ja, nein oder doch.",
+      "wordBank": ["Ja", "Nein", "Doch"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["Ist deine Schwester verheiratet?"] },
+          { "speaker": "triangle", "segments": [{ "id": "3a", "answer": "Ja" }, ", meine Schwester ist verheiratet."] }
+        ],
+        [
+          { "speaker": "square", "segments": ["Leben deine Eltern in Kiel?"] },
+          { "speaker": "triangle", "segments": [{ "id": "3b", "answer": "Nein" }, ", meine Eltern leben nicht in Kiel."] }
+        ],
+        [
+          { "speaker": "square", "segments": ["Du studierst nicht, oder?"] },
+          { "speaker": "triangle", "segments": [{ "id": "3c", "answer": "Doch" }, ", ich studiere Physik."] }
+        ],
+        [
+          { "speaker": "square", "segments": ["Deine Schwester ist auch Schauspielerin, oder?"] },
+          { "speaker": "triangle", "segments": [{ "id": "3d", "answer": "Ja" }, ", sie ist auch Schauspielerin."] }
+        ],
+        [
+          { "speaker": "square", "segments": ["Deine Frau heißt nicht Sandra, oder?"] },
+          { "speaker": "triangle", "segments": [{ "id": "3e", "answer": "Doch" }, ", sie heißt Sandra."] }
+        ]
+      ]
+    },
+    {
+      "type": "matching",
+      "exerciseNumber": 4,
+      "reference": "KB 5",
+      "section": "WÖRTER",
+      "instruction": "Ordnen Sie zu.",
+      "left": [
+        { "label": "a", "text": "Sohn" },
+        { "label": "b", "text": "Mutter" },
+        { "label": "c", "text": "Bruder" },
+        { "label": "d", "text": "Opa" },
+        { "label": "e", "text": "Enkel" }
+      ],
+      "right": [
+        "Tochter",
+        "Vater",
+        "Schwester",
+        "Oma",
+        "Enkelin"
+      ],
+      "correctPairs": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4
+      }
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 5,
+      "reference": "KB 5",
+      "section": "STRUKTUREN",
+      "instruction": "Ordnen Sie zu: mein/meine/dein/deine.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Sind das ", { "id": "5a", "answer": "deine" }, " Kinder auf dem Bild?"] },
+            { "speaker": "triangle", "segments": ["Ja, das sind ", { "id": "5b", "answer": "meine" }, " Kinder. Das hier ist ", { "id": "5c", "answer": "meine" }, " Tochter Leonie und das hier ist ", { "id": "5d", "answer": "mein" }, " Sohn Torben. Und hier ist ", { "id": "5e", "answer": "mein" }, " Bruder."] },
+            { "speaker": "square", "segments": ["Was macht ", { "id": "5f", "answer": "dein" }, " Bruder?"] },
+            { "speaker": "triangle", "segments": [{ "id": "5g", "answer": "Mein" }, " Bruder lebt in Berlin und arbeitet als IT-Spezialist."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table-fill",
+      "exerciseNumber": 6,
+      "reference": "KB 6",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie die Verben.",
+      "columns": ["sprechen", "haben", "kommen"],
+      "rows": [
+        {
+          "label": "ich",
+          "cells": [
+            { "id": "6a", "answer": "spreche" },
+            { "id": "6b", "answer": "habe" },
+            { "id": "6c", "answer": "komme" }
+          ]
+        },
+        {
+          "label": "du",
+          "cells": [
+            { "id": "6d", "answer": "sprichst" },
+            { "id": "6e", "answer": "hast" },
+            { "id": "6f", "answer": "kommst" }
+          ]
+        },
+        {
+          "label": "er/sie",
+          "cells": [
+            { "id": "6g", "answer": "spricht" },
+            { "id": "6h", "answer": "hat" },
+            { "id": "6i", "answer": "kommt" }
+          ]
+        },
+        {
+          "label": "wir",
+          "cells": [
+            { "id": "6j", "answer": "sprechen" },
+            { "id": "6k", "answer": "haben" },
+            { "id": "6l", "answer": "kommen" }
+          ]
+        },
+        {
+          "label": "ihr",
+          "cells": [
+            { "id": "6m", "answer": "sprecht" },
+            { "id": "6n", "answer": "habt" },
+            { "id": "6o", "answer": "kommt" }
+          ]
+        },
+        {
+          "label": "sie/Sie",
+          "cells": [
+            { "id": "6p", "answer": "sprechen" },
+            { "id": "6q", "answer": "haben" },
+            { "id": "6r", "answer": "kommen" }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 7,
+      "reference": "KB 6",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie die Verben.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Welche Sprachen ", { "id": "7a1", "answer": "sprichst" }, " du?"] },
+            { "speaker": "triangle", "segments": ["Ich ", { "id": "7a2", "answer": "spreche" }, " Deutsch und Englisch."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Wie viele Sprachen ", { "id": "7b1", "answer": "sprechen" }, " Sie?"] },
+            { "speaker": "triangle", "segments": ["Drei: Englisch, Französisch und Spanisch."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Woher ", { "id": "7c1", "answer": "kommt" }, " ihr?"] },
+            { "speaker": "triangle", "segments": ["Wir ", { "id": "7c2", "answer": "kommen" }, " aus der Schweiz."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "7d1", "answer": "Sprecht" }, " ihr Französisch?"] },
+            { "speaker": "triangle", "segments": ["Ja, und Deutsch."] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "7e1", "answer": "Haben" }, " Sie Kinder?"] },
+            { "speaker": "triangle", "segments": ["Ja, wir ", { "id": "7e2", "answer": "haben" }, " zwei Kinder."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "categorize",
+      "exerciseNumber": 8,
+      "reference": "KB 6",
+      "section": "WÖRTER",
+      "instruction": "Was spricht man wo? Ordnen Sie zu.",
+      "categories": ["Deutsch", "Englisch", "Spanisch", "Französisch", "Italienisch", "Russisch"],
+      "items": [
+        { "label": "Österreich", "correctCategory": 0 },
+        { "label": "England", "correctCategory": 1 },
+        { "label": "Spanien", "correctCategory": 2 },
+        { "label": "Frankreich", "correctCategory": 3 },
+        { "label": "Italien", "correctCategory": 4 },
+        { "label": "Russland", "correctCategory": 5 }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 9,
+      "section": "TEST",
+      "instruction": "Familie. Ergänzen Sie.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Eltern: Vater und ", { "id": "9a", "answer": "Mutter" }] },
+            { "speaker": "square", "segments": ["Geschwister: Bruder und ", { "id": "9b", "answer": "Schwester" }] },
+            { "speaker": "square", "segments": ["Kinder: Sohn und ", { "id": "9c", "answer": "Tochter" }] },
+            { "speaker": "square", "segments": ["Großeltern: Opa/Großvater und ", { "id": "9d", "answer": "Oma" }, "/Großmutter"] },
+            { "speaker": "square", "segments": ["Enkelkinder: Enkel und ", { "id": "9e", "answer": "Enkelin" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "matching",
+      "exerciseNumber": 10,
+      "reference": "KB 5",
+      "section": "WÖRTER",
+      "instruction": "Ordnen Sie zu.",
+      "left": [
+        { "label": "a", "text": "Schwester" },
+        { "label": "b", "text": "Vater" },
+        { "label": "c", "text": "Sohn" },
+        { "label": "d", "text": "Opa" },
+        { "label": "e", "text": "Enkel" },
+        { "label": "f", "text": "(Ehe-)Frau" }
+      ],
+      "right": [
+        "Bruder",
+        "Mutter",
+        "Tochter",
+        "Oma / Großmutter",
+        "Enkelin",
+        "(Ehe-)Mann"
+      ],
+      "correctPairs": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5
+      }
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 11,
+      "reference": "KB 5",
+      "section": "WÖRTER",
+      "instruction": "Silbenrätsel. Ergänzen Sie.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["a Meine ", { "id": "11a", "answer": "Eltern" }, " bei der goldenen Hochzeit."] },
+            { "speaker": "square", "segments": ["b Meine ", { "id": "11b", "answer": "Schwester" }, " in den Alpen."] },
+            { "speaker": "square", "segments": ["c Meine ", { "id": "11c", "answer": "Großeltern" }, " bei der goldenen Hochzeit."] },
+            { "speaker": "square", "segments": ["d Ich und meine ", { "id": "11d", "answer": "Kinder" }, " in Paris."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 12,
+      "reference": "KB 6",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie die Verben.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Welche Sprachen ", { "id": "12a1", "answer": "sprichst" }, " du?"] },
+            { "speaker": "triangle", "segments": ["Ich ", { "id": "12a2", "answer": "spreche" }, " Deutsch und Englisch."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Wie viele Sprachen ", { "id": "12b1", "answer": "sprechen" }, " Sie?"] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Wo ", { "id": "12c1", "answer": "wohnen" }, " Sie?"] },
+            { "speaker": "triangle", "segments": ["Wir ", { "id": "12c2", "answer": "wohnen" }, " in Graz."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "12d1", "answer": "Haben" }, " Sie Kinder?"] },
+            { "speaker": "triangle", "segments": ["Ja, wir ", { "id": "12d2", "answer": "haben" }, " zwei Kinder."] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": ["Das ", { "id": "12e1", "answer": "sind" }, " meine Kinder."] },
+            { "speaker": "triangle", "segments": ["Sie ", { "id": "12e2", "answer": "heißen" }, " Tim und Tomma."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 13,
+      "section": "TEST",
+      "instruction": "Schreiben Sie die Fragen.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "t2a", "answer": "Ist Thea deine Tochter" }, "?"] },
+            { "speaker": "triangle", "segments": ["Ja, Thea ist meine Tochter."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "t2b", "answer": "Welche Sprachen sprichst du" }, "?"] },
+            { "speaker": "triangle", "segments": ["Französisch, Englisch und Deutsch."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "t2c", "answer": "Ist dein Vater verheiratet" }, "?"] },
+            { "speaker": "triangle", "segments": ["Ja, das ist mein Vater."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "t2d", "answer": "Wo wohnst du" }, "?"] },
+            { "speaker": "triangle", "segments": ["Nein, ich ..."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 14,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie mein-/dein-.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Hallo Eduardo,"] },
+            { "speaker": "square", "segments": ["wie geht's? Ich bin jetzt in Deutschland. Hier wohnt ", { "id": "t4a", "answer": "mein" }, " Bruder."] },
+            { "speaker": "square", "segments": ["Ich mache hier ein Praktikum. ", { "id": "t4b", "answer": "Meine" }, " Kollegen sind nett."] },
+            { "speaker": "square", "segments": ["Wie geht es Dir? Was machen ", { "id": "t4c", "answer": "deine" }, " Frau und ", { "id": "t4d", "answer": "dein" }, " Sohn?"] },
+            { "speaker": "square", "segments": ["Tschüs, Anna"] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 15,
+      "section": "TEST",
+      "instruction": "Ja, nein oder doch? Schreiben Sie die Antworten.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Hannah ist nicht deine Tochter, oder?"] },
+            { "speaker": "triangle", "segments": [{ "id": "t5a", "answer": "Doch" }, ", Hannah ist meine Tochter."] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": ["Sprichst du Spanisch?"] },
+            { "speaker": "triangle", "segments": [{ "id": "t5b", "answer": "Nein" }, ", ich spreche kein Spanisch."] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Du bist nicht verheiratet, oder?"] },
+            { "speaker": "triangle", "segments": [{ "id": "t5c", "answer": "Nein" }, ", ich bin nicht verheiratet."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Ist Frau Duarte deine Lehrerin?"] },
+            { "speaker": "triangle", "segments": [{ "id": "t5d", "answer": "Ja" }, ", sie ist meine Lehrerin."] }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "lektion": 9,
+  "title": "Ich möchte was essen, Onkel Harry.",
+  "quizzes": [
+    {
+      "type": "matching",
+      "exerciseNumber": 1,
+      "reference": "KB 3",
+      "section": "WÖRTER",
+      "instruction": "Essen und Trinken. Ordnen Sie zu.",
+      "left": [
+        { "label": "a", "text": "fish" },
+        { "label": "b", "text": "cake" },
+        { "label": "c", "text": "tea" },
+        { "label": "d", "text": "potato" },
+        { "label": "e", "text": "apple" },
+        { "label": "f", "text": "tomato" },
+        { "label": "g", "text": "milk" },
+        { "label": "h", "text": "bread" }
+      ],
+      "right": [
+        "Fisch",
+        "Kuchen",
+        "Tee",
+        "Kartoffel",
+        "Apfel",
+        "Tomate",
+        "Milch",
+        "Brot"
+      ],
+      "correctPairs": {
+        "0": 0,
+        "1": 1,
+        "2": 2,
+        "3": 3,
+        "4": 4,
+        "5": 5,
+        "6": 6,
+        "7": 7
+      }
+    },
+    {
+      "type": "table-fill",
+      "exerciseNumber": 2,
+      "reference": "KB 3",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie mögen.",
+      "columns": ["mögen"],
+      "rows": [
+        { "label": "ich", "cells": [{ "id": "2a", "answer": "mag" }] },
+        { "label": "du", "cells": [{ "id": "2b", "answer": "magst" }] },
+        { "label": "er/sie", "cells": [{ "id": "2c", "answer": "mag" }] },
+        { "label": "wir", "cells": [{ "id": "2d", "answer": "mögen" }] },
+        { "label": "ihr", "cells": [{ "id": "2e", "answer": "mögt" }] },
+        { "label": "sie/Sie", "cells": [{ "id": "2f", "answer": "mögen" }] }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 3,
+      "reference": "KB 3",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie möchte- in der richtigen Form.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Was ", { "id": "3a", "answer": "möchtet" }, " ihr?"] },
+            { "speaker": "triangle", "segments": ["Wir ", { "id": "3b", "answer": "möchten" }, " bitte zwei Brötchen."] },
+            { "speaker": "square", "segments": ["Mit Schinken oder Käse?"] },
+            { "speaker": "triangle", "segments": ["Ich ", { "id": "3c", "answer": "möchte" }, " bitte ein Käsebrötchen."] },
+            { "speaker": "square", "segments": ["Und du Jonas, was ", { "id": "3d", "answer": "möchtest" }, " du?"] },
+            { "speaker": "triangle", "segments": ["Ein Schinkenbrötchen bitte."] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 4,
+      "reference": "KB 3",
+      "section": "KOMMUNIKATION",
+      "instruction": "Welche Antwort passt? Kreuzen Sie an.",
+      "questions": [
+        {
+          "label": "a",
+          "segments": [
+            "Guten Appetit! — ",
+            { "id": "4a", "options": ["Nein, danke.", "Danke, gleichfalls."], "correct": 1 }
+          ]
+        },
+        {
+          "label": "b",
+          "segments": [
+            "Mögen Sie Fisch? — ",
+            { "id": "4b", "options": ["Bitte nein.", "Nein, nicht so gern."], "correct": 1 }
+          ]
+        },
+        {
+          "label": "c",
+          "segments": [
+            "Möchten Sie noch etwas Kuchen? — ",
+            { "id": "4c", "options": ["Ja, ebenfalls.", "Ja, gern."], "correct": 1 }
+          ]
+        },
+        {
+          "label": "d",
+          "segments": [
+            "Wie schmeckt die Suppe? — ",
+            { "id": "4d", "options": ["Sehr gut, danke.", "Gut. Bitte sehr."], "correct": 0 }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 5,
+      "reference": "KB 5",
+      "section": "STRUKTUREN",
+      "instruction": "Ergänzen Sie schon oder erst.",
+      "wordBank": ["schon", "erst"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["Was ... es ist ", { "id": "5a", "answer": "schon" }, " fünf vor vier?"] },
+          { "speaker": "triangle", "segments": ["Warum? Was ist los?"] },
+          { "speaker": "square", "segments": ["Ich treffe Claudia um vier am Marktplatz."] }
+        ],
+        [
+          { "speaker": "square", "segments": ["Heute kommen meine Schwester und ihr Mann zum Essen. Wann kommen sie denn?"] },
+          { "speaker": "triangle", "segments": ["Um sieben Uhr."] },
+          { "speaker": "square", "segments": ["Aber es ist doch ", { "id": "5b", "answer": "erst" }, " fünf. Da hast du doch noch viel Zeit!"] }
+        ],
+        [
+          { "speaker": "square", "segments": ["Was, du gehst ", { "id": "5c", "answer": "schon" }, " nach Hause? Es ist doch ", { "id": "5d", "answer": "erst" }, " elf Uhr."] }
+        ]
+      ]
+    },
+    {
+      "type": "categorize",
+      "exerciseNumber": 6,
+      "section": "WÖRTER",
+      "instruction": "Ordnen Sie die Speisekarte zu.",
+      "categories": ["Vorspeisen", "Hauptgerichte", "Desserts", "Getränke"],
+      "items": [
+        { "label": "Kartoffelsuppe mit Brot", "correctCategory": 0 },
+        { "label": "Zwiebelsuppe mit Käse", "correctCategory": 0 },
+        { "label": "Schweinebraten mit Knödel", "correctCategory": 1 },
+        { "label": "Fisch mit Reis", "correctCategory": 1 },
+        { "label": "Wiener Schnitzel mit Kartoffelsalat", "correctCategory": 1 },
+        { "label": "Warmer Apfelstrudel mit Vanilleeis", "correctCategory": 2 },
+        { "label": "Obstsalat", "correctCategory": 2 },
+        { "label": "Schokoladenkuchen", "correctCategory": 2 },
+        { "label": "Bier", "correctCategory": 3 },
+        { "label": "Mineralwasser", "correctCategory": 3 },
+        { "label": "Apfelsaft", "correctCategory": 3 }
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 7,
+      "section": "TEST",
+      "instruction": "Ergänzen Sie die Verben in der richtigen Form.",
+      "dialogues": [
+        {
+          "label": "a",
+          "lines": [
+            { "speaker": "square", "segments": ["Was ", { "id": "7a", "answer": "isst" }, " du gern zum Frühstück?"] }
+          ]
+        },
+        {
+          "label": "b",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "7b", "answer": "Möchtet" }, " ihr einen Kaffee?"] }
+          ]
+        },
+        {
+          "label": "c",
+          "lines": [
+            { "speaker": "square", "segments": ["Melanie ", { "id": "7c", "answer": "mag" }, " keinen Braten."] }
+          ]
+        },
+        {
+          "label": "d",
+          "lines": [
+            { "speaker": "square", "segments": ["Ich ", { "id": "7d", "answer": "esse" }, " sehr oft Schokolade."] }
+          ]
+        },
+        {
+          "label": "e",
+          "lines": [
+            { "speaker": "square", "segments": [{ "id": "7e", "answer": "Möchten" }, " Sie einen Salat mit Schinken und Ei?"] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "table-fill",
+      "exerciseNumber": 8,
+      "section": "BASISTRAINING",
+      "instruction": "Ergänzen Sie essen.",
+      "columns": ["essen"],
+      "rows": [
+        { "label": "ich", "cells": [{ "id": "8a", "answer": "esse" }] },
+        { "label": "du", "cells": [{ "id": "8b", "answer": "isst" }] },
+        { "label": "er/sie", "cells": [{ "id": "8c", "answer": "isst" }] },
+        { "label": "wir", "cells": ["essen"] },
+        { "label": "ihr", "cells": [{ "id": "8d", "answer": "esst" }] },
+        { "label": "sie/Sie", "cells": [{ "id": "8e", "answer": "essen" }] }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 9,
+      "section": "BASISTRAINING",
+      "instruction": "Ordnen Sie zu.",
+      "wordBank": ["mag ich auch gern", "isst du auch gern", "esse ich sehr gern", "mögt ihr", "isst du gern"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["Und was ", { "id": "9a", "answer": "isst du gern" }, " zum Frühstück?"] },
+          { "speaker": "triangle", "segments": ["Hm ... ich weiß nicht."] },
+          { "speaker": "square", "segments": ["Julia, was ", { "id": "9b", "answer": "isst du auch gern" }, " zum Frühstück?"] },
+          { "speaker": "triangle", "segments": ["Also, Brötchen mit Käse ", { "id": "9c", "answer": "esse ich sehr gern" }, "!"] },
+          { "speaker": "triangle", "segments": ["Und Müsli mit Obst ", { "id": "9d", "answer": "mag ich auch gern" }, " zum Frühstück."] },
+          { "speaker": "square", "segments": [{ "id": "9e", "answer": "Mögt ihr" }, " Wurst oder Schinken?"] },
+          { "speaker": "triangle", "segments": ["Ja, aber nicht zum Frühstück."] }
+        ]
+      ]
+    },
+    {
+      "type": "fill-in-blank",
+      "exerciseNumber": 10,
+      "section": "TEST",
+      "instruction": "Bilden Sie neue Wörter mit Artikel.",
+      "dialogues": [
+        {
+          "lines": [
+            { "speaker": "square", "segments": ["Kartoffel + Suppe = ", { "id": "10a", "answer": "die Kartoffelsuppe" }] },
+            { "speaker": "square", "segments": ["Apfel + Kuchen = ", { "id": "10b", "answer": "der Apfelkuchen" }] },
+            { "speaker": "square", "segments": ["Schinken + Brötchen = ", { "id": "10c", "answer": "das Schinkenbrötchen" }] }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "word-bank-fill",
+      "exerciseNumber": 11,
+      "section": "TEST",
+      "instruction": "Ordnen Sie zu.",
+      "wordBank": ["Ei", "Orangen", "Suppe", "Braten", "Tee", "Äpfel", "Sahne"],
+      "dialogues": [
+        [
+          { "speaker": "square", "segments": ["Guten Tag. Was möchten Sie?"] },
+          { "speaker": "triangle", "segments": ["Ein Stück Kuchen mit ", { "id": "11a", "answer": "Sahne" }, " bitte."] }
+        ],
+        [
+          { "speaker": "square", "segments": ["Mama, können wir einen Obstsalat machen?"] },
+          { "speaker": "triangle", "segments": ["Gute Idee! Wir brauchen ", { "id": "11b1", "answer": "Orangen" }, " und ", { "id": "11b2", "answer": "Äpfel" }, "."] }
+        ],
+        [
+          { "speaker": "square", "segments": ["Ich esse gern Müsli zum Frühstück, und du?"] },
+          { "speaker": "triangle", "segments": ["Ich esse immer Brot mit Wurst und Käse und manchmal auch ein ", { "id": "11c", "answer": "Ei" }, "."] }
+        ],
+        [
+          { "speaker": "square", "segments": ["Hier ist der ", { "id": "11d1", "answer": "Braten" }, " mit Salat. Guten Appetit!"] },
+          { "speaker": "triangle", "segments": ["Ich koche eine ", { "id": "11d2", "answer": "Suppe" }, " mit Kartoffeln und Tomaten."] }
+        ],
+        [
+          { "speaker": "square", "segments": ["Möchten Sie etwas trinken?"] },
+          { "speaker": "triangle", "segments": ["Oh ja! Einen ", { "id": "11e", "answer": "Tee" }, " bitte."] }
+        ]
+      ]
+    },
+    {
+      "type": "inline-choice",
+      "exerciseNumber": 12,
+      "section": "TEST",
+      "instruction": "Was ist richtig? Kreuzen Sie an.",
+      "questions": [
+        { "label": "a", "segments": ["Möchten Sie ein Eis? — ", { "id": "12a", "options": ["Ja, gleichfalls!", "Oh ja, bitte!", "Nein, bitte!"], "correct": 1 }] },
+        { "label": "b", "segments": ["Guten Appetit! — ", { "id": "12b", "options": ["Nein, gleichfalls!", "Danke, ebenfalls!", "Ja, gleichfalls!"], "correct": 1 }] },
+        { "label": "c", "segments": ["Hier ist die Suppe. Möchten Sie auch einen Salat? — ", { "id": "12c", "options": ["Nein, bitte!", "Danke, bitte!", "Nein, danke!"], "correct": 2 }] },
+        { "label": "d", "segments": ["Frühstücken wir zusammen? — ", { "id": "12d", "options": ["Ja, gern!", "Ja, gleichfalls!", "Ja, danke!"], "correct": 0 }] },
+        { "label": "e", "segments": ["Magst du Fisch? — ", { "id": "12e", "options": ["Bitte, nein!", "Nein, gern.", "Nein, nicht so gern."], "correct": 2 }] }
+      ]
+    }
+  ]
+}
