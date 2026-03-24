@@ -198,29 +198,29 @@ export default function Matching({ quiz, onComplete, onReset, stateKey }: Props)
   };
 
   const getLineColor = (leftIdx: number) => {
-    if (!checked) return "#3b82f6"; // blue-500
-    return getPairStatus(leftIdx) === "correct" ? "#22c55e" : "#ef4444";
+    if (!checked) return "#1CB0F6"; // duo-blue
+    return getPairStatus(leftIdx) === "correct" ? "#58CC02" : "#FF4B4B";
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className="max-w-lg mx-auto px-4 py-5">
       {/* Header */}
-      <div className="mb-6">
-        <div className="flex items-center gap-3 mb-2">
+      <div className="mb-5">
+        <div className="flex items-center gap-2.5 mb-1.5">
           {quiz.reference && (
-            <span className="text-sm text-gray-500 font-medium">
+            <span className="text-xs font-extrabold text-duo-gray-dark uppercase tracking-wider">
               {quiz.reference}
             </span>
           )}
-          <span className="bg-yellow-400 text-black font-bold text-sm px-2 py-0.5 rounded">
+          <span className="bg-duo-gold text-white font-black text-xs w-7 h-7 rounded-full flex items-center justify-center">
             {quiz.exerciseNumber}
           </span>
-          <h2 className="text-xl font-bold text-gray-900">
-            {quiz.instruction}
-          </h2>
         </div>
+        <h2 className="text-lg font-extrabold text-duo-text leading-snug">
+          {quiz.instruction}
+        </h2>
         {quiz.section && (
-          <div className="text-xs tracking-widest text-gray-400 uppercase">
+          <div className="text-xs font-bold text-duo-gray tracking-wider uppercase mt-1">
             {quiz.section}
           </div>
         )}
@@ -244,7 +244,7 @@ export default function Matching({ quiz, onComplete, onReset, stateKey }: Props)
           ))}
         </svg>
 
-        <div className="flex gap-12">
+        <div className="flex gap-8">
           {/* Left column */}
           <div className="flex-1 space-y-2">
             {quiz.left.map((item, lIdx) => {
@@ -263,27 +263,27 @@ export default function Matching({ quiz, onComplete, onReset, stateKey }: Props)
                   onClick={() => handleLeftClick(lIdx)}
                   disabled={checked || isGiven}
                   className={`
-                    w-full flex items-center gap-3 px-4 py-3 rounded-lg border text-left transition-all
+                    w-full flex items-center gap-3 px-4 py-3 rounded-2xl border-2 text-left transition-all
                     ${
                       checked
                         ? status === "correct"
-                          ? "border-green-400 bg-green-50"
+                          ? "border-duo-green bg-duo-green-light"
                           : status === "incorrect"
-                          ? "border-red-400 bg-red-50"
+                          ? "border-duo-red bg-duo-red/10"
                           : "border-gray-200 bg-white"
                         : isSelected
-                        ? "border-blue-500 bg-blue-100 ring-2 ring-blue-300"
+                        ? "border-duo-blue bg-duo-blue/10 ring-2 ring-duo-blue/30"
                         : isPaired
-                        ? "border-blue-300 bg-blue-50"
-                        : "border-gray-200 bg-white hover:border-gray-400 hover:bg-gray-50"
+                        ? "border-duo-blue/60 bg-duo-blue/5"
+                        : "border-gray-200 bg-white hover:border-gray-300"
                     }
                     ${isGiven ? "cursor-default" : "cursor-pointer"}
                   `}
                 >
-                  <span className="text-sm font-bold text-gray-400 w-4">
+                  <span className="text-sm font-black text-duo-gray w-5">
                     {item.label}
                   </span>
-                  <span className="text-base text-gray-800">{item.text}</span>
+                  <span className="text-base font-bold text-duo-text">{item.text}</span>
                 </button>
               );
             })}
@@ -314,24 +314,24 @@ export default function Matching({ quiz, onComplete, onReset, stateKey }: Props)
                   onClick={() => handleRightClick(rIdx)}
                   disabled={checked || isGiven}
                   className={`
-                    w-full px-4 py-3 rounded-lg border text-left transition-all
+                    w-full flex items-center gap-3 px-4 py-3 rounded-2xl border-2 text-left transition-all
                     ${
                       checked
                         ? status === "correct"
-                          ? "border-green-400 bg-green-50"
+                          ? "border-duo-green bg-duo-green-light"
                           : status === "incorrect"
-                          ? "border-red-400 bg-red-50"
+                          ? "border-duo-red bg-duo-red/10"
                           : "border-gray-200 bg-white"
                         : isSelected
-                        ? "border-blue-500 bg-blue-100 ring-2 ring-blue-300"
+                        ? "border-duo-blue bg-duo-blue/10 ring-2 ring-duo-blue/30"
                         : isUsed
-                        ? "border-blue-300 bg-blue-50"
-                        : "border-gray-200 bg-white hover:border-gray-400 hover:bg-gray-50"
+                        ? "border-duo-blue/60 bg-duo-blue/5"
+                        : "border-gray-200 bg-white hover:border-gray-300"
                     }
                     ${isGiven ? "cursor-default" : "cursor-pointer"}
                   `}
                 >
-                  <span className="text-base text-gray-800">{text}</span>
+                  <span className="text-base font-bold text-duo-text">{text}</span>
                 </button>
               );
             })}
@@ -340,24 +340,21 @@ export default function Matching({ quiz, onComplete, onReset, stateKey }: Props)
       </div>
 
       {/* Actions */}
-      <div className="flex gap-3 mt-8">
+      <div className="flex gap-3 mt-6">
         <button
           onClick={handleCheck}
           disabled={!allPaired || checked}
-          className={`
-            px-6 py-2.5 rounded-lg font-semibold text-base transition-all
-            ${
-              allPaired && !checked
-                ? "bg-green-600 text-white hover:bg-green-700 shadow-md"
-                : "bg-gray-200 text-gray-400 cursor-not-allowed"
-            }
-          `}
+          className={`btn-3d flex-1 py-3 rounded-2xl font-extrabold text-base uppercase tracking-wide border-b-4 transition-all ${
+            allPaired && !checked
+              ? "bg-duo-green text-white border-duo-green-dark cursor-pointer"
+              : "bg-gray-200 text-gray-400 border-gray-300 cursor-not-allowed"
+          }`}
         >
           Prüfen
         </button>
         <button
           onClick={handleReset}
-          className="px-6 py-2.5 rounded-lg font-semibold text-base bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all"
+          className="btn-3d flex-1 py-3 rounded-2xl font-extrabold text-base uppercase tracking-wide border-b-4 bg-white text-duo-gray-dark border-gray-300 cursor-pointer"
         >
           Nochmal
         </button>
@@ -365,8 +362,8 @@ export default function Matching({ quiz, onComplete, onReset, stateKey }: Props)
 
       {/* Score */}
       {checked && (
-        <div className="mt-4 p-4 rounded-lg bg-blue-50 border border-blue-200">
-          <p className="text-lg font-semibold text-blue-900">
+        <div className="mt-4 p-4 rounded-2xl bg-duo-green-light border-2 border-duo-green">
+          <p className="text-base font-extrabold text-duo-green-dark">
             {
               Object.entries(quiz.correctPairs).filter(
                 ([l, r]) => pairs[Number(l)] === r

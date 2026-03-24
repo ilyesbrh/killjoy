@@ -3,6 +3,7 @@ import QuizRenderer from "./components/QuizRenderer";
 import { lektionen, encodeHomework, saveHomeworkToHistory } from "./data";
 import type { HomeworkItem } from "./data";
 import type { Quiz } from "./types/quiz";
+import AppLogo from "./components/AppLogo";
 
 const STORAGE_KEY = "killjoy-progress";
 
@@ -19,7 +20,6 @@ function saveProgress(set: Set<string>) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify([...set]));
 }
 
-/** Progress key matching StudentApp format: "lektionIdx-quizIdx" (0-based lektion) */
 function progressKey(lektionNum: number, quizIndex: number): string {
   return `${lektionNum - 1}-${quizIndex}`;
 }
@@ -34,7 +34,6 @@ interface HWQuiz {
   lektionTitle: string;
   quizIndex: number;
   quiz: Quiz;
-  /** Pre-computed progress key for localStorage */
   pKey: string;
 }
 
@@ -42,19 +41,16 @@ export default function HomeworkView({ items, label }: Props) {
   const [currentIdx, setCurrentIdx] = useState(0);
   const [completed, setCompleted] = useState<Set<string>>(loadProgress);
 
-  // Persist to localStorage whenever completed changes
   useEffect(() => {
     saveProgress(completed);
   }, [completed]);
 
-  // Save this homework to history on mount
   useEffect(() => {
     if (items.length > 0) {
       saveHomeworkToHistory(encodeHomework(items), items, label);
     }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  // Resolve homework items to actual quizzes
   const hwQuizzes: HWQuiz[] = useMemo(() => {
     const result: HWQuiz[] = [];
     for (const item of items) {
@@ -88,13 +84,11 @@ export default function HomeworkView({ items, label }: Props) {
     [completed, hwQuizzes]
   );
 
-  // Start on the first incomplete exercise
   useEffect(() => {
     const firstIncomplete = hwQuizzes.findIndex((q) => !completed.has(q.pKey));
     if (firstIncomplete >= 0 && firstIncomplete !== currentIdx) {
       setCurrentIdx(firstIncomplete);
     }
-    // Only on initial mount
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -109,34 +103,24 @@ export default function HomeworkView({ items, label }: Props) {
 
   if (total === 0) {
     return (
-      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+      <div className="min-h-screen bg-duo-surface flex items-center justify-center">
         <div className="text-center p-8">
-          <div className="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center mx-auto mb-4">
-            <svg
-              className="w-8 h-8 text-slate-400"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"
-              />
+          <div className="w-20 h-20 rounded-[1.5rem] bg-white border-2 border-gray-200 flex items-center justify-center mx-auto mb-4">
+            <svg className="w-10 h-10 text-duo-gray" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" />
             </svg>
           </div>
-          <h2 className="text-lg font-semibold text-slate-800 mb-1">
-            Keine Übungen gefunden
+          <h2 className="text-lg font-extrabold text-duo-text mb-1">
+            Keine Ubungen gefunden
           </h2>
-          <p className="text-sm text-slate-500 mb-4">
-            Der Link enthält keine gültigen Übungen.
+          <p className="text-sm font-bold text-duo-gray mb-4">
+            Der Link enthalt keine gultigen Ubungen.
           </p>
           <a
             href="#/"
-            className="text-sm text-indigo-600 hover:text-indigo-700 font-medium"
+            className="inline-block btn-3d px-6 py-3 rounded-2xl text-sm font-extrabold uppercase tracking-wide bg-duo-green text-white border-b-4 border-duo-green-dark"
           >
-            Zurück zur Startseite
+            Zur Startseite
           </a>
         </div>
       </div>
@@ -145,28 +129,18 @@ export default function HomeworkView({ items, label }: Props) {
 
   if (isDone) {
     return (
-      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+      <div className="min-h-screen bg-duo-surface flex items-center justify-center">
         <div className="text-center p-8 max-w-sm">
-          <div className="w-20 h-20 rounded-2xl bg-green-100 flex items-center justify-center mx-auto mb-5">
-            <svg
-              className="w-10 h-10 text-green-600"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
+          <div className="w-24 h-24 rounded-[2rem] bg-duo-green-light border-2 border-duo-green flex items-center justify-center mx-auto mb-5">
+            <svg className="w-12 h-12 text-duo-green" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h2 className="text-xl font-bold text-slate-800 mb-2">
+          <h2 className="text-2xl font-black text-duo-text mb-2">
             Fertig!
           </h2>
-          <p className="text-sm text-slate-500 mb-6">
-            Du hast alle {total} Übungen abgeschlossen.
+          <p className="text-sm font-bold text-duo-gray mb-6">
+            Du hast alle {total} Ubungen abgeschlossen.
           </p>
           <div className="flex gap-3 justify-center">
             <button
@@ -178,15 +152,15 @@ export default function HomeworkView({ items, label }: Props) {
                 });
                 setCurrentIdx(0);
               }}
-              className="px-4 py-2 rounded-lg text-sm font-medium bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors cursor-pointer"
+              className="btn-3d px-5 py-3 rounded-2xl text-sm font-extrabold uppercase tracking-wide bg-white text-duo-gray-dark border-2 border-gray-200 border-b-4 border-b-gray-300 cursor-pointer"
             >
               Nochmal
             </button>
             <a
               href="#/"
-              className="px-4 py-2 rounded-lg text-sm font-medium bg-indigo-600 hover:bg-indigo-700 text-white transition-colors"
+              className="btn-3d px-5 py-3 rounded-2xl text-sm font-extrabold uppercase tracking-wide bg-duo-green text-white border-b-4 border-duo-green-dark"
             >
-              Zur Startseite
+              Startseite
             </a>
           </div>
         </div>
@@ -195,59 +169,42 @@ export default function HomeworkView({ items, label }: Props) {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 pb-20">
+    <div className="min-h-screen bg-duo-surface pb-20">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+      <header className="sticky top-0 z-50 bg-white border-b-2 border-gray-200">
+        <div className="max-w-lg mx-auto px-4">
           <div className="flex items-center justify-between h-14">
-            <div className="flex items-center gap-2.5">
-              <a
-                href="#/"
-                className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center shadow-sm"
-              >
-                <svg
-                  className="w-4 h-4 text-white"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2.5}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
-                  />
-                </svg>
+            <div className="flex items-center gap-3">
+              <a href="#/" className="flex items-center justify-center">
+                <AppLogo size={36} className="text-duo-green drop-shadow-sm" />
               </a>
-              <div className="leading-tight">
-                <span className="font-bold text-slate-900 text-sm truncate max-w-[180px]">
+              <div>
+                <div className="font-extrabold text-duo-text text-sm truncate max-w-[180px]">
                   {label || "Hausaufgaben"}
-                </span>
-                <span className="text-xs text-slate-400 ml-2">
+                </div>
+                <div className="text-xs font-bold text-duo-gray">
                   {currentIdx + 1} / {total}
-                </span>
+                </div>
               </div>
             </div>
 
-            <div className="text-xs text-slate-400">
-              L{current.lektionNum} · Üb. {current.quiz.exerciseNumber}
+            <div className="text-xs font-extrabold text-duo-gray-dark">
+              L{current.lektionNum} · Ub. {current.quiz.exerciseNumber}
             </div>
           </div>
         </div>
 
         {/* Progress bar */}
-        <div className="h-1 bg-slate-100">
+        <div className="h-2 bg-gray-200">
           <div
-            className="h-full bg-emerald-500 transition-all duration-500"
-            style={{
-              width: `${(completedCount / total) * 100}%`,
-            }}
+            className="h-full bg-duo-green rounded-r-full transition-all duration-500"
+            style={{ width: `${(completedCount / total) * 100}%` }}
           />
         </div>
       </header>
 
       {/* Quiz */}
-      <main className="py-6">
+      <main className="py-4">
         <QuizRenderer
           key={`${current.lektionNum}-${current.quizIndex}`}
           quiz={current.quiz}
@@ -265,44 +222,33 @@ export default function HomeworkView({ items, label }: Props) {
       </main>
 
       {/* Bottom navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-sm border-t border-slate-200">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 py-2.5 flex items-center justify-between">
+      <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t-2 border-gray-200 safe-bottom">
+        <div className="max-w-lg mx-auto px-4 py-2.5 flex items-center justify-between">
           <button
             onClick={() => setCurrentIdx((i) => Math.max(0, i - 1))}
             disabled={currentIdx === 0}
-            className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium
-              transition-all cursor-pointer text-slate-700
-              enabled:hover:bg-slate-100
+            className="btn-3d flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-extrabold uppercase
+              bg-white text-duo-gray-dark border-2 border-gray-200 border-b-4 border-b-gray-300
+              transition-all cursor-pointer
               disabled:opacity-30 disabled:cursor-not-allowed"
           >
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
             </svg>
-            Zurück
+            Zuruck
           </button>
 
-          {/* Dots */}
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1.5">
             {hwQuizzes.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setCurrentIdx(idx)}
                 className={`rounded-full transition-all cursor-pointer ${
                   idx === currentIdx
-                    ? "w-6 h-2 bg-emerald-500"
+                    ? "w-7 h-2.5 bg-duo-green"
                     : isQuizCompleted(idx)
-                      ? "w-2 h-2 bg-green-400"
-                      : "w-2 h-2 bg-slate-300 hover:bg-slate-400"
+                      ? "w-2.5 h-2.5 bg-duo-green/60"
+                      : "w-2.5 h-2.5 bg-gray-300 hover:bg-gray-400"
                 }`}
               />
             ))}
@@ -311,24 +257,14 @@ export default function HomeworkView({ items, label }: Props) {
           <button
             onClick={() => setCurrentIdx((i) => Math.min(total - 1, i + 1))}
             disabled={currentIdx === total - 1}
-            className="flex items-center gap-1.5 px-4 py-2 rounded-lg text-sm font-medium
-              transition-all cursor-pointer text-slate-700
-              enabled:hover:bg-slate-100
+            className="btn-3d flex items-center gap-2 px-4 py-2.5 rounded-2xl text-sm font-extrabold uppercase
+              bg-duo-green text-white border-2 border-duo-green border-b-4 border-b-duo-green-dark
+              transition-all cursor-pointer
               disabled:opacity-30 disabled:cursor-not-allowed"
           >
             Weiter
-            <svg
-              className="w-4 h-4"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
             </svg>
           </button>
         </div>

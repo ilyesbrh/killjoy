@@ -103,44 +103,43 @@ export default function WordBankFill({ quiz, onComplete, onReset, stateKey }: Pr
   const allFilled = allBlanks.every((b) => placements[b.id]);
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className="max-w-lg mx-auto px-4 py-5">
       {/* Header */}
-      <div className="mb-6">
-        <div className="flex items-center gap-3 mb-2">
+      <div className="mb-5">
+        <div className="flex items-center gap-2.5 mb-1.5">
           {quiz.reference && (
-            <span className="text-sm text-gray-500 font-medium">
+            <span className="text-xs font-extrabold text-duo-gray-dark uppercase tracking-wider">
               {quiz.reference}
             </span>
           )}
-          <span className="bg-yellow-400 text-black font-bold text-sm px-2 py-0.5 rounded">
+          <span className="bg-duo-gold text-white font-black text-xs w-7 h-7 rounded-full flex items-center justify-center">
             {quiz.exerciseNumber}
           </span>
-          <h2 className="text-xl font-bold text-gray-900">
-            {quiz.instruction}
-          </h2>
         </div>
+        <h2 className="text-lg font-extrabold text-duo-text leading-snug">
+          {quiz.instruction}
+        </h2>
         {quiz.section && (
-          <div className="text-xs tracking-widest text-gray-400 uppercase">
+          <div className="text-xs font-bold text-duo-gray tracking-wider uppercase mt-1">
             {quiz.section}
           </div>
         )}
       </div>
 
       {/* Word Bank */}
-      <div className="flex flex-wrap gap-2 mb-8 p-4 bg-gray-50 rounded-lg border border-gray-200">
+      <div className="flex flex-wrap gap-2 mb-6 p-4 bg-white rounded-2xl border-2 border-gray-200">
         {bankAvailability.map(({ word, idx, isUsed }) => (
           <button
             key={idx}
             onClick={() => !isUsed && handleWordClick(word)}
             disabled={isUsed || checked}
             className={`
-              px-3 py-1.5 rounded-md text-base font-medium transition-all
               ${
                 isUsed
-                  ? "bg-gray-200 text-gray-400 line-through cursor-default"
+                  ? "px-4 py-2 rounded-xl text-base font-bold bg-gray-100 text-duo-gray line-through cursor-default"
                   : selectedWord === word
-                  ? "bg-blue-600 text-white shadow-md scale-105"
-                  : "bg-white text-gray-800 border border-gray-300 hover:border-blue-400 hover:bg-blue-50 cursor-pointer"
+                  ? "btn-3d px-4 py-2 rounded-xl text-base font-bold border-2 border-duo-blue border-b-4 border-b-duo-blue-dark bg-duo-blue text-white shadow-md"
+                  : "btn-3d px-4 py-2 rounded-xl text-base font-bold border-2 border-gray-200 border-b-4 border-b-gray-300 bg-white text-duo-text cursor-pointer"
               }
             `}
           >
@@ -154,7 +153,7 @@ export default function WordBankFill({ quiz, onComplete, onReset, stateKey }: Pr
         {quiz.dialogues.map((dialogue, dIdx) => (
           <div
             key={dIdx}
-            className="space-y-3 p-4 bg-white rounded-lg border border-gray-100"
+            className="space-y-3 p-4 bg-white rounded-2xl border-2 border-gray-200"
           >
             {dialogue.map((line, lIdx) => (
               <DialogueLineView
@@ -172,24 +171,21 @@ export default function WordBankFill({ quiz, onComplete, onReset, stateKey }: Pr
       </div>
 
       {/* Actions */}
-      <div className="flex gap-3 mt-8">
+      <div className="flex gap-3 mt-6">
         <button
           onClick={handleCheck}
           disabled={!allFilled || checked}
-          className={`
-            px-6 py-2.5 rounded-lg font-semibold text-base transition-all
-            ${
-              allFilled && !checked
-                ? "bg-green-600 text-white hover:bg-green-700 shadow-md"
-                : "bg-gray-200 text-gray-400 cursor-not-allowed"
-            }
-          `}
+          className={`btn-3d flex-1 py-3 rounded-2xl font-extrabold text-base uppercase tracking-wide border-b-4 transition-all ${
+            allFilled && !checked
+              ? "bg-duo-green text-white border-duo-green-dark cursor-pointer"
+              : "bg-gray-200 text-gray-400 border-gray-300 cursor-not-allowed"
+          }`}
         >
           Prüfen
         </button>
         <button
           onClick={handleReset}
-          className="px-6 py-2.5 rounded-lg font-semibold text-base bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all"
+          className="btn-3d flex-1 py-3 rounded-2xl font-extrabold text-base uppercase tracking-wide border-b-4 bg-white text-duo-gray-dark border-gray-300 cursor-pointer"
         >
           Nochmal
         </button>
@@ -197,8 +193,8 @@ export default function WordBankFill({ quiz, onComplete, onReset, stateKey }: Pr
 
       {/* Score feedback */}
       {checked && (
-        <div className="mt-4 p-4 rounded-lg bg-blue-50 border border-blue-200">
-          <p className="text-lg font-semibold text-blue-900">
+        <div className="mt-4 p-4 rounded-2xl bg-duo-green-light border-2 border-duo-green">
+          <p className="text-base font-extrabold text-duo-green-dark">
             {allBlanks.filter(
               (b) =>
                 placements[b.id]?.toLowerCase() === b.answer.toLowerCase()
@@ -233,21 +229,21 @@ function DialogueLineView({
       {/* Speaker icon */}
       <span className="mt-1 flex-shrink-0">
         {line.speaker === "square" ? (
-          <span className="inline-block w-3 h-3 bg-gray-800 rounded-sm" />
+          <span className="inline-block w-3.5 h-3.5 bg-duo-text rounded-sm" />
         ) : (
           <span
             className="inline-block w-0 h-0"
             style={{
               borderLeft: "6px solid transparent",
               borderRight: "6px solid transparent",
-              borderBottom: "10px solid #22c55e",
+              borderBottom: "10px solid #58CC02",
             }}
           />
         )}
       </span>
 
       {/* Segments */}
-      <p className="text-lg leading-relaxed flex flex-wrap items-baseline">
+      <p className="text-base leading-relaxed flex flex-wrap items-baseline">
         {line.segments.map((seg, sIdx) =>
           isBlank(seg) ? (
             <BlankSlot
@@ -284,25 +280,25 @@ function BlankSlot({
   onClick: () => void;
 }) {
   const baseClasses =
-    "inline-flex items-center justify-center min-w-[80px] px-2 py-0.5 mx-1 border-b-2 text-base font-medium transition-all cursor-pointer";
+    "inline-flex items-center justify-center min-w-[80px] px-2 py-0.5 mx-1 text-base font-bold transition-all cursor-pointer rounded-lg";
 
   const statusClasses = checked
     ? status === "correct"
-      ? "border-green-500 bg-green-50 text-green-800"
+      ? "border-b-2 border-duo-green bg-duo-green-light text-duo-green-dark"
       : status === "incorrect"
-      ? "border-red-500 bg-red-50 text-red-800"
-      : "border-gray-300 bg-gray-50 text-gray-400"
+      ? "border-b-2 border-duo-red bg-duo-red/10 text-duo-red-dark"
+      : "border-b-2 border-gray-300 bg-duo-surface text-duo-gray"
     : value
-    ? "border-blue-400 bg-blue-50 text-blue-900 hover:bg-blue-100"
+    ? "border-b-2 border-duo-blue bg-duo-blue/10 text-duo-blue-dark"
     : isTarget
-    ? "border-blue-400 bg-blue-50 text-gray-400 animate-pulse"
-    : "border-gray-300 bg-gray-50 text-gray-400";
+    ? "border-b-2 border-duo-blue bg-duo-blue/10 text-duo-gray animate-pulse"
+    : "border-b-2 border-gray-300 bg-duo-surface text-duo-gray";
 
   return (
     <span className={`${baseClasses} ${statusClasses}`} onClick={onClick}>
       {value || "\u00A0"}
       {checked && status === "incorrect" && (
-        <span className="ml-2 text-xs text-green-600">({blank.answer})</span>
+        <span className="ml-2 text-xs font-bold text-duo-green-dark">({blank.answer})</span>
       )}
     </span>
   );

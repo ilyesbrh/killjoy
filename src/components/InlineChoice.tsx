@@ -83,27 +83,27 @@ export default function InlineChoice({ quiz, onComplete, onReset, stateKey }: Pr
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className="max-w-lg mx-auto px-4 py-5">
       {/* Header */}
       <div className="mb-6">
         <div className="flex items-center gap-3 mb-2">
           {quiz.reference && (
-            <span className="text-sm text-gray-500 font-medium">
+            <span className="text-sm text-duo-gray-dark font-bold">
               {quiz.reference}
             </span>
           )}
-          <span className="bg-yellow-400 text-black font-bold text-sm px-2 py-0.5 rounded">
+          <span className="bg-duo-gold text-white font-black text-sm px-2.5 py-0.5 rounded-full">
             {quiz.exerciseNumber}
           </span>
-          <h2 className="text-xl font-bold text-gray-900">
+          <h2 className="text-xl font-extrabold text-duo-text">
             {quiz.title || quiz.instruction}
           </h2>
         </div>
         {quiz.title && (
-          <p className="text-base text-gray-600">{quiz.instruction}</p>
+          <p className="text-base text-duo-gray-dark font-bold">{quiz.instruction}</p>
         )}
         {quiz.section && (
-          <div className="text-xs tracking-widest text-gray-400 uppercase mt-1">
+          <div className="text-xs tracking-widest text-duo-gray uppercase mt-1 font-bold">
             {quiz.section}
           </div>
         )}
@@ -117,13 +117,13 @@ export default function InlineChoice({ quiz, onComplete, onReset, stateKey }: Pr
           return (
             <div
               key={qIdx}
-              className={`flex items-baseline gap-3 p-4 rounded-lg border transition-all ${
+              className={`flex items-baseline gap-3 p-4 rounded-2xl border-2 transition-all ${
                 given
-                  ? "bg-gray-50 border-gray-200"
-                  : "bg-white border-gray-100"
+                  ? "bg-duo-surface border-gray-200"
+                  : "bg-white border-gray-200"
               }`}
             >
-              <span className="text-sm font-bold text-gray-500 flex-shrink-0">
+              <span className="text-sm font-black text-duo-gray-dark flex-shrink-0">
                 {q.label}
               </span>
               <p className="text-base leading-relaxed flex flex-wrap items-baseline gap-y-2">
@@ -149,24 +149,21 @@ export default function InlineChoice({ quiz, onComplete, onReset, stateKey }: Pr
       </div>
 
       {/* Actions */}
-      <div className="flex gap-3 mt-8">
+      <div className="flex gap-3 mt-6">
         <button
           onClick={handleCheck}
           disabled={!allAnswered || checked}
-          className={`
-            px-6 py-2.5 rounded-lg font-semibold text-base transition-all
-            ${
-              allAnswered && !checked
-                ? "bg-green-600 text-white hover:bg-green-700 shadow-md"
-                : "bg-gray-200 text-gray-400 cursor-not-allowed"
-            }
-          `}
+          className={`btn-3d flex-1 py-3 rounded-2xl font-extrabold text-base uppercase tracking-wide border-b-4 transition-all ${
+            allAnswered && !checked
+              ? "bg-duo-green text-white border-duo-green-dark cursor-pointer"
+              : "bg-gray-200 text-gray-400 border-gray-300 cursor-not-allowed"
+          }`}
         >
           Prüfen
         </button>
         <button
           onClick={handleReset}
-          className="px-6 py-2.5 rounded-lg font-semibold text-base bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all"
+          className="btn-3d flex-1 py-3 rounded-2xl font-extrabold text-base uppercase tracking-wide border-b-4 bg-white text-duo-gray-dark border-gray-300 cursor-pointer"
         >
           Nochmal
         </button>
@@ -174,8 +171,8 @@ export default function InlineChoice({ quiz, onComplete, onReset, stateKey }: Pr
 
       {/* Score */}
       {checked && (
-        <div className="mt-4 p-4 rounded-lg bg-blue-50 border border-blue-200">
-          <p className="text-lg font-semibold text-blue-900">
+        <div className="mt-4 p-4 rounded-2xl bg-duo-green-light border-2 border-duo-green">
+          <p className="text-base font-extrabold text-duo-green-dark">
             {
               allChoices.filter(
                 ({ choice }) => answers[choice.id] === choice.correct
@@ -214,10 +211,10 @@ function ChoiceGroup({
         if (checked && isSelected) {
           ringColor =
             status === "correct"
-              ? "ring-green-500 bg-green-50"
-              : "ring-red-500 bg-red-50";
+              ? "ring-duo-green bg-duo-green-light"
+              : "ring-duo-red bg-duo-red/10";
         } else if (checked && !isSelected && isCorrect) {
-          ringColor = "ring-green-400 bg-green-50";
+          ringColor = "ring-duo-green bg-duo-green-light";
         }
 
         return (
@@ -234,45 +231,45 @@ function ChoiceGroup({
                 onSelect(oIdx);
               }}
               className={`
-                w-4 h-4 rounded-full border-2 flex items-center justify-center transition-all
+                w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all
                 ${
                   checked
                     ? isSelected
                       ? status === "correct"
-                        ? "border-green-500"
-                        : "border-red-500"
+                        ? "border-duo-green"
+                        : "border-duo-red"
                       : isCorrect
-                      ? "border-green-500"
+                      ? "border-duo-green"
                       : "border-gray-300"
                     : isSelected
-                    ? "border-blue-500"
-                    : "border-gray-400 hover:border-blue-400"
+                    ? "border-duo-blue"
+                    : "border-gray-300 hover:border-duo-blue"
                 }
               `}
             >
               {isSelected && (
                 <span
-                  className={`w-2 h-2 rounded-full ${
+                  className={`w-2.5 h-2.5 rounded-full ${
                     checked
                       ? status === "correct"
-                        ? "bg-green-500"
-                        : "bg-red-500"
-                      : "bg-blue-500"
+                        ? "bg-duo-green"
+                        : "bg-duo-red"
+                      : "bg-duo-blue"
                   }`}
                 />
               )}
               {checked && !isSelected && isCorrect && (
-                <span className="w-2 h-2 rounded-full bg-green-500" />
+                <span className="w-2.5 h-2.5 rounded-full bg-duo-green" />
               )}
             </span>
             <span
-              className={`text-base font-medium ${
+              className={`text-base font-bold ${
                 checked && isCorrect
-                  ? "text-green-700"
+                  ? "text-duo-green-dark font-extrabold"
                   : checked && isSelected && !isCorrect
-                  ? "text-red-700 line-through"
-                  : "text-gray-800"
-              } ${ringColor ? `px-1 rounded ${ringColor} ring-1` : ""}`}
+                  ? "text-duo-red-dark line-through"
+                  : "text-duo-text"
+              } ${ringColor ? `px-1.5 rounded-lg ring-2 ${ringColor}` : ""}`}
             >
               {opt}
             </span>

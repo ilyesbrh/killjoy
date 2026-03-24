@@ -18,7 +18,6 @@ interface Props {
 
 /**
  * Generic quiz dispatcher — renders the right component based on quiz.type.
- * Extend the switch as new quiz types are added.
  */
 export default function QuizRenderer({ quiz, onComplete, onReset, stateKey }: Props) {
   let content: React.ReactNode;
@@ -53,7 +52,7 @@ export default function QuizRenderer({ quiz, onComplete, onReset, stateKey }: Pr
       break;
     default:
       return (
-        <div className="p-4 text-red-600">
+        <div className="p-4 text-duo-red font-bold">
           Unknown quiz type: <strong>{(quiz as any).type}</strong>
         </div>
       );
@@ -68,20 +67,21 @@ export default function QuizRenderer({ quiz, onComplete, onReset, stateKey }: Pr
 }
 
 function SoundCloudPlayer({ url }: { url: string }) {
-  const embedUrl = `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=%236366f1&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false`;
+  const embedUrl = `https://w.soundcloud.com/player/?url=${encodeURIComponent(url)}&color=%2358CC02&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false`;
 
   return (
-    <div className="max-w-2xl mx-auto px-6 mb-2">
-      <iframe
-        title="Audio"
-        width="100%"
-        height="80"
-        scrolling="no"
-        frameBorder="no"
-        allow="autoplay"
-        src={embedUrl}
-        className="rounded-lg"
-      />
+    <div className="max-w-lg mx-auto px-4 mb-3">
+      <div className="rounded-2xl overflow-hidden border-2 border-gray-200">
+        <iframe
+          title="Audio"
+          width="100%"
+          height="80"
+          scrolling="no"
+          frameBorder="no"
+          allow="autoplay"
+          src={embedUrl}
+        />
+      </div>
     </div>
   );
 }

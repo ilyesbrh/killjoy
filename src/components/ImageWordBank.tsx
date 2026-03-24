@@ -100,34 +100,36 @@ export default function ImageWordBank({ quiz, onComplete, onReset, stateKey }: P
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
+    <div className="max-w-lg mx-auto px-4 py-5">
       {/* Header */}
-      <div className="mb-6">
-        <div className="flex items-center gap-3 mb-2">
+      <div className="mb-5">
+        <div className="flex items-center gap-2.5 mb-1.5">
           {quiz.reference && (
-            <span className="text-sm text-gray-500 font-medium">
+            <span className="text-xs font-extrabold text-duo-gray-dark uppercase tracking-wider">
               {quiz.reference}
             </span>
           )}
-          <span className="bg-yellow-400 text-black font-bold text-sm px-2 py-0.5 rounded">
+          <span className="bg-duo-gold text-white font-black text-xs w-7 h-7 rounded-full flex items-center justify-center">
             {quiz.exerciseNumber}
           </span>
-          <h2 className="text-xl font-bold text-gray-900">
-            {quiz.title || quiz.instruction}
-          </h2>
         </div>
+        <h2 className="text-lg font-extrabold text-duo-text leading-snug">
+          {quiz.title || quiz.instruction}
+        </h2>
         {quiz.section && (
-          <div className="text-xs tracking-widest text-gray-400 uppercase">
+          <div className="text-xs font-bold text-duo-gray tracking-wider uppercase mt-1">
             {quiz.section}
           </div>
         )}
       </div>
 
       {/* Instruction + Word Bank */}
-      <div className="mb-6 p-4 bg-gray-50 rounded-lg border border-gray-200">
-        <p className="text-base text-gray-700 mb-3 font-medium">
-          {quiz.title ? quiz.instruction : ""}
-        </p>
+      <div className="mb-6 p-4 bg-white rounded-2xl border-2 border-gray-200">
+        {quiz.title && (
+          <p className="text-base text-duo-gray-dark mb-3 font-bold">
+            {quiz.instruction}
+          </p>
+        )}
         <div className="flex flex-wrap gap-2">
           {bankAvailability.map(({ word, idx, isUsed }) => (
             <button
@@ -135,13 +137,12 @@ export default function ImageWordBank({ quiz, onComplete, onReset, stateKey }: P
               onClick={() => !isUsed && handleWordClick(word)}
               disabled={isUsed || checked}
               className={`
-                px-3 py-1.5 rounded-md text-base font-medium transition-all
                 ${
                   isUsed
-                    ? "bg-gray-200 text-gray-400 line-through cursor-default"
+                    ? "px-4 py-2 rounded-xl text-base font-bold bg-gray-100 text-duo-gray line-through cursor-default"
                     : selectedWord === word
-                    ? "bg-blue-600 text-white shadow-md scale-105"
-                    : "bg-white text-gray-800 border border-gray-300 hover:border-blue-400 hover:bg-blue-50 cursor-pointer"
+                    ? "btn-3d px-4 py-2 rounded-xl text-base font-bold border-2 border-duo-blue border-b-4 border-b-duo-blue-dark bg-duo-blue text-white shadow-md"
+                    : "btn-3d px-4 py-2 rounded-xl text-base font-bold border-2 border-gray-200 border-b-4 border-b-gray-300 bg-white text-duo-text cursor-pointer"
                 }
               `}
             >
@@ -152,7 +153,7 @@ export default function ImageWordBank({ quiz, onComplete, onReset, stateKey }: P
       </div>
 
       {/* Cards grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {quiz.cards.map((card, cIdx) => {
           const isGiven =
             quiz.givenCard !== undefined && cIdx === quiz.givenCard;
@@ -166,19 +167,19 @@ export default function ImageWordBank({ quiz, onComplete, onReset, stateKey }: P
               onClick={() => handleCardClick(cIdx)}
               disabled={checked || isGiven}
               className={`
-                flex flex-col items-center rounded-xl border-2 overflow-hidden transition-all text-center
+                flex flex-col items-center rounded-2xl border-2 overflow-hidden transition-all text-center
                 ${
                   checked
                     ? status === "correct"
-                      ? "border-green-400 bg-green-50"
+                      ? "border-duo-green bg-duo-green-light"
                       : status === "incorrect"
-                      ? "border-red-400 bg-red-50"
+                      ? "border-duo-red bg-duo-red/10"
                       : "border-gray-200 bg-white"
                     : placed
-                    ? "border-blue-400 bg-blue-50"
+                    ? "border-duo-blue/60 bg-duo-blue/5"
                     : isTarget
-                    ? "border-blue-300 bg-blue-50 animate-pulse"
-                    : "border-gray-200 bg-white hover:border-gray-400"
+                    ? "border-duo-blue bg-duo-blue/5 animate-pulse"
+                    : "border-gray-200 bg-white hover:border-gray-300"
                 }
                 ${isGiven ? "cursor-default" : "cursor-pointer"}
               `}
@@ -196,37 +197,37 @@ export default function ImageWordBank({ quiz, onComplete, onReset, stateKey }: P
                     {getLandmarkEmoji(card.caption)}
                   </span>
                 )}
-                <span className="absolute top-1 left-1 bg-gray-800 text-white text-xs font-bold w-5 h-5 rounded flex items-center justify-center">
+                <span className="absolute top-1 left-1 bg-duo-text text-white text-xs font-black w-6 h-6 rounded-full flex items-center justify-center">
                   {card.label}
                 </span>
               </div>
 
               {/* Caption */}
               <div className="px-2 py-2 w-full">
-                <p className="text-sm font-medium text-gray-700">
+                <p className="text-sm font-bold text-duo-text">
                   {card.caption}
                 </p>
 
                 {/* Answer slot */}
                 <div
                   className={`
-                    mt-1 min-h-[28px] border-b-2 text-sm font-semibold px-1 py-0.5 transition-all
+                    mt-1 min-h-[28px] border-b-2 text-sm font-bold px-1 py-0.5 transition-all
                     ${
                       checked
                         ? status === "correct"
-                          ? "border-green-500 text-green-700"
+                          ? "border-duo-green text-duo-green-dark"
                           : status === "incorrect"
-                          ? "border-red-500 text-red-700"
-                          : "border-gray-300 text-gray-400"
+                          ? "border-duo-red text-duo-red-dark"
+                          : "border-gray-300 text-duo-gray"
                         : placed
-                        ? "border-blue-400 text-blue-700"
-                        : "border-gray-300 text-gray-400"
+                        ? "border-duo-blue text-duo-blue-dark"
+                        : "border-gray-300 text-duo-gray"
                     }
                   `}
                 >
                   {placed || "\u00A0"}
                   {checked && status === "incorrect" && (
-                    <span className="block text-xs text-green-600">
+                    <span className="block text-xs font-bold text-duo-green-dark">
                       {card.answer}
                     </span>
                   )}
@@ -238,33 +239,30 @@ export default function ImageWordBank({ quiz, onComplete, onReset, stateKey }: P
       </div>
 
       {/* Actions */}
-      <div className="flex gap-3 mt-8">
+      <div className="flex gap-3 mt-6">
         <button
           onClick={handleCheck}
           disabled={!allFilled || checked}
-          className={`
-            px-6 py-2.5 rounded-lg font-semibold text-base transition-all
-            ${
-              allFilled && !checked
-                ? "bg-green-600 text-white hover:bg-green-700 shadow-md"
-                : "bg-gray-200 text-gray-400 cursor-not-allowed"
-            }
-          `}
+          className={`btn-3d flex-1 py-3 rounded-2xl font-extrabold text-base uppercase tracking-wide border-b-4 transition-all ${
+            allFilled && !checked
+              ? "bg-duo-green text-white border-duo-green-dark cursor-pointer"
+              : "bg-gray-200 text-gray-400 border-gray-300 cursor-not-allowed"
+          }`}
         >
           Prüfen
         </button>
         <button
           onClick={handleReset}
-          className="px-6 py-2.5 rounded-lg font-semibold text-base bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all"
+          className="btn-3d flex-1 py-3 rounded-2xl font-extrabold text-base uppercase tracking-wide border-b-4 bg-white text-duo-gray-dark border-gray-300 cursor-pointer"
         >
           Nochmal
         </button>
       </div>
 
-      {/* Score */}
+      {/* Score feedback */}
       {checked && (
-        <div className="mt-4 p-4 rounded-lg bg-blue-50 border border-blue-200">
-          <p className="text-lg font-semibold text-blue-900">
+        <div className="mt-4 p-4 rounded-2xl bg-duo-green-light border-2 border-duo-green">
+          <p className="text-base font-extrabold text-duo-green-dark">
             {
               quiz.cards.filter(
                 (card, i) =>

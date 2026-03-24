@@ -6,6 +6,7 @@ import {
   decodeHomework,
 } from "./data";
 import type { HomeworkHistoryEntry } from "./data";
+import AppLogo from "./components/AppLogo";
 
 const PROGRESS_KEY = "killjoy-progress";
 
@@ -55,9 +56,7 @@ function formatRelativeDate(ts: number): string {
 }
 
 export default function HomeworkHistory() {
-  const [history, setHistory] = useState<HomeworkHistoryEntry[]>(
-    getHomeworkHistory
-  );
+  const [history, setHistory] = useState<HomeworkHistoryEntry[]>(getHomeworkHistory);
   const progress = loadProgress();
 
   const handleDelete = (id: string) => {
@@ -66,68 +65,43 @@ export default function HomeworkHistory() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50">
+    <div className="min-h-screen bg-duo-surface pb-24">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <a
-              href="#/"
-              className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center shadow-sm"
-            >
-              <svg
-                className="w-4 h-4 text-white"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={2.5}
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
-                />
-              </svg>
+      <header className="sticky top-0 z-50 bg-white border-b-2 border-gray-200">
+        <div className="max-w-lg mx-auto px-4 h-14 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <a href="#/" className="flex items-center justify-center">
+              <AppLogo size={36} className="text-duo-green drop-shadow-sm" />
             </a>
-            <span className="font-bold text-slate-900 text-sm">
+            <span className="font-extrabold text-duo-text text-sm">
               Meine Hausaufgaben
             </span>
           </div>
           <a
             href="#/"
-            className="text-sm text-slate-500 hover:text-slate-700 transition-colors"
+            className="text-sm font-extrabold text-duo-blue hover:text-duo-blue-dark transition-colors"
           >
-            Zurück
+            Zuruck
           </a>
         </div>
       </header>
 
-      <main className="max-w-3xl mx-auto px-4 sm:px-6 py-6">
+      <main className="max-w-lg mx-auto px-4 py-4">
         {history.length === 0 ? (
           <div className="text-center py-16">
-            <div className="w-16 h-16 rounded-2xl bg-slate-100 flex items-center justify-center mx-auto mb-4">
-              <svg
-                className="w-8 h-8 text-slate-300"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
-                />
+            <div className="w-20 h-20 rounded-[1.5rem] bg-white border-2 border-gray-200 flex items-center justify-center mx-auto mb-4">
+              <svg className="w-10 h-10 text-duo-gray" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
               </svg>
             </div>
-            <p className="text-sm text-slate-500 mb-4">
+            <p className="text-sm font-bold text-duo-gray mb-4">
               Noch keine Hausaufgaben vorhanden.
             </p>
             <a
               href="#/homework"
-              className="text-sm text-indigo-600 hover:text-indigo-700 font-medium"
+              className="inline-block btn-3d px-6 py-3 rounded-2xl text-sm font-extrabold uppercase tracking-wide bg-duo-green text-white border-b-4 border-duo-green-dark"
             >
-              Neue Hausaufgaben erstellen
+              Neue erstellen
             </a>
           </div>
         ) : (
@@ -141,55 +115,47 @@ export default function HomeworkHistory() {
               return (
                 <div
                   key={entry.id}
-                  className="bg-white rounded-xl border border-slate-200 overflow-hidden group"
+                  className="bg-white rounded-2xl border-2 border-gray-200 overflow-hidden group"
                 >
                   <div className="flex items-center gap-3 px-4 py-3">
-                    {/* Completion indicator */}
-                    <div
-                      className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 text-sm font-bold ${
-                        pct === 1
-                          ? "bg-green-100 text-green-700"
-                          : pct > 0
-                            ? "bg-emerald-50 text-emerald-600"
-                            : "bg-slate-100 text-slate-400"
-                      }`}
-                    >
-                      {pct === 1 ? (
-                        <svg
-                          className="w-5 h-5"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth={2.5}
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M4.5 12.75l6 6 9-13.5"
-                          />
-                        </svg>
-                      ) : (
-                        `${Math.round(pct * 100)}%`
-                      )}
+                    {/* Circular progress */}
+                    <div className="relative w-12 h-12 flex-shrink-0">
+                      <svg className="w-12 h-12 -rotate-90" viewBox="0 0 36 36">
+                        <circle cx="18" cy="18" r="15.5" fill="none" stroke="#E5E5E5" strokeWidth="3" />
+                        <circle
+                          cx="18" cy="18" r="15.5" fill="none"
+                          stroke={pct === 1 ? "#58CC02" : pct > 0 ? "#1CB0F6" : "#AFAFAF"}
+                          strokeWidth="3"
+                          strokeDasharray="97.4"
+                          strokeDashoffset={97.4 * (1 - pct)}
+                          strokeLinecap="round"
+                          className="transition-all duration-500"
+                        />
+                      </svg>
+                      <span className={`absolute inset-0 flex items-center justify-center text-xs font-black ${
+                        pct === 1 ? "text-duo-green" : pct > 0 ? "text-duo-blue" : "text-duo-gray"
+                      }`}>
+                        {pct === 1 ? (
+                          <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={3} stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                          </svg>
+                        ) : `${Math.round(pct * 100)}%`}
+                      </span>
                     </div>
 
-                    <a
-                      href={`#/hw/${urlFragment}`}
-                      className="flex-1 min-w-0"
-                    >
-                      <div className="text-sm font-medium text-slate-800 truncate">
+                    <a href={`#/hw/${urlFragment}`} className="flex-1 min-w-0">
+                      <div className="text-sm font-extrabold text-duo-text truncate">
                         {entry.label}
                       </div>
-                      <div className="text-xs text-slate-400 mt-0.5">
-                        {totalExercises} Übungen · {done}/{total} erledigt ·{" "}
-                        {formatRelativeDate(entry.lastOpenedAt)}
+                      <div className="text-xs font-bold text-duo-gray mt-0.5">
+                        {totalExercises} Ubungen · {done}/{total} erledigt · {formatRelativeDate(entry.lastOpenedAt)}
                       </div>
                       {/* Mini progress bar */}
                       {total > 0 && (
-                        <div className="mt-1.5 h-1 bg-slate-100 rounded-full overflow-hidden">
+                        <div className="mt-1.5 h-2 bg-gray-100 rounded-full overflow-hidden">
                           <div
                             className={`h-full rounded-full transition-all ${
-                              pct === 1 ? "bg-green-500" : "bg-emerald-400"
+                              pct === 1 ? "bg-duo-green" : "bg-duo-blue"
                             }`}
                             style={{ width: `${pct * 100}%` }}
                           />
@@ -199,21 +165,11 @@ export default function HomeworkHistory() {
 
                     <button
                       onClick={() => handleDelete(entry.id)}
-                      className="p-1.5 rounded-lg text-slate-300 hover:text-red-500 hover:bg-red-50 transition-colors cursor-pointer opacity-0 group-hover:opacity-100 flex-shrink-0"
-                      title="Löschen"
+                      className="p-2 rounded-xl text-duo-gray hover:text-duo-red hover:bg-duo-red/10 transition-colors cursor-pointer opacity-0 group-hover:opacity-100 flex-shrink-0"
+                      title="Loschen"
                     >
-                      <svg
-                        className="w-4 h-4"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={2}
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M6 18L18 6M6 6l12 12"
-                        />
+                      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                       </svg>
                     </button>
                   </div>
@@ -221,13 +177,12 @@ export default function HomeworkHistory() {
               );
             })}
 
-            {/* Link to builder */}
             <div className="pt-4 text-center">
               <a
                 href="#/homework"
-                className="text-sm text-indigo-600 hover:text-indigo-700 font-medium"
+                className="inline-block btn-3d px-6 py-3 rounded-2xl text-sm font-extrabold uppercase tracking-wide bg-duo-green text-white border-b-4 border-duo-green-dark"
               >
-                + Neue Hausaufgaben erstellen
+                + Neue erstellen
               </a>
             </div>
           </div>

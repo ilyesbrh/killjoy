@@ -93,24 +93,24 @@ export default function Reorder({ quiz, onComplete, onReset, stateKey }: Props) 
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
+    <div className="max-w-lg mx-auto px-4 py-5">
       {/* Header */}
-      <div className="mb-6">
-        <div className="flex items-center gap-3 mb-2">
+      <div className="mb-5">
+        <div className="flex items-center gap-2.5 mb-1.5">
           {quiz.reference && (
-            <span className="text-sm text-gray-500 font-medium">
+            <span className="text-xs font-extrabold text-duo-gray-dark uppercase tracking-wider">
               {quiz.reference}
             </span>
           )}
-          <span className="bg-yellow-400 text-black font-bold text-sm px-2 py-0.5 rounded">
+          <span className="bg-duo-gold text-white font-black text-xs w-7 h-7 rounded-full flex items-center justify-center">
             {quiz.exerciseNumber}
           </span>
-          <h2 className="text-xl font-bold text-gray-900">
-            {quiz.instruction}
-          </h2>
         </div>
+        <h2 className="text-lg font-extrabold text-duo-text leading-snug">
+          {quiz.instruction}
+        </h2>
         {quiz.section && (
-          <div className="text-xs tracking-widest text-gray-400 uppercase">
+          <div className="text-xs font-bold text-duo-gray tracking-wider uppercase mt-1">
             {quiz.section}
           </div>
         )}
@@ -130,37 +130,38 @@ export default function Reorder({ quiz, onComplete, onReset, stateKey }: Props) 
               onClick={() => handleClick(idx)}
               disabled={checked || isGiven}
               className={`
-                w-full flex items-center gap-4 px-4 py-3 rounded-lg border text-left transition-all
+                w-full flex items-center gap-4 px-4 py-3 rounded-2xl border-2 text-left transition-all
                 ${
                   checked
                     ? status === "correct"
-                      ? "border-green-400 bg-green-50"
+                      ? "border-duo-green bg-duo-green-light"
                       : status === "incorrect"
-                      ? "border-red-400 bg-red-50"
+                      ? "border-duo-red bg-duo-red/10"
                       : "border-gray-200 bg-white"
+                    : isGiven
+                    ? "border-gray-300 bg-gray-50 cursor-default"
                     : num !== null
-                    ? "border-blue-400 bg-blue-50"
-                    : "border-gray-200 bg-white hover:border-gray-400 hover:bg-gray-50"
+                    ? "border-duo-blue/60 bg-duo-blue/5"
+                    : "border-gray-200 bg-white hover:border-gray-300 cursor-pointer"
                 }
-                ${isGiven ? "cursor-default" : "cursor-pointer"}
               `}
             >
               {/* Number circle */}
               <span
                 className={`
-                  flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold border-2 transition-all
+                  flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-sm font-black border-2 transition-all
                   ${
                     checked
                       ? status === "correct"
-                        ? "border-green-500 bg-green-500 text-white"
+                        ? "border-duo-green bg-duo-green text-white"
                         : status === "incorrect"
-                        ? "border-red-500 bg-red-500 text-white"
-                        : "border-gray-300 text-gray-400"
+                        ? "border-duo-red bg-duo-red text-white"
+                        : "border-gray-300 text-duo-gray"
                       : num !== null
                       ? isGiven
-                        ? "border-gray-800 bg-gray-800 text-white"
-                        : "border-blue-500 bg-blue-500 text-white"
-                      : "border-gray-300 text-gray-400"
+                        ? "border-duo-text bg-duo-text text-white"
+                        : "border-duo-blue bg-duo-blue text-white"
+                      : "border-gray-300 text-duo-gray"
                   }
                 `}
               >
@@ -168,11 +169,11 @@ export default function Reorder({ quiz, onComplete, onReset, stateKey }: Props) 
               </span>
 
               {/* Sentence text */}
-              <span className="text-base text-gray-800 flex-1">{sentence}</span>
+              <span className="text-base font-bold text-duo-text flex-1">{sentence}</span>
 
               {/* Show correct number on wrong answers */}
               {checked && status === "incorrect" && (
-                <span className="text-xs text-green-600 font-semibold flex-shrink-0">
+                <span className="text-xs text-duo-green-dark font-extrabold flex-shrink-0">
                   = {getCorrectNumber(idx)}
                 </span>
               )}
@@ -182,24 +183,21 @@ export default function Reorder({ quiz, onComplete, onReset, stateKey }: Props) 
       </div>
 
       {/* Actions */}
-      <div className="flex gap-3 mt-8">
+      <div className="flex gap-3 mt-6">
         <button
           onClick={handleCheck}
           disabled={!allAssigned || checked}
-          className={`
-            px-6 py-2.5 rounded-lg font-semibold text-base transition-all
-            ${
-              allAssigned && !checked
-                ? "bg-green-600 text-white hover:bg-green-700 shadow-md"
-                : "bg-gray-200 text-gray-400 cursor-not-allowed"
-            }
-          `}
+          className={`btn-3d flex-1 py-3 rounded-2xl font-extrabold text-base uppercase tracking-wide border-b-4 transition-all ${
+            allAssigned && !checked
+              ? "bg-duo-green text-white border-duo-green-dark cursor-pointer"
+              : "bg-gray-200 text-gray-400 border-gray-300 cursor-not-allowed"
+          }`}
         >
           Prüfen
         </button>
         <button
           onClick={handleReset}
-          className="px-6 py-2.5 rounded-lg font-semibold text-base bg-gray-100 text-gray-600 hover:bg-gray-200 transition-all"
+          className="btn-3d flex-1 py-3 rounded-2xl font-extrabold text-base uppercase tracking-wide border-b-4 bg-white text-duo-gray-dark border-gray-300 cursor-pointer"
         >
           Nochmal
         </button>
@@ -207,8 +205,8 @@ export default function Reorder({ quiz, onComplete, onReset, stateKey }: Props) 
 
       {/* Score */}
       {checked && (
-        <div className="mt-4 p-4 rounded-lg bg-blue-50 border border-blue-200">
-          <p className="text-lg font-semibold text-blue-900">
+        <div className="mt-4 p-4 rounded-2xl bg-duo-green-light border-2 border-duo-green">
+          <p className="text-base font-extrabold text-duo-green-dark">
             {quiz.sentences.filter((_, i) => getStatus(i) === "correct").length}{" "}
             / {total} richtig!
           </p>
