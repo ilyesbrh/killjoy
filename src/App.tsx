@@ -195,19 +195,32 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
 }
 
+function isStandalone() {
+  return window.matchMedia("(display-mode: standalone)").matches
+    || ("standalone" in navigator && (navigator as Record<string, unknown>).standalone === true);
+}
+
+function isIos() {
+  return /iphone|ipad|ipod/i.test(navigator.userAgent);
+}
+
 function usePwaInstall() {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
   const [dismissed, setDismissed] = useState(() =>
     localStorage.getItem("killjoy-pwa-dismissed") === "1"
   );
-  const [installed, setInstalled] = useState(false);
+  const [standalone] = useState(isStandalone);
+  const [ios] = useState(isIos);
 
   useEffect(() => {
     const handler = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
     };
-    const installedHandler = () => setInstalled(true);
+    const installedHandler = () => {
+      setDismissed(true);
+      localStorage.setItem("killjoy-pwa-dismissed", "1");
+    };
     window.addEventListener("beforeinstallprompt", handler);
     window.addEventListener("appinstalled", installedHandler);
     return () => {
@@ -220,7 +233,10 @@ function usePwaInstall() {
     if (!deferredPrompt) return;
     await deferredPrompt.prompt();
     const { outcome } = await deferredPrompt.userChoice;
-    if (outcome === "accepted") setInstalled(true);
+    if (outcome === "accepted") {
+      setDismissed(true);
+      localStorage.setItem("killjoy-pwa-dismissed", "1");
+    }
     setDeferredPrompt(null);
   };
 
@@ -229,34 +245,47 @@ function usePwaInstall() {
     localStorage.setItem("killjoy-pwa-dismissed", "1");
   };
 
-  const show = !!deferredPrompt && !dismissed && !installed;
-  return { show, install, dismiss };
+  // Show if: not dismissed, not already installed/standalone
+  const show = !dismissed && !standalone;
+  const canPrompt = !!deferredPrompt;
+  return { show, install, dismiss, canPrompt, ios };
 }
 
 function PwaInstallBanner() {
-  const { show, install, dismiss } = usePwaInstall();
+  const { show, install, dismiss, canPrompt, ios } = usePwaInstall();
   if (!show) return null;
 
   return (
-    <div className="pwa-banner bg-duo-blue text-white px-4 py-2.5 flex items-center gap-3 relative z-[60]">
+    <div className="pwa-banner bg-duo-blue text-white px-4 py-2.5 relative z-[60]">
       <div className="max-w-lg mx-auto flex items-center gap-3 w-full">
         <AppLogo size={32} className="text-white flex-shrink-0 drop-shadow" />
         <div className="flex-1 min-w-0">
           <div className="font-extrabold text-sm leading-tight">App installieren</div>
-          <div className="text-xs font-bold text-white/70">Offline lernen, schneller starten</div>
+          <div className="text-xs font-bold text-white/70">
+            {ios
+              ? <>Tippe auf{" "}
+                  <svg className="inline w-3.5 h-3.5 align-text-bottom" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M12 2.25v12m0-12l3 3m-3-3l-3 3" />
+                  </svg>
+                  {" "}dann &quot;Zum Home-Bildschirm&quot;</>
+              : "Offline lernen, schneller starten"
+            }
+          </div>
         </div>
-        <button
-          onClick={install}
-          className="btn-3d px-4 py-1.5 rounded-xl bg-white text-duo-blue font-extrabold text-xs
-            uppercase tracking-wide border-b-[3px] border-gray-200 cursor-pointer
-            hover:bg-gray-50 transition-colors flex-shrink-0"
-        >
-          Installieren
-        </button>
+        {canPrompt && (
+          <button
+            onClick={install}
+            className="btn-3d px-4 py-1.5 rounded-xl bg-white text-duo-blue font-extrabold text-xs
+              uppercase tracking-wide border-b-[3px] border-gray-200 cursor-pointer
+              hover:bg-gray-50 transition-colors flex-shrink-0"
+          >
+            Installieren
+          </button>
+        )}
         <button
           onClick={dismiss}
           className="p-1 rounded-lg hover:bg-white/20 transition-colors cursor-pointer flex-shrink-0"
-          aria-label="Schließen"
+          aria-label="Dismiss"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
