@@ -230,14 +230,15 @@ function usePwaInstall() {
   }, []);
 
   const install = async () => {
-    if (!deferredPrompt) return;
-    await deferredPrompt.prompt();
-    const { outcome } = await deferredPrompt.userChoice;
-    if (outcome === "accepted") {
-      setDismissed(true);
-      localStorage.setItem("killjoy-pwa-dismissed", "1");
+    if (deferredPrompt) {
+      await deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === "accepted") {
+        setDismissed(true);
+        localStorage.setItem("killjoy-pwa-dismissed", "1");
+      }
+      setDeferredPrompt(null);
     }
-    setDeferredPrompt(null);
   };
 
   const dismiss = () => {
@@ -247,13 +248,19 @@ function usePwaInstall() {
 
   // Show if: not dismissed, not already installed/standalone
   const show = !dismissed && !standalone;
-  const canPrompt = !!deferredPrompt;
-  return { show, install, dismiss, canPrompt, ios };
+  return { show, install, dismiss, deferredPrompt, ios };
 }
 
 function PwaInstallBanner() {
-  const { show, install, dismiss, canPrompt, ios } = usePwaInstall();
+  const { show, install, dismiss, deferredPrompt, ios } = usePwaInstall();
   if (!show) return null;
+
+  const handleInstall = () => {
+    if (deferredPrompt) {
+      install();
+    }
+    // On browsers without native prompt, the button text guides the user
+  };
 
   return (
     <div className="pwa-banner bg-duo-blue text-white px-4 py-2.5 relative z-[60]">
@@ -263,25 +270,27 @@ function PwaInstallBanner() {
           <div className="font-extrabold text-sm leading-tight">App installieren</div>
           <div className="text-xs font-bold text-white/70">
             {ios
-              ? <>Tippe auf{" "}
+              ? <>Tippe{" "}
                   <svg className="inline w-3.5 h-3.5 align-text-bottom" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M12 2.25v12m0-12l3 3m-3-3l-3 3" />
                   </svg>
-                  {" "}dann &quot;Zum Home-Bildschirm&quot;</>
-              : "Offline lernen, schneller starten"
+                  {" "}&rarr; &quot;Zum Home-Bildschirm&quot;</>
+              : "Zum Startbildschirm hinzufugen"
             }
           </div>
         </div>
-        {canPrompt && (
-          <button
-            onClick={install}
-            className="btn-3d px-4 py-1.5 rounded-xl bg-white text-duo-blue font-extrabold text-xs
-              uppercase tracking-wide border-b-[3px] border-gray-200 cursor-pointer
-              hover:bg-gray-50 transition-colors flex-shrink-0"
-          >
-            Installieren
-          </button>
-        )}
+        <button
+          onClick={handleInstall}
+          className="btn-3d px-4 py-1.5 rounded-xl bg-white text-duo-blue font-extrabold text-xs
+            uppercase tracking-wide border-b-[3px] border-gray-200 cursor-pointer
+            hover:bg-gray-50 transition-colors flex-shrink-0"
+        >
+          {deferredPrompt ? "Installieren" : (
+            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+          )}
+        </button>
         <button
           onClick={dismiss}
           className="p-1 rounded-lg hover:bg-white/20 transition-colors cursor-pointer flex-shrink-0"
