@@ -195,88 +195,49 @@ interface BeforeInstallPromptEvent extends Event {
   userChoice: Promise<{ outcome: "accepted" | "dismissed" }>;
 }
 
-function isStandalone() {
-  return window.matchMedia("(display-mode: standalone)").matches
-    || ("standalone" in navigator && (navigator as Record<string, unknown>).standalone === true);
-}
-
-function isIos() {
-  return /iphone|ipad|ipod/i.test(navigator.userAgent);
-}
-
-function usePwaInstall() {
+function PwaInstallBanner() {
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
-  const [dismissed, setDismissed] = useState(() =>
-    localStorage.getItem("killjoy-pwa-dismissed") === "1"
-  );
-  const [standalone] = useState(isStandalone);
-  const [ios] = useState(isIos);
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const handler = (e: Event) => {
+    // Already dismissed or already installed as standalone
+    if (localStorage.getItem("killjoy-pwa-dismissed")) return;
+    if (window.matchMedia("(display-mode: standalone)").matches) return;
+
+    function onBeforeInstall(e: Event) {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
-    };
-    const installedHandler = () => {
-      setDismissed(true);
-      localStorage.setItem("killjoy-pwa-dismissed", "1");
-    };
-    window.addEventListener("beforeinstallprompt", handler);
-    window.addEventListener("appinstalled", installedHandler);
-    return () => {
-      window.removeEventListener("beforeinstallprompt", handler);
-      window.removeEventListener("appinstalled", installedHandler);
-    };
+      setVisible(true);
+    }
+
+    window.addEventListener("beforeinstallprompt", onBeforeInstall);
+    return () => window.removeEventListener("beforeinstallprompt", onBeforeInstall);
   }, []);
 
-  const install = async () => {
-    if (deferredPrompt) {
-      await deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      if (outcome === "accepted") {
-        setDismissed(true);
-        localStorage.setItem("killjoy-pwa-dismissed", "1");
-      }
-      setDeferredPrompt(null);
-    }
-  };
+  const handleInstall = useCallback(async () => {
+    if (!deferredPrompt) return;
+    await deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === "accepted") setVisible(false);
+    setDeferredPrompt(null);
+  }, [deferredPrompt]);
 
-  const dismiss = () => {
-    setDismissed(true);
+  const handleDismiss = useCallback(() => {
+    setVisible(false);
+    setDeferredPrompt(null);
     localStorage.setItem("killjoy-pwa-dismissed", "1");
-  };
+  }, []);
 
-  // Show if: not dismissed, not already installed/standalone
-  const show = !dismissed && !standalone;
-  return { show, install, dismiss, deferredPrompt, ios };
-}
-
-function PwaInstallBanner() {
-  const { show, install, dismiss, deferredPrompt, ios } = usePwaInstall();
-  if (!show) return null;
-
-  const handleInstall = () => {
-    if (deferredPrompt) {
-      install();
-    }
-    // On browsers without native prompt, the button text guides the user
-  };
+  if (!visible) return null;
 
   return (
     <div className="pwa-banner bg-duo-blue text-white px-4 py-2.5 relative z-[60]">
       <div className="max-w-lg mx-auto flex items-center gap-3 w-full">
         <AppLogo size={32} className="text-white flex-shrink-0 drop-shadow" />
         <div className="flex-1 min-w-0">
-          <div className="font-extrabold text-sm leading-tight">App installieren</div>
-          <div className="text-xs font-bold text-white/70">
-            {ios
-              ? <>Tippe{" "}
-                  <svg className="inline w-3.5 h-3.5 align-text-bottom" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M12 2.25v12m0-12l3 3m-3-3l-3 3" />
-                  </svg>
-                  {" "}&rarr; &quot;Zum Home-Bildschirm&quot;</>
-              : "Zum Startbildschirm hinzufugen"
-            }
+          <div className="font-extrabold text-sm leading-tight">KillJoy installieren</div>
+          <div className="text-xs font-bold text-white/70 truncate">
+            Zum Startbildschirm hinzufugen
           </div>
         </div>
         <button
@@ -285,14 +246,10 @@ function PwaInstallBanner() {
             uppercase tracking-wide border-b-[3px] border-gray-200 cursor-pointer
             hover:bg-gray-50 transition-colors flex-shrink-0"
         >
-          {deferredPrompt ? "Installieren" : (
-            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
-            </svg>
-          )}
+          Installieren
         </button>
         <button
-          onClick={dismiss}
+          onClick={handleDismiss}
           className="p-1 rounded-lg hover:bg-white/20 transition-colors cursor-pointer flex-shrink-0"
           aria-label="Dismiss"
         >
